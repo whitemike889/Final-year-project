@@ -1,0 +1,877 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{float}
+\floatstyle{boxed} 
+\restylefloat{figure}
+\usepackage{fancyhdr}
+\usepackage[left=1.25in,right=1.25in,top=1in, bottom=1in]{geometry}
+
+% FG: Make quote environments italic
+\newenvironment{elements}
+    {\begin{quote}\itshape}
+    {\end{quote}}
+
+\author{Student: Dionisios Kalantzis (SID:0733139) \\ Supervisor: Dr. Maysam Abbod}
+%\title{Smart system for control and customisation of office building for energy consumption}
+%\maketitle
+\begin{document}
+\onehalfspacing
+\begin{titlepage}
+\begin{center}
+% Upper part of the page
+%\includegraphics[width=0.15\textwidth]{./logo}\\[1cm]    
+%
+\textsc{\LARGE Brunel University}\\[1.5cm]
+\textsc{\LARGE School of Engineering and Design}\\[1cm]
+%
+\textsc{\Large Final year project}\\[1cm]
+% Title
+\hrule
+\hfill\\[0.5cm]
+{ \huge \bfseries Smart system for control and customisation of office building energy consumption}\\[0.5cm]
+\hrule
+\hfill\\[0.5cm]
+\ \\
+\hfill\\[0.2cm]
+% Author and supervisor
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+Dionysios \textsc{Kalantzis}
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Supervisor:} \\
+Dr.~M. \textsc{Abbot}
+\end{flushright}
+\end{minipage}
+\vfill
+% Bottom of the page
+{\large \today}
+\end{center}
+\end{titlepage}
+\newpage
+%
+\newpage
+\begin{abstract}
+\emph{"Apollo the god who sees and foresees everything."}
+\end{abstract}
+%
+\renewcommand{\abstractname}{Acknowledgements}
+\begin{abstract}
+ Thanks Mum!
+\end{abstract}
+%
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+%
+\pagestyle{fancyplain}
+ %
+\fancyhf{}
+ %
+\lhead{\fancyplain{}{\leftmark}}
+\rhead{\fancyplain{}{}}
+\rfoot{\fancyplain{}{\thepage}}
+%
+\chapter{Introduction}
+%
+Air is one of life's essentials for all creatures on Earth. Humans live, work and prosper in air. The quality of air affects humans performance. Throughout the years various methods have been devised to assure the good air quality. For example miners were using canary birds as warning systems until 1987. The presence of toxic gases such as carbon monoxide, methane or carbon dioxide could have deadly consequences. Therefore the notice of any distress from the canary birds would act as a warning. Moreover, high air quality standards improve the performance of the people in a working environment.\\
+\ \\
+Nowadays another main issue, in the fast growing world, is power consumption, and how to minimise it. More and more devices are being developed and are becoming available to consumers. Regardless if those devices are mechanical or electrical, they need energy to operate.\\
+\ \\
+This project presents a system devised to improve the air quality in office buildings and other closed working environments. It can also minimise the energy consumption by using the building's resources only whenever they are needed. This is achieved by constantly monitoring the environmental conditions in a room and operating the lighting and air-conditioning according to the presence and the preferences of the occupants.\\
+\ \\
+\section{Project Aims and Objectives}
+This projects aims to build a system that monitors the environmental conditions of a room as well as operating the lighting and/or air-conditioning of the room, according to the user(s) preferences. 
+%
+\newpage
+\chapter{Literature review}
+%
+\section{Energy efficiency}
+A lot of attention has been focused on the energy use of new buildings through regulations and various standards. These just address only part of the problem as almost 70\% of the buildings which will be needed by 2050 have already been built. This becomes even more dramatic as such buildings have been constructed before 1985, the year during which the energy efficiency requirements in the Building Regulations were first introduced ~\cite{website:building_reg,website:carbon_trust}.
+\ \\
+\ \\
+Modifyin an existing building can be very expensive and extremely inconvenient, in particular if it is currently being used. Therefore it seems only reasonable to invest into new technologies that could reduce the energy consumption without altering the construction. \emph{Apollo} is a plug and play 3 piece system which can control the energy use of the room it is installed in.\\
+\ \\
+%
+\section {Ventilation and air quality standards}
+Clean air is very important for a working environment. Productivity may be reduced by up to 20\%, as studies has shown. The pollution, which human and machines produces can make the air feel heavy and humid. This is due to the fact that both continuously produce vapours and heat. The result of operating in this environment could be tiredness and discomfort from the increased $CO2$ and temperature levels. Studies has shown that in order to maintain a good indoor climate in an office, the air should be replaced at least three times per hour. In many rooms, such as laboratories, cooling is also essential if just the ventilation is not enough \cite{website:ventilation}.
+%
+\section{Internet of Things}
+The \textit{Internet of Things} (IoT) is the concept of globally interconnected devices -- \textit{things} with RFID \textit{(Radio-Frequency IDentification)} technology with virtual representation in an Internet-like structure. 
+With the rapid technology developments today, the interconnection of the \textit{things} is feasible between heterogeneous devices. Once connected to the Internet these devices can report in real time from anywhere on the globe. Moreover due to their uniqueness, it is easy to map where the data are coming from and most importantly what they are reporting\cite{website:iot}.\\
+\ \\
+IoT vision is not limited to just reporting. As they would be part of global infrastructure, more and more smart processes and services could be available. Those processes and services could have environmental and, ultimately, an economic impact. \emph{Apollo} could clearly be included into IoT, as it monitors environmental changes and by acting accordingly energy is saved effectively contributing to cost reduction in terms of annual consumption \cite{iotconference}.\\
+\ \\
+An example of such IoT project is Pachube.
+\begin{quote} 
+    Pachube ("patch-bay") connects people to devices, applications, and the Internet of Things. As a web-based service built to manage the world's real-time data, Pachube gives people the power to share, collaborate, and make use of information generated from the world around them \cite{website:pachube}.
+\end{quote}
+\ \\
+Moreover \textit{Pachube} is a platform where sensors report in real time and their data are accessible anywhere on the world. This is due to the fact that \textit{Pachube} traffics its data over the Internet.
+%
+\section{Wireless Sensor Network}
+%
+Wireless sensor network (\textit{WSN}) is a concept that makes IoT vision be more and more real. The first appearance of the term dates back to the 1990s.
+\begin{quote}
+    Researcher named Kris Pister dreamed up a wild future in which people would sprinkle the Earth with countless tiny sensors, no larger than grains of rice.
+\end{quote} 
+These particles were called \textit{"smart-dust"} \cite{website:smartdust}. WSN is a network consisting of distributed devices that provide sensing features. Lately systems applied on WSN are becoming more and more noticeable. Arduino, which is one of the most common hardware platforms, would make the perfect wireless sensor network node, due to its small size (Arduino Pro Mini), low cost and modularity.\\
+\ \\
+\ \\
+\textit{Uberdust} holds a somewhat executive role to IoT as well as to WSN. Uberdust is one of the promising outcomes of the research program \textbf{SPITFIRE} (\textit{Semantic Service Provisioning for the Internet of Things using Future Internet Research by Experimentation}). SPITFIRE's main aim is to investigate unified concepts methods and software infrastructures that facilitate the efficient development of applications that span and intergrate the Internet and the embedded world. Uberdust is a data storage and brokerage web service for connecting IoT data providers and actuators with data consumers and application developers providing real time as well as historical data.It's main focus is to provide storage, sharing and discovery of real-time data from objects, devices and building installations around the world via the Web.\\
+\ \\
+Additionally a unique experiment research facility is currently being proposed by \textit{Smart Santander}. A city-scale experiment for applications and services of a smart city. \emph{Apollo} could easily be adapted into this experiment, providing information on the energy consumption of the office buildings and not only. This way, the city's resources use would be optimised, achieving an greater energy efficiency.\\
+\ \\
+%
+\newpage
+%
+\chapter{System Architecture}
+%
+\emph{Apollo} is an automatic system which detects the environmental conditions in the office. As a smart system it reacts, accordingly to the preferences of the users in the office, to achieve the optimum environment to maximise the work performance.\\
+\ \\
+In Figure \ref{arch_design} below there is a visual representation of \emph{Apollo}. The communication between the board is shown with the use of the arrows.\\
+%
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.35]{architecture_design}
+\caption{Overall system design - Block diagram}
+\label{arch_design}
+\end{figure}
+\ \\
+The \textit{Controller} is a SunSPOT. SunSPOT (Sun Small Programmable Object Technology) is a wireless sensor network mote developed by Sun Microsystems \cite{website:sunspot}. Due to is computational power it is preferred over the Arduino to make the decisions on the operation of the lights and/or the air-conditioning. \\ 
+\ \\
+The system works in two stages -- the \emph{passive} process and the \emph{active} process. In order for the system to work on the later stage it is necessary to go through the \emph{passive}. The difference between these two stages is, during the former (\emph{passive}) stage, the system collects the user(s) preferences on the environmental changes. It also observes the environmental values when the user(s) choose to switch on the lights and/or the air conditioning.\\
+\ \\
+Those marks will set the threshold on when the system will operate on the \emph{active} stage. During this stage (\textit{active}) the system operates the lights and the air conditioning. And this is done with the preferences the users set on the \emph{passive} stage.\\
+\ \\
+As the weather conditions change over the year it is advised to use the system on the \emph{passive} stage approximately for one to two weeks every four months. This is to calibrate the system with reference to the four different seasons (\textit{spring, summer, autumn, winter}) over the year. In general this is needed to be done only once after the installation of the system. From then onwards the \emph{passive} stage is needed to be run only when the users feel the need to make any core modifications on the thresholds.\\
+\ \\
+Regarding the modifications, user(s) are also able to use the web interface of the system to manually control the lighting and/or air conditioning. The web interface is a medium where user(s) can remotely access and interact with the system. This could mean operating manually the lighting and/or air conditioning remotely. The user(s) are also capable to check the status of the system via the web interface.\\
+\ \\
+The status of the system is generally used for security reasons as \emph{Apollo} can inform the owner of the office of any unusual changes in environmental conditions. This is useful for example to detect fires. Moreover every time the system recognise an unauthorised person using the office can remotely inform its owner through the internet with an email.\\
+\ \\
+%
+\newpage
+%
+\chapter{System Specifications}
+%
+\emph{Apollo} is a three (3) piece system:
+%
+\begin{itemize}
+\item[$\blacktriangleright$] The sensor board
+\item[$\blacktriangleright$] The control board
+\item[$\blacktriangleright$] The action board
+\end{itemize}
+The main reason for the existence of the 3 different pieces is to minimise the mean time of repair. Each board can easily removed and individually checked for defect(s).
+%
+\section{The sensor board}
+%
+The sensor board is a PCB(\textit{Printed Circuit Board}) responsible for collecting the environmental changes of the space it is installed in. To achieve the above, the board is equipped with the following:
+%
+\begin{itemize}
+\item[$\blacktriangleright$]Gas sensors:
+	\begin{itemize}
+	\item[$\triangleright$] MQ - 4 Methane - \textit{Compressed Natural Gas} sensor
+	\item[$\triangleright$] MQ - 7 Carbon Monoxide  sensor
+	\end{itemize}
+\item[$\blacktriangleright$]Light sensor:
+	\begin{itemize}
+	\item[$\triangleright$]LDR - Light Dependent Resistor
+	\end{itemize}
+\item[$\blacktriangleright$]Motion Sensor:
+	\begin{itemize}
+	\item[$\triangleright$]PIR - Passive InfraRed motion sensor 
+	\end{itemize}
+\item[$\blacktriangleright$]Temperature Sensor:
+	\begin{itemize}
+	\item[$\triangleright$]LM335 - Precision Temperature Sensor
+	\end{itemize}
+\end{itemize}
+%
+\subsection{MQ - 4 Methane (Compressed Natural Gas) sensor}
+%
+This is an easy to use \emph{compressed natural gas} sensor capable of sensing natural gas, which is mainly composed of methane ($CH_4$). The detection range for this sensor is between 200 to 10000ppm of methane  - compressed natural gas \cite{website:mq4}.
+
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.45]{mq4}
+\includegraphics*[scale=0.45]{mq4_2}
+\caption{MQ - 4 Methane - Compressed Natural Gas sensor}
+%\caption{MQ - 4 Dimensions}
+\end{figure}
+\ \\
+%
+From the following diagram it is easy to see the simplicity of sensor's drive circuit.
+\begin{figure}[H]
+\centering
+\includegraphics*[width=400px]{mq4_structure-configuration}
+\centering
+\caption{MQ - 4 sensor's drive circuit}
+\end{figure}
+\ \\
+%%%%%%%%%%%%%%%%%%   FG: WTF? Inversely proportional of directly proportional?? ----------------v____________________
+The sensor requires an input of 5 Volt and its output is an analogue resistance. The output is inversely proportional to the gas concentration. Moreover the greater the gas concentration the higher the output value.
+\ \\
+%
+\subsection{MQ - 7 Carbon Monoxide  sensor}
+The \emph{Carbon Monoxide} sensor is as well an easy to use sensor.  The detection range is between 20 to 2000ppm of $CO$ \cite{website:mq7}.
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.45]{mq7}
+\includegraphics*[scale=0.45]{mq7_2}
+\caption{MQ - 7 Carbon Monoxide  sensor}
+\caption{MQ - 7 Dimensions}
+\end{figure}
+\ \\
+%%%%%%%%%%%%%%%%%%   FG: Temperature or voltage?! EXPLAIN. -----------------------------------------------------------------v______________________________
+The MQ - 7 has a slightly more complicated operation technique comparing to the MQ - 4. It detects by cycle high (5 Volts) and low (1.5 Volts) temperature and detects $CO$ when low temperature is applied. When sensor is at high temperature (heated by 5 Volts) cleans the other gases absorbed under the low temperature heating (1.5 Volts). The conductivity of the sensor is higher along the gas concentration rising \cite{website:mq7_datasheet}.
+\ \\
+%
+\subsection{LDR - Light Dependent Resistor}
+\ \\
+This is the simplest light sensor. It is a variable resistance of a range between 10 M($\Omega$) down to 100 $\Omega$.
+\\ \
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{ldr}
+\caption{LDR - Light Dependent Resistor}
+\end{figure}
+\ \\
+The LDR, in dark condition, has a very high resistance allowing to a small amount of current to pass. As the light (\textit{lux}) increases, the resistance decreases proportionally.
+\ \\
+%
+\subsection{PIR - Passive InfraRed motion sensor}
+PIR \textit{Passive InfraRed} motion sensor is a ready to use integrated circuit. It can detect movement up to approximately 6 meter.
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.2]{pir}
+\includegraphics*[scale=0.2]{pir_2}
+\caption{PIR - Passive InfraRed motion sensor}
+%\caption{PIR Dimensions}
+\end{figure}
+\ \\
+The sensor has a 3-pin connection interface. The red wire is the power (5 Volts), the brown wire is the ground (\textit{GND}) and finally the black wire is the output. The alarm pin (output) is an open collector and therefore the introduction of a pull up resistor is essential. In a  no movement state the sensor outputs a high signal (5 Volts). When on movement detection state the alarm pin goes low (0 Volt). The open drain setup allows multiple motion sensors to be connected on a single line. When one of the sensors detects movement the alarm pin will be pulled low.
+\ \\
+%
+\subsection{LM335 - Precision Temperature Sensor}
+%
+The LM335A is a analog temperature sensor. The LM335A works like a Zener diode with a breakdown voltage proportional to absolute temperature at 10mV/$^\circ K$. When a resistor is connected between the 5V and the GND, and the LM335A will output an analog voltage of 2.98V (298 Kelvin is 25$^\circ C$).  The output of the sensor is linear, and when calibrated at 25$^\circ C$ the LM335A has typically less than 1$^\circ C$ error over a 100°C temperature range. The sensor can operate continuously from −40$^\circ C$ to 100$^\circ C$. 
+\ \\
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{lm335}
+\caption{LM335 - Precision Temperature Sensor}
+\end{figure}
+\ \\
+%
+\section{The control board}
+The control board is the core of the \emph{Apollo}. It is a PCB board which is equipped with:
+\begin{itemize}
+\item[$\triangleright$]Arduino Pro Mini
+\item[$\triangleright$]XBee RF Module
+\end{itemize}
+%\begin{figure}[H]
+%\centering
+%\includegraphics*[scale=0.2]{controlbrd}
+%\caption{The control board}
+% 
+%\end{figure}
+\ \\
+%%%%%%%%%%%%%%%%%%   FG: What do you mean by "prepared" ---------------------------------------v______
+The board is connected through pin cable with the sensor board. The collected values are then prepared and sent. This is done with the use of the XBee RF Module.\\
+%
+\subsection{Arduino Pro Mini}
+Arduino is an open-source platform based on a micro-controller and a simple software development environment. It can be used to build interactive applications, receiving inputs from several types of sensors and interacting with the environment controlling various actuators.\\
+\ \\
+Arduino Pro Mini board is based on the ATMEL AVR 8-bit micro-controller, specifically on the ATmega168. Despite its size, it is equipped with both analogue as well digital input/outputs. More specifically it has 14 digital input/output pins, of which 6 can be used as PWM (\textit{Pulse-width modulation}) outputs. In addition it has 6 analogue inputs, as well as a reset button. Each pin is a hole allowing pin headers to be mounted (soldered).\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.4]{arduinopromini}
+\caption{Arduino Pro Mini} 
+\end{figure}
+\ \\
+There are two versions of the Arduino Pro Mini. One, which runs at 3.3 Volts and 8 MHz and another which runs at 5 Volts and 16 MHz. The former one is used for \emph{Apollo}. Arduino Pro Mini has three different memories embedded on it; one \textbf{Flash} of 16 MB, one \textbf{SRAM} of 1 KB and one \textbf{EEPROM} 512 bytes.\\
+\ \\
+It can be powered up by either USB connection or a external power supply. The recommended input voltage is between 5 to 12 V.
+\ \\
+%
+Specifications:
+\begin{table}
+\centering
+    \begin{tabular}{|l|l|}
+        \hline Micro-controller & ATmega168 \\
+        \hline Operating Voltage & 5 Volts \\
+        \hline Input Voltage & 5-12 Volts \\
+        \hline Digital I/O Pins & 14 (6 provide PWM output) \\
+        \hline Analogue Pins & 6 \\
+        \hline DC Current per I/O Pin & 40$mA$ \\
+        \hline Flash Memory & 16 KB (2 KB dedicated to the bootloader) \\
+        \hline SRAM & 1 KB \\
+        \hline EEPROM & 512 bytes \\
+        \hline Clock Speed & 16 MHz\\
+        \hline
+    \end{tabular}
+    \caption{Arduino Pro Mini Specifications}
+\end{table}
+\ \\
+
+\subsection{XBee RF Module}
+Arduino does not provide built-in wireless connectivity. Therefore the wireless communication is achieved by connecting an IEEE 802.15.4 module, the XBee RF.
+\ \\
+XBee RF is an embedded module providing wireless connectivity to devices. The module uses the IEEE 802.15.4 standards for a low-rate wireless PAN (\textit{Personal Area Network}) \cite{website:xbee}. This makes it ideal for a low-cost, low-power wireless sensor network, such as \emph{Apollo}.
+\begin{figure}[H]
+    \centering
+    \includegraphics*[scale=0.4]{xbee}
+    \caption{XBee RF module}
+\end{figure}
+\ \\
+XBee is connected to the Arduino via a serial port and adds wireless capabilities by forwarding any data received from the Arduino to the wireless network and forwarding received wireless to the Arduino respectively.
+%
+\section{The action board}
+The action board is a PCB board equipped with holes to fit up to 4 relays. The relays used are fully sealed SPDT (\textit{Single Pole Double Throw}). \\
+\ \\
+%
+\subsection{Relay SPDT Sealed}
+This is a high quality SPDT sealed relay. Suitable for high voltage and high current devices. \cite{website:relay}
+\ \\
+\begin{figure}[H]
+\centering
+    \includegraphics*[scale=0.5]{realy}
+    \includegraphics*[scale=0.2]{relay_2}
+    \caption{Relay SPDT Sealed}
+\end{figure}
+\ \\
+Specifications:
+\begin{table}[H]
+\centering
+    \begin{tabular}{|l|l|}
+    \hline Max. Operating Current & 5 A \\
+    \hline Max. Operating Voltage & 220 V AC / 30 V DC \\
+    \hline Max. Operating Power & 1250 V AC / 150 W \\
+    \hline Contact resistance & 100m$\Omega$ \\
+    \hline Ambient Temperature & -40 $\sim$ +85$^\circ$C \\
+    \hline Mechanical life & 10000000 Ops \\
+    \hline Electrical life & 100000 Ops \\
+    \hline
+    \end{tabular}
+    \caption{SPDT Specifications}
+\end{table}
+\ \\
+The action board is also equipped with \textbf{LEDs} (\textit{light emitting diodes}) which are connected to the relays. This provides a visual and fast inspection for defect(s) on the board.
+\begin{figure}[H]
+\centering
+    \includegraphics*[scale=0.2]{led}
+    \caption{LEDs}
+\end{figure}
+\ \\
+%
+\section{Software}
+\subsection{Arduino IDE}
+\textbf{Arduino IDE} is a software development environment for program applications for the Arduino platform. It is comprises a toolbar, which includes the most common functions, a text editor for writing the code and a message area. Arduino IDE is also used to upload programs and communicate with the Arduino boards \cite{website:arduinosoftware}.
+\begin{figure}[H]
+    \centering
+    \includegraphics*[width=300px]{arduinomain}
+    \caption{Arduino IDE software development environment}
+\end{figure}
+\ \\
+The toolbar buttons allow the user to verify programs, create new, open existing, save, upload to the Arduino board and the serial monitor. The programs written using Arduino Software are called \textbf{Sketches}. The serial monitor displays serial data being sent from the Arduino board it also can send data to the board. The message area is used to display errors and to provide feedback at the process of saving and uploading the programs on the board. The console displays text output by the Arduino environment including full error messages \cite{website:arduinosoftware}.\\
+\ \\
+Sketches are written in C/C++ but developers need to define two methods:
+\begin{itemize}
+    \item[$\triangleright$] \textbf{setup():} runs only once in the beginning of the program and initialises the variables.
+    \item[$\triangleright$] \textbf{loop$()$:} runs repeatedly inside the program until the power of the board be cut.   
+\end{itemize}
+\ \\
+Beside these two basic methods Arduino IDE includes others which can be split in \textbf{structure}, \textbf{values}, \textbf{functions} \cite{website:arduinosoftware}. These are defined below: 
+\begin{itemize}
+    \item[$\triangleright$] \textbf{Structure:} include all the control flow structures of numerical and logical operations, such as: \textbf{if, if...else, and more}, 
+    \item[$\triangleright$] \textbf{Values:} include all the data structure, such as: \textbf{boolean, char, int, byte, long, and more},
+    \item[$\triangleright$] \textbf{Functions:} include all the management methods for the pins and the general internal function of the micro-controller, such as: \textbf{pinMode(), digitalWrite(), digitalRead(), analogRead(), tone(), interrupts(), and more}.
+\end{itemize}
+\ \\
+%
+\subsection{CoolTerm}
+\textbf{CoolTerm} is a software for communication with hardware connected to serial ports. It is a serial port terminal application for the exchange of data with hardware connected to serial ports  such as micro-controllers. It has the same concept as the serial monitor of the Arduino IDE. The main differences that made it more suitable are the capability of multiple concurrent connections if multiple serial port connections are presented. It can also display the received data in plain text as well as hexadecimal format. In addition, it can capture the received data to a text file \cite{website:coolterm}.
+\begin{figure}[H]
+\centering
+    \includegraphics*[scale=0.3]{cooltermtinux}
+    \caption{CoolTerm - serial port communication}
+\end{figure}
+\ \\
+%
+\subsection{Eagle PCB Software}
+Eagle PCB Software is a powerful and flexible PCB design program. Eagle is an acronym for Easily Applicable Graphical Layout Editor. It was used to design and print the PCB designs for this project (\emph{Apollo}). To do this the schematic design of the three different boards first had to be drawn. The board design was then produced by arranging the components appropriately \cite{website:eagle}.
+\begin{figure}[H]
+\centering
+    %\includegraphics*[scale=0.2]{eagle1}
+    \caption{Eagle - Schematic design}
+
+    \caption{Eagle - Board design}
+\end{figure}
+\ \\
+\newpage
+\chapter{System Design}
+This section presents the overall design of the system as well as of the individual components implementation of \emph{Apollo}. In addition, the design choices are explained and justified in detail and their advantages are analysed in depth.\\
+\ \\
+The main guides for designing \emph{Apollo} were the air quality standards for office and laboratory buildings. In addition the installation of the system should have the minimum impact on the building's structure. The maintenance time and cost of all three boards was another major factor for their design. Moreover the system's capacity for heterogeneous connection and interaction with other systems was one of the crucial characteristics for its design. \\
+\ \\
+\emph{Apollo} has passed various stages before taking the shape and form that has on the date of this report. The original approach included two boards; \textbf{\textit{control}} and the \textbf{\textit{sensor}} board. After a series of prototype testing seemed cogent to break the \textit{control} board in two discrete ones. The outcome of this was the three boards; \textbf{\textit{sensor, control, action}}.\\
+\ \\
+The significant difference of the two is the separation of the Arduino platform from the control board with the relays. The reason for that was the minimisation of the repair (\textit{MTTR}). This increased the cost of the system. The cost increase is of approximately £1, according to the School technician. It is not possible to calculate the exact cost increase, as for the development of the PCBs the facilities of the School were used.\\
+\ \\
+For the design of the boards, CadSoft Eagle CAD software was used. Eagle is equipped with an Electrical Rule Check \textit{ERC} as well as with a Design Rule Check \textit{DRC} . This is integrated functions that check the schematics for electrical and design errors respectively. If any error(s) are detected, an error dialogue window pops with details on the errors.
+%
+\section{Sensor board}
+\subsection{Schematic implementation}
+Below, it will be presented the process of designing the sensor board with the use of Eagle CAD software.
+\ \\
+To begin with, the development starts with the creation of the schematic. In the schematic all the necessary parts are being placed. \ref{Sensor-brd-s1}
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.25]{sens_brd_s1}
+\caption{Sensor board - Adding all the parts (Stage 1)}
+\label{Sensor-brd-s1}
+\end{figure}
+\ \\
+For the schematic, and the board later, to be easier and clear what is what, the parts are named accordingly. \ref{Sensor-brd-s2}
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.25]{sens_brd_s2}
+\caption{Sensor board -  (Stage 2)}
+\label{Sensor-brd-s2}
+\end{figure}
+\ \\
+At this stage the parts are being spread. The reason for this is for the following step to be easier and more efficient.
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.25]{sens_brd_s3}
+\caption{Sensor board -  (Stage 3)}
+\label{Sensor-brd-s3}
+\end{figure}
+\ \\
+In the following Figure \ref{Sensor-brd-s4} the wiring of the parts of the sensor board is being made.
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.25]{sens_brd_s4}
+\caption{Sensor board -  (Stage 4)}
+\label{Sensor-brd-s4} 
+\end{figure}
+\ \\
+To check if the wiring is properly done, and there is neither short-circuit nor unconnected parts and \textbf{ERC} was performed. The result is shown in Figure \ref{Sensor-brd-s5}. There were no errors reported back. The warnings are of somewhat minimum importance as the parts used are universal. On the other hand it is of importance, all pins to be connected either to other parts and/or to the power supply and/or to the ground.
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.25]{sens_brd_s5}
+\caption{Sensor board -  (Stage 5)}
+\label{Sensor-brd-s5}
+\end{figure}
+\ \\
+%
+\subsection{Board implementation}
+This is the stage where the parts implemented on the previous part will be take shape on the board. As the board will be installed in a visible part in a room, it is important to be as discreet as possible. In the Figure \ref{Sensor-brd-s6}, below, the components are ready to be spread in the available space. The size of the board will be 5cm wide and 5cm high.
+\ \\
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.25]{sens_brd_s6}
+\caption{Sensor board -  (Stage 6)}
+\label{Sensor-brd-s6}
+\end{figure}
+\ \\
+Once all components were spread with sufficient space between them the \textit{Ratsnest} tool was used to minimise the path of the of the wiring. This time the wiring is the conductive medium,of electric current between the parts of the board, the copper.
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.25]{sens_brd_s7}
+\caption{Sensor board -  (Stage 7)}
+\label{Sensor-brd-s7}
+\end{figure}
+\ \\
+The wiring route were finally generated with the use of the \textit{Autoroute} tool. To achieve the optimal result, in this case the minimum copper paths \textit{Autoroute} has an \textit{Optimiser} option which was used. Moreover the settings of the \textit{Optimiser} were set accordingly to achieve the least possible layers and bias.\\
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.25]{sens_brd_s8}
+\caption{Sensor board -  (Stage 8)}
+\label{Sensor-brd-s8}
+\end{figure}
+\ \\
+Layers are the sides of the board used for the creating the copper paths. In Figure \ref{Sensor-brd-s8} the top layer wire paths are marked with maroon color, where the bottom layer paths are on blue. Bias are called the points where the wire path changes layer. Bias add extra difficulty on soldering the board and therefore are being avoided when possible.\\
+\ \\
+%
+\section{Control board}
+The same method as with \textit{Sensor} was used for designing and developing the \textit{Control} board. The following Figures \ref{Control-brd-s1} \ref{Control-brd-s2} \ref{Control-brd-s3} \ref{Control-brd-s4} show the process. \\
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.25]{control_brd_s1}
+\caption{Control board -  (Stage 1)}
+\label{Control-brd-s1}
+\end{figure}
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.25]{control_brd_s2}
+\caption{Control board -  (Stage 2)}
+\label{Control-brd-s2}
+\end{figure}
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.25]{control_brd_s3}
+\caption{Control board -  (Stage 3)}
+\label{Control-brd-s3}
+\end{figure}
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.25]{control_brd_s4}
+\caption{Control board -  (Stage 4)}
+\label{Control-brd-s4}
+\end{figure}
+\ \\
+At this stage is essential to clarify the existence of the six pin holes (\textit{JP8}) in the above Figure \ref{Control-brd-s4}. Those six pin holes will host a six pin header (Figure \ref{Arduino_header}). This is one of many practical ways to hold the \textit{XBee} shield straight. With this method the shield's pins will not be bended, therefore any damage will be avoided.\\
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.25]{arduino_header}
+\caption{Arduino header}
+\label{Arduino_header}
+\end{figure}
+%
+\section{Action board}
+For the development of the \textit{Action} board was used the same method as of the \textit{Control}. At this point, it is important to explain the existence of the four \textit{LEDs} on the board. Their purpose is to have a quick visual check of the signal going into the relay. In this way, it is possible to detect if any or more of the relays has/have fail. With this technique, precious time is saved from removing the \textit{action} board. \\
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.25]{action_brd_s1}
+\caption{Action board -  (Stage 1)}
+\label{Action-brd-s1}
+\end{figure}
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.25]{action_brd_s2}
+\caption{Action board -  (Stage 2)}
+\label{Action-brd-s2}
+\end{figure}
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.25]{action_brd_s3}
+\caption{Action board -  (Stage 3)}
+\label{Action-brd-s3}
+\end{figure}
+\ \\
+%
+%\begin{figure}[H]
+%\centering
+%\includegraphics*[scale=0.2]{action_brd_s4}
+%\caption{Action board -  (Stage 4)}
+%\label{Action-brd-s4}
+%\end{figure}
+%\ \\
+%
+\section{Arduino code}
+In this section an extensive description of the code that was created for \emph{Apollo} will be carried out. The code is divided in three parts; \textit{\textbf{initialisation, setup(), loop()}}
+%
+\subsection{Initialisation}
+The very first part of the code consist the \textit{initialisation}. This includes the libraries as well as the global variables, which will be used across all the program.\\
+\ \\
+The heterogeneous communication protocol which allows the Arduino to communicate with different devices is included as a header in this part. This is the \textit{XbeeDario.h} and was provided by the Computer Technology Institute and Press "Diophantus".\\
+\ \\
+Furthermore the global variables were declared at this stage as well. Global variables include the Arduino's pins and to what they are connected to. 
+%
+\subsection{setup()}
+The connected pins can be set as input or output depending of their purpose. This is done in the \textit{setup()} part of the code.\\
+\ \\
+In addition the communication between the Arduino and the XBee is set up. Moreover the XBee is connected to the pins of the Arduino. Therefore it is compulsory to specify the communication serial port between them two.
+%
+\subsection{loop()}
+\textit{Loop()} is the final and longest part of the code. To start with Arduino checks if the other two boards (\textit{sensor, action}) are connected to it. This way the system do not have to be removed in case any of the boards has a defect and is down.\\
+\ \\
+If the \textit{action} board (relays) are connected, the number of relays are being checked. As the specifications of the room that the system is installed may vary therefore the \textit{action} board my not have all four relays installed. To check how many relays are on the \textit{action} board different resistance is used for each case. Therefore different current values are being measured in the \textit{relayCheckPin}. This values are mapped in the code and the system reports back how many relays are installed.\\
+\ \\
+The next function controls the output of the relays. The received data from the Controller is checked if it contains any value for the relay(s) and in what state does it set it. The next step is to check which of the lamps are on and which are off and report this information. Also reports any change on the status of the lamps to the Controller. \\
+\ \\
+The following group of statements check the status of the motion sensor (\textit{PIR - Passive InfaRed}). Every half of a second the status of the PIR sensor is being checked and his status is being reported as well.\\
+\ \\
+Following, the light sensor is called every three seconds and its value is being reported at the time of measurement.\\
+\ \\
+On the same rate of every three seconds, the value of temperature is being measured. Explain the temp function. \\
+\ \\
+The value of methane ($CH_4$) is also measured every three seconds. This is simply being done by reading the analogue value of sensor's (\textit{MQ-4}) output pin.\\
+\ \\
+It was not possible to measure the $CO$ levels as there was an ambiguity on the return values of the \textit{MQ-7} sensor. The issue was determined around the heating time and the working cycles before sensor's values were evaluated.\\
+\ \\
+%
+\section{Database}
+$\ddot{U}berdust$ stores data to an RDBMS using the WiseDB component of the WiseML library based on the state of the art O/RM framework, Hibernate. Hibernate is probably the most well establish relational persistence framework for Java. Hibernate facilitates the storage and retrieval of Java domain objects via Object/Relational Mapping (ORM). Although $\ddot{U}berdust$ was originally developed for storing sensor data from wireless sensor networks, any source can provide data as long as it is in a simple timestamp-based format and a small set of metadata is already provided in the persistence store. and was provided by the Computer Technology Institute and Press "Diophantus". \cite{website:database} \\
+%
+\newpage
+%
+\chapter{Results}
+%
+\emph{Apollo} was built completely as it can be seen in the following Figures \ref{Sensor_brd_complete} \ref{Control_brd_complete}  \ref{Action_brd_complete}.
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.2]{sens_brd_complete}
+\caption{Sensor board - Completed with all parts soldered}
+\label{Sensor_brd_complete}
+\end{figure}
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.2]{control_brd_complete}
+\caption{Control board - Completed with all parts soldered}
+\label{Control_brd_complete}
+\end{figure}
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.2]{action_brd_complete}
+\caption{Action board - Completed with all parts soldered}
+\label{Action_brd_complete}
+\end{figure}
+\ \\
+%
+In the next figure is shown the connections between the three boards.
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.2]{apollo_complete}
+\caption{\emph{Apollo} - All boards are connected}
+\label{all_brd_connected}
+\end{figure}
+\ \\
+%
+The system was installed into the rooms 0.I.1, 0.I.3, 0.I.9 and 0.I.11 of the lower ground floor of the Computer Technology Institute and Press "Diophantus" building in Greece. The selection of the rooms was made on the fact that they are occupied by different number of people. This was an extra test of the reliability of the system. Thus the size of the rooms defers as well as the number of lamps and air-conditioning units.\\
+\ \\
+The moment each system went live it started reporting the environmental values and feed the \textit{Uberdust} database. Below are shown the data collected into the database for each room separately, categorised by the type of sensor.\\
+\ \\
+%
+\section{PIR}
+%
+{Room 0.I.1}
+%
+\ \\
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{pir_1}
+\caption{$\ddot{U}berdust$ chart for for PIR sensor in room 0.I.1}
+\label{chart_pir_1}
+\end{figure}
+\ \\
+%
+{Room 0.I.3}
+%
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{pir_3}
+\caption{$\ddot{U}berdust$ chart for for PIR sensor in room 0.I.3}
+\label{chart_pir_3}
+\end{figure}
+\ \\
+%
+{Room 0.I.9}
+%
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{pir_9}
+\caption{$\ddot{U}berdust$ chart for for PIR sensor in room 0.I.9}
+\label{chart_pir_9}
+\end{figure}
+\ \\
+%
+{Room 0.I.11}
+%
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{light_1}
+\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.11}
+\label{chart_light_1}
+\end{figure}
+\ \\
+%
+\section{Light}
+%
+{Room 0.I.1}
+%
+From the following Figure \ref{chart_light_1} is clear the pattern of the light emittance that is followed each day.
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{light_1}
+\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.1}
+\label{chart_light_1}
+\end{figure}
+\ \\
+%
+{Room 0.I.3}
+%
+In the expanded chart in Figure \ref{chart_light_3}, is visible the light's strength during a day.
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{light_3}
+\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.3}
+\label{chart_light_3}
+\end{figure}
+\ \\
+%
+{Room 0.I.9}
+%
+In this case the illuminance of different room is being presented.
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{pir_9}
+\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.9}
+\label{chart_light_9}
+\end{figure}
+\ \\
+%
+{Room 0.I.11}
+%
+The occupants of this room have a preference of low light emittance. This can be seen from the low values from the light sensor.
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{light_11}
+\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.11}
+\label{chart_light_11}
+\end{figure}
+\ \\
+%
+\section{Temperature}
+%
+{Room 0.I.1}
+%
+The temperature show a steady value around 24$^\circ C$ during the whole day. This is due to the fact of electronics dissipating heat.
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{temp_1}
+\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
+\label{chart_temp_1}
+\end{figure}
+\ \\
+%
+{Room 0.I.3}
+%
+As all rooms are installed with computers with high computing power the levels of dissipating heat are quit high.
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{temp_3}
+\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
+\label{chart_temp_3}
+\end{figure}
+\ \\
+%
+{Room 0.I.9}
+%
+The same situation is seen in this room as well.
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{temp_9}
+\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
+\label{chart_temp_9}
+\end{figure}
+\ \\
+%
+{Room 0.I.11}
+%
+In Figure \ref{chart_temp_11} it is indicated that around 14:00 the ventilation was turned on. This is due to just a small drop of temperature.
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{temp_11}
+\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
+\label{chart_temp_11}
+\end{figure}
+\ \\
+%
+\section{$CH_4$}
+%
+The \textit{Methane} $CH_4$ levels are constant and at a low value. The \textit{glitch} noticed between 08:00 and 12:00 is due to sensor's fault return value.
+{Room 0.I.1}
+%
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{ch4_1}
+\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
+\label{chart_ch4_1}
+\end{figure}
+\ \\
+%
+{Room 0.I.3}
+%
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{ch4_3}
+\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
+\label{chart_ch4_3}
+\end{figure}
+\ \\
+%
+{Room 0.I.9}
+%
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{ch4_9}
+\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
+\label{chart_ch4_9}
+\end{figure}
+\ \\
+%
+{Room 0.I.11}
+%
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.2]{ch4_11}
+\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
+\label{chart_ch4_11}
+\end{figure}
+\ \\
+%
+\section{CO}
+%
+Unfortunately as it has been explained in section \textit{\textbf{5.4.3 loop ()}} the $CO$ sensor is not yet funtioning properly.
+\newpage
+%
+\chapter{Conclusions \& Future improvements}
+%
+To the author's opinion the project tends to be characterized as successful due to the fact that the aims have been achieved. The system is installed and working in the Computer Technology Institute and Press "Diophantus" building, lower ground floor. Evidence provided by the database feeding and everyday working status clearly supports the success of the system.\\
+\ \\
+Moreover \emph{Apollo} is able to collect the environmental values from the room is installed in and report them back to the \textit{Controller} and in extension to the database. It is also capable of operating the lighting as well as the air-conditioning of the room. This is a novel approach of such a system, as with the use of the IEEE 802.15.4 protocol the communication with other systems is feasible. On that point the system can work along with other systems such as TelosB, SunSpot, iSense and any other system that uses the same communication protocol. \\
+\ \\
+\emph{Apollo} has a great potential of expansion. As a first step, the development of a pressure sensor system. This addition it would enable the option of personalising the system according to the each user. On that note the pressure sensor could wireless send information of the presence of a specific user. Moreover the system could respond to the user's preferences for lighting and temperature. With this technique if more than one user occupied the room, each can have a separately preferences for his working space.\\
+\ \\
+Additionally to the last suggestion the presence of a blue-tooth module connected to the \textit{action} board could expand system's personalisation. Nowadays every mobile device has a blue-tooth connectivity option. The system could recognise the presence of a specific user and would set the working environment accordingly. This would mean the light along with the temperature level would be set upon user's arrival in the building. \\
+\ \\
+Introduction of security alerts via e-mail could be considered a further achievement. Additionally the system would recognise an ambiguity activity. The owner of the office would be notified for this activity via e-mail.\\
+\ \\
+Most office buildings are equipped with a Building Management System (\textit{BMS}). BMS is a computer based control system, which  operates the electrical and mechanical equipment, such as ventilation, lighting, power systems, fire systems and security systems of a building. Priceless energy could be saved on the overall building. This could easily achieved if the electrical and mechanical systems of each floor or section (depending on the BMS abilities) would operate only when necessary.
+%
+\newpage
+%
+\bibliographystyle{acm}
+\bibliography{Citation}
+%
+\newpage
+%
+\chapter*{Appendices}
+%
+\end{document}

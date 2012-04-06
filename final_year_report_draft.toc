@@ -1,0 +1,42 @@
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Project Aims and Objectives}{5}{section.1.1}
+\contentsline {chapter}{\numberline {2}Literature review}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Energy efficiency}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Ventilation and air quality standards}{7}{section.2.2}
+\contentsline {section}{\numberline {2.3}Internet of Things}{8}{section.2.3}
+\contentsline {section}{\numberline {2.4}Wireless Sensor Network}{8}{section.2.4}
+\contentsline {chapter}{\numberline {3}System Architecture}{10}{chapter.3}
+\contentsline {chapter}{\numberline {4}System Specifications}{12}{chapter.4}
+\contentsline {section}{\numberline {4.1}The sensor board}{12}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}MQ - 4 Methane (Compressed Natural Gas) sensor}{13}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}MQ - 7 Carbon Monoxide sensor}{13}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}LDR - Light Dependent Resistor}{14}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}PIR - Passive InfraRed motion sensor}{14}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}LM335 - Precision Temperature Sensor}{15}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}The control board}{15}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Arduino Pro Mini}{16}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}XBee RF Module}{17}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}The action board}{18}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Relay SPDT Sealed}{18}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}Software}{19}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Arduino IDE}{19}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}CoolTerm}{20}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Eagle PCB Software}{21}{subsection.4.4.3}
+\contentsline {chapter}{\numberline {5}System Design}{22}{chapter.5}
+\contentsline {section}{\numberline {5.1}Sensor board}{23}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Schematic implementation}{23}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Board implementation}{26}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Control board}{27}{section.5.2}
+\contentsline {section}{\numberline {5.3}Action board}{30}{section.5.3}
+\contentsline {section}{\numberline {5.4}Arduino code}{31}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Initialisation}{32}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}setup()}{32}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}loop()}{32}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}Database}{33}{section.5.5}
+\contentsline {chapter}{\numberline {6}Results}{34}{chapter.6}
+\contentsline {section}{\numberline {6.1}PIR}{36}{section.6.1}
+\contentsline {section}{\numberline {6.2}Light}{37}{section.6.2}
+\contentsline {section}{\numberline {6.3}Temperature}{38}{section.6.3}
+\contentsline {section}{\numberline {6.4}$CH_4$}{38}{section.6.4}
+\contentsline {section}{\numberline {6.5}CO}{39}{section.6.5}
+\contentsline {chapter}{\numberline {7}Conclusions \& Future improvements}{40}{chapter.7}
