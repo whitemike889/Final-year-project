@@ -53,7 +53,7 @@ Dionysios \textsc{Kalantzis}
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{Supervisor:} \\
-Dr.~M. \textsc{Abbot}
+Dr.Maysam. \textsc{Abbot}
 \end{flushright}
 \end{minipage}
 \vfill
@@ -88,14 +88,20 @@ Dr.~M. \textsc{Abbot}
 %
 \chapter{Introduction}
 %
-Air is one of life's essentials for all creatures on Earth. Humans live, work and prosper in air. The quality of air affects humans performance. Throughout the years various methods have been devised to assure the good air quality. For example miners were using canary birds as warning systems until 1987. The presence of toxic gases such as carbon monoxide, methane or carbon dioxide could have deadly consequences. Therefore the notice of any distress from the canary birds would act as a warning. Moreover, high air quality standards improve the performance of the people in a working environment.\\
+Air is one of life's essentials for all creatures on Earth. Humans live, work and prosper in air. The quality of air affects humans performance. Throughout the years various methods have been devised to assure the good air quality. For example miners were using canary birds as warning systems until 1987. The presence of toxic gases such as carbon monoxide, methane or carbon dioxide could have deadly consequences. Therefore the notice of any distress from the canary birds would act as a warning. Studies have shown that low air quality standards affects the performance of the people in a working environment.\cite{airquality} Therefore it compulsory to keep high air quality standards, which will improve performance and advance the general well-being as well.\\
 \ \\
-Nowadays another main issue, in the fast growing world, is power consumption, and how to minimise it. More and more devices are being developed and are becoming available to consumers. Regardless if those devices are mechanical or electrical, they need energy to operate.\\
+Nowadays,in the fast growing world, another great issue is power consumption, and how to minimise it. More and more devices are being developed and are becoming available to consumers. Regardless if those devices are mechanical or electrical, they need energy to operate. Meaningless use of energy increase unnecessary costs and affects the global pollution.\\
 \ \\
-This project presents a system devised to improve the air quality in office buildings and other closed working environments. It can also minimise the energy consumption by using the building's resources only whenever they are needed. This is achieved by constantly monitoring the environmental conditions in a room and operating the lighting and air-conditioning according to the presence and the preferences of the occupants.\\
+Innovation in technology nowadays has made certain services to be considered as granted. Such services are internet, which can be used as a powerful tool to monitor and act on life quality standards. In addition people are able to operate their home and office appliances with the press of only a few buttons. Wireless Sensor Network is a distributed network of sensors that accommodate sensing features of environmental changes and via internet can report these changes all over the world. Recent years system applied on WSN are being noticed.\\
 \ \\
+This project presents a wireless system devised to improve the air quality in office buildings and other closed working environments. The novel approach of this system is use of a low-power wireless standard protocol \textit{IEEE 802.15.4}, which can communicate with heterogeneous systems. \textit{IEEE 802.15.4} is the default standard for low-rate, low-power wireless communication. In addition, it is used by various wireless network embedded platforms such as SunSPOT, iSense, XBee, TelosB, ZigBee and more. This system also introduces the ability of the previous mentioned platforms to communicate between each otherl.\\
+\ \\   
+Additionally it could also control and minimise the energy consumption by using the building's resources only whenever they are needed. This is achieved by constantly monitoring the environmental conditions in a room and operating the lighting and air-conditioning according to the presence and the preferences of the occupants. This means that energy would be reduced by using it only upon demand, and by minimising meaningless use, such as lights forgotten switched on.\\
+\ \\
+A smart system, such as the introduced, can be solution even to complicate building contractions due its wireless connectivity. Moreover the system's network can easily be expanded because of the heterogeneous ability to communicate with various platforms. Furthermore the easy installation and ease of use make it an outstanding solution.
+%
 \section{Project Aims and Objectives}
-This project aims on building a system that monitors the environmental conditions in a room. Moreover the system is in position to operate the lighting and/or air-conditioning of the room, according to the user(s) preferences. \\
+This project aims on building a low power wireless system that monitors the environmental conditions in a room. Moreover the system is in position to operate the lighting and/or air-conditioning of the room, according to the user(s) preferences. \\
 \ \\
 For the project implementation the following steps have been achieved:
 \begin{itemize}
@@ -142,11 +148,16 @@ Wireless sensor network (\textit{WSN}) is a concept that makes IoT vision be mor
 \end{quote} 
 These particles were called \textit{"smart-dust"} \cite{website:smartdust}. WSN is a network consisting of distributed devices that provide sensing features. Lately systems applied on WSN are becoming more and more noticeable. Arduino, which is one of the most common hardware platforms, would make the perfect wireless sensor network node, due to its small size (Arduino Pro Mini), low cost and modularity.\\
 \ \\
-\ \\
 \textit{Uberdust} holds a somewhat executive role to IoT as well as to WSN. Uberdust is one of the promising outcomes of the research program \textbf{SPITFIRE} (\textit{Semantic Service Provisioning for the Internet of Things using Future Internet Research by Experimentation}). SPITFIRE's main aim is to investigate unified concepts methods and software infrastructures that facilitate the efficient development of applications that span and intergrate the Internet and the embedded world. Uberdust is a data storage and brokerage web service for connecting IoT data providers and actuators with data consumers and application developers providing real time as well as historical data.It's main focus is to provide storage, sharing and discovery of real-time data from objects, devices and building installations around the world via the Web.\\
 \ \\
 Additionally a unique experiment research facility is currently being proposed by \textit{Smart Santander}. A city-scale experiment for applications and services of a smart city. \emph{Apollo} could easily be adapted into this experiment, providing information on the energy consumption of the office buildings and not only. This way, the city's resources use would be optimised, achieving an greater energy efficiency.\\
 \ \\
+%
+For this project the Computer Technology Institute and Press "Diophantus" was chosen to collaborate with the author.
+%
+\begin{quote}The Computer Technology Institute and Press "Diophantus" is a research and technology organization focusing on research and development in Information and Communication Technologies (ICT)\cite{website:cti}. \end{quote}
+%
+The main reason for this collaboration is the interest and technical knowledge of the Institution on WSN as well as to the wireless communication protocol that is been used on the project.
 %
 \newpage
 %
@@ -163,7 +174,14 @@ In Figure \ref{arch_design} below there is a visual representation of \emph{Apol
 \label{arch_design}
 \end{figure}
 \ \\
-The \textit{Controller} is a SunSPOT. SunSPOT (Sun Small Programmable Object Technology) is a wireless sensor network mote developed by Sun Microsystems \cite{website:sunspot}. Due to is computational power it is preferred over the Arduino to make the decisions on the operation of the lights and/or the air-conditioning. \\ 
+The \textit{Controller} is a SunSPOT. SunSPOT (Sun Small Programmable Object Technology) is a wireless sensor network mote developed by Sun Microsystems \cite{website:sunspot}. Due to is computational power it is preferred over the Arduino to make the decisions on the operation of the lights and/or the air-conditioning.\label{Controller} \\ 
+\ \\
+\begin{figure}[H]
+\centering
+%\includegraphics*[scale=0.35]{sunspot}
+\caption{Sun SPOT}
+\label{sunspot}
+\end{figure}
 \ \\
 The system works in two stages -- the \emph{passive} process and the \emph{active} process. In order for the system to work on the later stage it is necessary to go through the \emph{passive}. The difference between these two stages is, during the former (\emph{passive}) stage, the system collects the user(s) preferences on the environmental changes. It also observes the environmental values when the user(s) choose to switch on the lights and/or the air conditioning.\\
 \ \\
@@ -234,8 +252,8 @@ From the following diagram it is easy to see the simplicity of sensor's drive ci
 \caption{MQ - 4 sensor's drive circuit}
 \end{figure}
 \ \\
-%%%%%%%%%%%%%%%%%%   FG: WTF? Inversely proportional of directly proportional?? ----------------v____________________
-The sensor requires an input of 5 Volt and its output is an analogue resistance. The output is inversely proportional to the gas concentration. Moreover the greater the gas concentration the higher the output value.
+%%%%%%%%%%%%%%%%%%   FG: CORRECTED 
+The sensor requires an input of 5 Volt and its output is an analogue resistance. The output is inversely proportional to the gas concentration. This means the greater the gas concentration is the lower the output value will be.
 \ \\
 %
 \subsection{MQ - 7 Carbon Monoxide  sensor}
@@ -249,8 +267,8 @@ The \emph{Carbon Monoxide} sensor is as well an easy to use sensor.  The detecti
 \caption{MQ - 7 Dimensions}
 \end{figure}
 \ \\
-%%%%%%%%%%%%%%%%%%   FG: Temperature or voltage?! EXPLAIN. -----------------------------------------------------------------v______________________________
-The MQ - 7 has a slightly more complicated operation technique comparing to the MQ - 4. It detects by cycle high (5 Volts) and low (1.5 Volts) temperature and detects $CO$ when low temperature is applied. When sensor is at high temperature (heated by 5 Volts) cleans the other gases absorbed under the low temperature heating (1.5 Volts). The conductivity of the sensor is higher along the gas concentration rising \cite{website:mq7_datasheet}.
+%%%%%%%%%%%%%%%%%%   FG: done
+The MQ - 7 has a slightly more complicated operation technique comparing to the MQ - 4.It detects the concentration of carbon monoxide by cycles of 5 Volts and 1.5 Volts. Specifically when at sensor is applied 5 Volts, the internal resistance heats up and cleans any other gases absorbed under the cycle of 1.5 Volts, when the internal resistance is at low temperature. The conductivity of the sensor is higher along the gas concentration rising \cite{website:mq7_datasheet}.
 \ \\
 %
 \subsection{LDR - Light Dependent Resistor}
@@ -259,7 +277,7 @@ This is the simplest light sensor. It is a variable resistance of a range betwee
 \\ \
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{ldr}
+\includegraphics*[scale=0.2]{ldr}
 \caption{LDR - Light Dependent Resistor}
 \end{figure}
 \ \\
@@ -286,7 +304,7 @@ The LM335A is a analog temperature sensor. The LM335A works like a Zener diode w
 \ \\
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{lm335}
+\includegraphics*[scale=0.3]{lm335}
 \caption{LM335 - Precision Temperature Sensor}
 \end{figure}
 \ \\
@@ -304,8 +322,8 @@ The control board is the core of the \emph{Apollo}. It is a PCB board which is e
 % 
 %\end{figure}
 \ \\
-%%%%%%%%%%%%%%%%%%   FG: What do you mean by "prepared" ---------------------------------------v______
-The board is connected through pin cable with the sensor board. The collected values are then prepared and sent. This is done with the use of the XBee RF Module.\\
+%%%%%%%%%%%%%%%%%%   FG: done
+The board is connected through pin cable with the sensor board. The collected are then prepared and sent. This is done with the use of the XBee RF Module.\\
 %
 \subsection{Arduino Pro Mini}
 Arduino is an open-source platform based on a micro-controller and a simple software development environment. It can be used to build interactive applications, receiving inputs from several types of sensors and interacting with the environment controlling various actuators.\\
@@ -436,7 +454,20 @@ Eagle PCB Software is a powerful and flexible PCB design program. Eagle is an ac
     \caption{Eagle - Board design}
 \end{figure}
 \ \\
+\section{Database}
+The database is called $\ddot{U}berdust$. It stores data using the WiseDB component of the WiseML library based on Hibernate. Hibernate is a well established relational persistence framework for Java. Hibernate facilitates the storage and retrieval of Java domain objects via Object/Relational Mapping (ORM). Although $\ddot{U}berdust$ was originally developed for storing sensor data from wireless sensor networks, any source can provide data as long as it is in a simple timestamp-based format and a small set of metadata is already provided in the persistence store. $\ddot{U}berdust$ was provided by the Computer Technology Institute and Press "Diophantus". \cite{website:database} \\
+%
+\begin{figure}[H]
+\centering
+    \includegraphics*[scale=0.4]{Uberdust}
+    \caption{$\ddot{U}berdust$}
+
+    \caption{Uberdust}
+\end{figure}
+\ \\
+%
 \newpage
+%
 \chapter{System Design}
 This section presents the overall design of the system as well as of the individual components implementation of \emph{Apollo}. In addition, the design choices are explained and justified in detail and their advantages are analysed in depth.\\
 \ \\
@@ -635,7 +666,17 @@ It was not possible to measure the $CO$ levels as there was an ambiguity on the 
 \ \\
 %
 \section{Database}
-$\ddot{U}berdust$ stores data to an RDBMS using the WiseDB component of the WiseML library based on the state of the art O/RM framework, Hibernate. Hibernate is probably the most well establish relational persistence framework for Java. Hibernate facilitates the storage and retrieval of Java domain objects via Object/Relational Mapping (ORM). Although $\ddot{U}berdust$ was originally developed for storing sensor data from wireless sensor networks, any source can provide data as long as it is in a simple timestamp-based format and a small set of metadata is already provided in the persistence store. and was provided by the Computer Technology Institute and Press "Diophantus". \cite{website:database} \\
+%
+$\ddot{U}berdust$ is database that is based on the Hibernate \cite{website:hibernate}. Hibernate is a Java framework based on an object relational mapping library \cite{website:hibernate-wiki}. The following (Figure \ref{uberdust-uml}) UML diagram is used to visualise the structure of $\ddot{U}berdust$.
+%
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.6]{wisedb2}
+\caption{$\ddot{U}berdust$ - UML description diagram}
+\label{uberdust-uml}
+\end{figure}
+\ \\
+Furthermore the entities (Setup, Node,Link, NodeCapability, etc) are mysql tables of Java classes. For a each of these Java classes there is an xml file which describes the mysql table. With the use of Java a database created by pointing the existence of a database in a computer-server as well as a wisedb  database. Once the database is created by using \textit{controllers\footnote{controllers in this case are functions of Java and irrelevant of the Controllers mentioned in \ref{Controller}}}, which they manage the mysql tables, functions are called. These functions are used to add values into the database as well to add nodes and more. 
 %
 \newpage
 %
@@ -644,21 +685,21 @@ $\ddot{U}berdust$ stores data to an RDBMS using the WiseDB component of the Wise
 \emph{Apollo} was built completely as it can be seen in the following Figures \ref{Sensor_brd_complete} \ref{Control_brd_complete}  \ref{Action_brd_complete}.
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.2]{sens_brd_complete}
+\includegraphics*[scale=0.3]{sens_brd_complete}
 \caption{Sensor board - Completed with all parts soldered}
 \label{Sensor_brd_complete}
 \end{figure}
 \ \\
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.2]{control_brd_complete}
+\includegraphics*[scale=0.3]{control_brd_complete}
 \caption{Control board - Completed with all parts soldered}
 \label{Control_brd_complete}
 \end{figure}
 \ \\
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.2]{action_brd_complete}
+\includegraphics*[scale=0.3]{action_brd_complete}
 \caption{Action board - Completed with all parts soldered}
 \label{Action_brd_complete}
 \end{figure}
@@ -668,7 +709,7 @@ In the next figure is shown the connections between the three boards.
 \ \\
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.2]{apollo_complete}
+\includegraphics*[scale=0.3]{apollo_complete}
 \caption{\emph{Apollo} - All boards are connected}
 \label{all_brd_connected}
 \end{figure}
@@ -686,7 +727,7 @@ The moment each system went live it started reporting the environmental values a
 \ \\
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{pir_1}
+\includegraphics*[scale=0.3]{pir_1}
 \caption{$\ddot{U}berdust$ chart for for PIR sensor in room 0.I.1}
 \label{chart_pir_1}
 \end{figure}
@@ -696,7 +737,7 @@ The moment each system went live it started reporting the environmental values a
 %
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{pir_3}
+\includegraphics*[scale=0.3]{pir_3}
 \caption{$\ddot{U}berdust$ chart for for PIR sensor in room 0.I.3}
 \label{chart_pir_3}
 \end{figure}
@@ -706,7 +747,7 @@ The moment each system went live it started reporting the environmental values a
 %
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{pir_9}
+\includegraphics*[scale=0.3]{pir_9}
 \caption{$\ddot{U}berdust$ chart for for PIR sensor in room 0.I.9}
 \label{chart_pir_9}
 \end{figure}
@@ -716,7 +757,7 @@ The moment each system went live it started reporting the environmental values a
 %
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{light_1}
+\includegraphics*[scale=0.3]{light_1}
 \caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.11}
 \label{chart_light_1}
 \end{figure}
@@ -729,7 +770,7 @@ The moment each system went live it started reporting the environmental values a
 From the following Figure \ref{chart_light_1} is clear the pattern of the light emittance that is followed each day.
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{light_1}
+\includegraphics*[scale=0.3]{light_1}
 \caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.1}
 \label{chart_light_1}
 \end{figure}
@@ -740,7 +781,7 @@ From the following Figure \ref{chart_light_1} is clear the pattern of the light 
 In the expanded chart in Figure \ref{chart_light_3}, is visible the light's strength during a day.
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{light_3}
+\includegraphics*[scale=0.3]{light_3}
 \caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.3}
 \label{chart_light_3}
 \end{figure}
@@ -751,7 +792,7 @@ In the expanded chart in Figure \ref{chart_light_3}, is visible the light's stre
 In this case the illuminance of different room is being presented.
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{pir_9}
+\includegraphics*[scale=0.3]{pir_9}
 \caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.9}
 \label{chart_light_9}
 \end{figure}
@@ -762,7 +803,7 @@ In this case the illuminance of different room is being presented.
 The occupants of this room have a preference of low light emittance. This can be seen from the low values from the light sensor.
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{light_11}
+\includegraphics*[scale=0.3]{light_11}
 \caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.11}
 \label{chart_light_11}
 \end{figure}
@@ -775,7 +816,7 @@ The occupants of this room have a preference of low light emittance. This can be
 The temperature show a steady value around 24$^\circ C$ during the whole day. This is due to the fact of electronics dissipating heat.
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{temp_1}
+\includegraphics*[scale=0.3]{temp_1}
 \caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
 \label{chart_temp_1}
 \end{figure}
@@ -786,7 +827,7 @@ The temperature show a steady value around 24$^\circ C$ during the whole day. Th
 As all rooms are installed with computers with high computing power the levels of dissipating heat are quit high.
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{temp_3}
+\includegraphics*[scale=0.3]{temp_3}
 \caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
 \label{chart_temp_3}
 \end{figure}
@@ -797,7 +838,7 @@ As all rooms are installed with computers with high computing power the levels o
 The same situation is seen in this room as well.
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{temp_9}
+\includegraphics*[scale=0.3]{temp_9}
 \caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
 \label{chart_temp_9}
 \end{figure}
@@ -808,7 +849,7 @@ The same situation is seen in this room as well.
 In Figure \ref{chart_temp_11} it is indicated that around 14:00 the ventilation was turned on. This is due to just a small drop of temperature.
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{temp_11}
+\includegraphics*[scale=0.3]{temp_11}
 \caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
 \label{chart_temp_11}
 \end{figure}
@@ -821,7 +862,7 @@ The \textit{Methane} $CH_4$ levels are constant and at a low value. The \textit{
 %
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{ch4_1}
+\includegraphics*[scale=0.3]{ch4_1}
 \caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
 \label{chart_ch4_1}
 \end{figure}
@@ -831,7 +872,7 @@ The \textit{Methane} $CH_4$ levels are constant and at a low value. The \textit{
 %
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{ch4_3}
+\includegraphics*[scale=0.3]{ch4_3}
 \caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
 \label{chart_ch4_3}
 \end{figure}
@@ -841,7 +882,7 @@ The \textit{Methane} $CH_4$ levels are constant and at a low value. The \textit{
 %
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{ch4_9}
+\includegraphics*[scale=0.3]{ch4_9}
 \caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
 \label{chart_ch4_9}
 \end{figure}
@@ -851,7 +892,7 @@ The \textit{Methane} $CH_4$ levels are constant and at a low value. The \textit{
 %
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.2]{ch4_11}
+\includegraphics*[scale=0.3]{ch4_11}
 \caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
 \label{chart_ch4_11}
 \end{figure}

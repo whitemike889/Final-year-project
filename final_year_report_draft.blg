@@ -2,57 +2,46 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: final_year_report_draft.aux
 The style file: acm.bst
 Database file #1: Citation.bib
-You're missing a field name---line 82 of file Citation.bib
- :    
- :    %month    = {May},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "website:carbon_trust"
-Warning--I didn't find a database entry for "xbee"
-Name 1 in "Department for Communities, and Local Government" has a comma at the end for entry website:building_reg
-while executing---line 1086 of file acm.bst
 Warning--empty booktitle in iotconference
-Name 1 in "Department for Communities, and Local Government" has a comma at the end for entry website:building_reg
-while executing---line 1127 of file acm.bst
-You've used 15 entries,
+You've used 18 entries,
             2253 wiz_defined-function locations,
-            587 strings with 5349 characters,
-and the built_in function-call counts, 3335 in all, are:
-= -- 301
-> -- 115
+            597 strings with 5512 characters,
+and the built_in function-call counts, 3932 in all, are:
+= -- 355
+> -- 131
 < -- 0
-+ -- 50
-- -- 34
-* -- 122
-:= -- 544
-add.period$ -- 45
-call.type$ -- 15
-change.case$ -- 62
++ -- 57
+- -- 38
+* -- 139
+:= -- 640
+add.period$ -- 54
+call.type$ -- 18
+change.case$ -- 73
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 130
-empty$ -- 353
-format.name$ -- 34
-if$ -- 728
+cite$ -- 19
+duplicate$ -- 154
+empty$ -- 422
+format.name$ -- 38
+if$ -- 860
 int.to.chr$ -- 0
-int.to.str$ -- 15
+int.to.str$ -- 18
 missing$ -- 1
-newline$ -- 78
-num.names$ -- 30
-pop$ -- 123
+newline$ -- 93
+num.names$ -- 36
+pop$ -- 146
 preamble$ -- 1
-purify$ -- 47
+purify$ -- 55
 quote$ -- 0
-skip$ -- 123
+skip$ -- 147
 stack$ -- 0
-substring$ -- 88
-swap$ -- 33
+substring$ -- 103
+swap$ -- 39
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
+type$ -- 72
 warning$ -- 1
-while$ -- 32
-width$ -- 17
-write$ -- 137
-(There were 3 error messages)
+while$ -- 38
+width$ -- 20
+write$ -- 164
+(There was 1 warning)

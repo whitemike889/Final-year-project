@@ -25,10 +25,20 @@
 \newblock The internet of things – promise for the future? an introduction.
 \newblock pp.~1--9.
 
+\bibitem{website:cti}
+{\sc CTIP}.
+\newblock Home - cti.
+\newblock \url{http://www.cti.gr/en/}.
+
 \bibitem{website:building_reg}
-{\sc for Communities, D., and Government, L.}
+{\sc {Department for Communities, and Local Government}}.
 \newblock Part l of the building regulations.
 \newblock \url{http://goo.gl/O2Okb}.
+
+\bibitem{website:xbee}
+{\sc Digi}.
+\newblock Xbee-pro 802.15.4.
+\newblock \url{http://goo.gl/YcHh4}.
 
 \bibitem{website:mq7_datasheet}
 {\sc HANWEI, Electronics, C.}
@@ -64,6 +74,11 @@
 {\sc Sutter, J.~D.}
 \newblock 'smart dust' aims to monitor everything.
 \newblock \url{http://goo.gl/KdK7q}.
+
+\bibitem{website:carbon_trust}
+{\sc Trust, C.}
+\newblock Existing buildings.
+\newblock \url{http://goo.gl/Utai4}.
 
 \bibitem{website:iot}
 {\sc Wikipedia}.
