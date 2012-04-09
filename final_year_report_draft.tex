@@ -127,6 +127,9 @@ Modifyin an existing building can be very expensive and extremely inconvenient, 
 \section {Ventilation and air quality standards}
 Clean air is very important for a working environment. Productivity may be reduced by up to 20\%, as studies has shown. The pollution, which human and machines produces can make the air feel heavy and humid. This is due to the fact that both continuously produce vapours and heat. The result of operating in this environment could be tiredness and discomfort from the increased $CO2$ and temperature levels. Studies has shown that in order to maintain a good indoor climate in an office, the air should be replaced at least three times per hour. In many rooms, such as laboratories, cooling is also essential if just the ventilation is not enough \cite{website:ventilation}.
 %
+\section{Building management system}
+Building Management System (\textit{BMS}) is a computer base control system for monitoring and operating mechanical and electrical equipment. BMS made its appearance in the early 1970's with the introduction of complex electronic devices that could collect and store data for managing services such as lighting and heating. BMS systems have seen great development since their appearance. They used to be big electromechanical systems controlling the buildings. Nowadays BMS is a software application that collects data from all over the building and these data presented in a computer screen. BMS systems functionality varies, depending on the demands and the building owner's investment. For example, a BMS system may control the lighting, heating, ventilation and air conditioning for the whole building or for each floor separately, or can even split the floor into sections and so on. The downside of BMS is the high cost and the prerequisite of including the installation at the construction of the building. The cost is also increasing with the depth of systems specialisation on the level of section control.\cite{website:bms}
+%
 \section{Internet of Things}
 The \textit{Internet of Things} (IoT) is the concept of globally interconnected devices -- \textit{things} with RFID \textit{(Radio-Frequency IDentification)} technology with virtual representation in an Internet-like structure. 
 With the rapid technology developments today, the interconnection of the \textit{things} is feasible between heterogeneous devices. Once connected to the Internet these devices can report in real time from anywhere on the globe. Moreover due to their uniqueness, it is easy to map where the data are coming from and most importantly what they are reporting\cite{website:iot}.\\
@@ -148,9 +151,9 @@ Wireless sensor network (\textit{WSN}) is a concept that makes IoT vision be mor
 \end{quote} 
 These particles were called \textit{"smart-dust"} \cite{website:smartdust}. WSN is a network consisting of distributed devices that provide sensing features. Lately systems applied on WSN are becoming more and more noticeable. Arduino, which is one of the most common hardware platforms, would make the perfect wireless sensor network node, due to its small size (Arduino Pro Mini), low cost and modularity.\\
 \ \\
-\textit{Uberdust} holds a somewhat executive role to IoT as well as to WSN. Uberdust is one of the promising outcomes of the research program \textbf{SPITFIRE} (\textit{Semantic Service Provisioning for the Internet of Things using Future Internet Research by Experimentation}). SPITFIRE's main aim is to investigate unified concepts methods and software infrastructures that facilitate the efficient development of applications that span and intergrate the Internet and the embedded world. Uberdust is a data storage and brokerage web service for connecting IoT data providers and actuators with data consumers and application developers providing real time as well as historical data.It's main focus is to provide storage, sharing and discovery of real-time data from objects, devices and building installations around the world via the Web.\\
-\ \\
-Additionally a unique experiment research facility is currently being proposed by \textit{Smart Santander}. A city-scale experiment for applications and services of a smart city. \emph{Apollo} could easily be adapted into this experiment, providing information on the energy consumption of the office buildings and not only. This way, the city's resources use would be optimised, achieving an greater energy efficiency.\\
+%\textit{Uberdust} holds a somewhat executive role to IoT as well as to WSN. Uberdust is one of the promising outcomes of the research program \textbf{SPITFIRE} (\textit{Semantic Service Provisioning for the Internet of Things using Future Internet Research by Experimentation}). SPITFIRE's main aim is to investigate unified concepts methods and software infrastructures that facilitate the efficient development of applications that span and intergrate the Internet and the embedded world. Uberdust is a data storage and brokerage web service for connecting IoT data providers and actuators with data consumers and application developers providing real time as well as historical data.It's main focus is to provide storage, sharing and discovery of real-time data from objects, devices and building installations around the world via the Web.\\
+%\ \\
+A unique experiment research facility is currently being proposed by \textit{Smart Santander}. A city-scale experiment for applications and services of a smart city. \emph{Apollo} could easily be adapted into this experiment, providing information on the energy consumption of the office buildings and not only. This way, the city's resources use would be optimised, achieving an greater energy efficiency.\\
 \ \\
 %
 For this project the Computer Technology Institute and Press "Diophantus" was chosen to collaborate with the author.
@@ -170,7 +173,7 @@ In Figure \ref{arch_design} below there is a visual representation of \emph{Apol
 \begin{figure}[H]
 \centering
 \includegraphics*[scale=0.35]{architecture_design}
-\caption{Overall system design - Block diagram}
+\caption{Board communication - Block diagram}
 \label{arch_design}
 \end{figure}
 \ \\
@@ -178,7 +181,8 @@ The \textit{Controller} is a SunSPOT. SunSPOT (Sun Small Programmable Object Tec
 \ \\
 \begin{figure}[H]
 \centering
-%\includegraphics*[scale=0.35]{sunspot}
+\includegraphics*[scale=0.35]{sunspot1}
+\includegraphics*[scale=0.35]{sunspot2}
 \caption{Sun SPOT}
 \label{sunspot}
 \end{figure}
@@ -192,6 +196,15 @@ As the weather conditions change over the year it is advised to use the system o
 Regarding the modifications, user(s) are also able to use the web interface of the system to manually control the lighting and/or air conditioning. The web interface is a medium where user(s) can remotely access and interact with the system. This could mean operating manually the lighting and/or air conditioning remotely. The user(s) are also capable to check the status of the system via the web interface.\\
 \ \\
 The status of the system is generally used for security reasons as \emph{Apollo} can inform the owner of the office of any unusual changes in environmental conditions. This is useful for example to detect fires. Moreover every time the system recognise an unauthorised person using the office can remotely inform its owner through the internet with an email.\\
+\ \\
+The following Figure \ref{syst-arch} gives an overall description of \emph{Apollo}. The different wireless sensor system nodes can communicate between each other in a heterogeneous network. The nodes through a Controller (SunSPOT) feed their data into the database. \emph{Apollo} can also get instructions from the Controller to operate the lighting and/or air conditioning of the room theya are installed in.
+\ \\
+\begin{figure}[H]
+\centering
+\includegraphics*[scale=0.35]{syst-arch}
+\caption{System Architecture}
+\label{syst-arch}
+\end{figure}
 \ \\
 %
 \newpage

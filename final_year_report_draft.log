@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.2.16)  9 APR 2012 09:56
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.2.16)  9 APR 2012 23:44
 entering extended mode
  %&-line parsing enabled.
 **final_year_report_draft.tex
@@ -495,88 +495,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--127
 [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 131--137
+
+LaTeX Warning: Citation `website:bms' on page 8 undefined on input line 131.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--137
+Underfull \hbox (badness 10000) in paragraph at lines 134--140
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 152--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--158
+Underfull \hbox (badness 10000) in paragraph at lines 152--161
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--158
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--158
-
- []
-
-[8] [9]
+[9]
 Chapter 3.
 File: architecture_design.eps Graphic file (type eps)
 <architecture_design.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 166--175
+Underfull \hbox (badness 10000) in paragraph at lines 169--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--175
+Underfull \hbox (badness 10000) in paragraph at lines 169--178
+
+ []
+
+File: sunspot1.eps Graphic file (type eps)
+<sunspot1.eps>
+File: sunspot2.eps Graphic file (type eps)
+ <sunspot2.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 179--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--184
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 176--184
+Underfull \hbox (badness 10000) in paragraph at lines 179--188
 
  []
 
 [10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 185--197
+
+LaTeX Warning: Reference `syst-arch' on page 11 undefined on input line 200.
+
+File: syst-arch.eps Graphic file (type eps)
+<syst-arch.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 189--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--197
+Underfull \hbox (badness 10000) in paragraph at lines 189--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--197
+Underfull \hbox (badness 10000) in paragraph at lines 189--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--197
+Underfull \hbox (badness 10000) in paragraph at lines 189--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--197
+Underfull \hbox (badness 10000) in paragraph at lines 189--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--197
+Underfull \hbox (badness 10000) in paragraph at lines 189--207
 
  []
 
 [11]
+Underfull \hbox (badness 10000) in paragraph at lines 208--210
+
+ []
+
+[12]
 Chapter 4.
-[12
+[13
 
 ]
 File: mq4.eps Graphic file (type eps)
@@ -585,7 +597,7 @@ File: mq4_2.eps Graphic file (type eps)
  <mq4_2.eps>
 File: mq4_structure-configuration.eps Graphic file (type eps)
  <mq4_structure-configuration.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 254--259
+Underfull \hbox (badness 10000) in paragraph at lines 267--272
 
  []
 
@@ -593,23 +605,23 @@ File: mq7.eps Graphic file (type eps)
 <mq7.eps>
 File: mq7_2.eps Graphic file (type eps)
  <mq7_2.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 260--268
+Underfull \hbox (badness 10000) in paragraph at lines 273--281
 
  []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 269--274
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 282--287
 
  []
 
 File: ldr.eps Graphic file (type eps)
 <ldr.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 275--282
+Underfull \hbox (badness 10000) in paragraph at lines 288--295
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--287
+Underfull \hbox (badness 10000) in paragraph at lines 296--300
 
  []
 
@@ -617,12 +629,12 @@ File: pir.eps Graphic file (type eps)
 <pir.eps>
 File: pir_2.eps Graphic file (type eps)
  <pir_2.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 288--296
+Underfull \hbox (badness 10000) in paragraph at lines 301--309
 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 297--301
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 310--314
 
  []
 
@@ -633,56 +645,56 @@ Missing character: There is no ˆ in font cmr12!
 Missing character: There is no ’ in font cmr12!
 File: lm335.eps Graphic file (type eps)
 <lm335.eps>
-Overfull \hbox (2.90178pt too wide) in paragraph at lines 303--309
+Overfull \hbox (2.90178pt too wide) in paragraph at lines 316--322
 \OT1/cmr/m/n/12 diode with a break-down volt-age pro-por-tional to ab-so-lute t
 em-per-a-ture at 10mV/$[]\OML/cmm/m/it/12 K$\OT1/cmr/m/n/12 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--309
+Underfull \hbox (badness 10000) in paragraph at lines 316--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--312
+Underfull \hbox (badness 10000) in paragraph at lines 323--325
 
  []
 
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 324--328
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 337--341
 
  []
 
 File: arduinopromini.eps Graphic file (type eps)
 <arduinopromini.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 329--336
+Underfull \hbox (badness 10000) in paragraph at lines 342--349
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--336
+Underfull \hbox (badness 10000) in paragraph at lines 342--349
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--362
+Underfull \hbox (badness 10000) in paragraph at lines 350--375
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--362
+Underfull \hbox (badness 10000) in paragraph at lines 350--375
 
  []
 
-[16]
+[17]
 File: xbee.eps Graphic file (type eps)
- <xbee.eps> [17]
-Underfull \hbox (badness 10000) in paragraph at lines 376--379
+ <xbee.eps> [18]
+Underfull \hbox (badness 10000) in paragraph at lines 389--392
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--379
+Underfull \hbox (badness 10000) in paragraph at lines 389--392
 
  []
 
@@ -690,362 +702,351 @@ File: realy.eps Graphic file (type eps)
 <realy.eps>
 File: relay_2.eps Graphic file (type eps)
  <relay_2.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 380--387
+Underfull \hbox (badness 10000) in paragraph at lines 393--400
 
  []
 
 File: led.eps Graphic file (type eps)
-<led.eps> [18]
-Underfull \hbox (badness 10000) in paragraph at lines 411--413
+<led.eps> [19]
+Underfull \hbox (badness 10000) in paragraph at lines 424--426
 
  []
 
 File: arduinomain.eps Graphic file (type eps)
-<arduinomain.eps> [19]
-Underfull \hbox (badness 10000) in paragraph at lines 421--425
+<arduinomain.eps> [20]
+Underfull \hbox (badness 10000) in paragraph at lines 434--438
 
  []
 
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 436--438
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 449--451
 
  []
 
 File: cooltermtinux.eps Graphic file (type eps)
 <cooltermtinux.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 445--447
+Underfull \hbox (badness 10000) in paragraph at lines 458--460
 
  []
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 456--457
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 469--470
 
  []
 
 File: Uberdust.eps Graphic file (type eps)
 <Uberdust.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 458--466
+Underfull \hbox (badness 10000) in paragraph at lines 471--479
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 467--469
+Underfull \hbox (badness 10000) in paragraph at lines 480--482
 
  []
 
-[22]
+[23]
 Chapter 5.
 Missing character: There is no Â in font cmr12!
 Missing character: There is no £ in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--482
+Underfull \hbox (badness 10000) in paragraph at lines 485--495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--482
+Underfull \hbox (badness 10000) in paragraph at lines 485--495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--482
+Underfull \hbox (badness 10000) in paragraph at lines 485--495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 472--482
+Underfull \hbox (badness 10000) in paragraph at lines 485--495
 
  []
 
-[23
+[24
 
 ]
 File: sens_brd_s1.eps Graphic file (type eps)
  <sens_brd_s1.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 484--493
+Underfull \hbox (badness 10000) in paragraph at lines 497--506
 
  []
 
 File: sens_brd_s2.eps Graphic file (type eps)
-<sens_brd_s2.eps> [24]
+<sens_brd_s2.eps> [25]
 File: sens_brd_s3.eps Graphic file (type eps)
  <sens_brd_s3.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 502--510
+Underfull \hbox (badness 10000) in paragraph at lines 515--523
 
  []
 
 File: sens_brd_s4.eps Graphic file (type eps)
 <sens_brd_s4.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 511--519
-
- []
-
-[25]
-File: sens_brd_s5.eps Graphic file (type eps)
- <sens_brd_s5.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 520--528
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 529--531
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 532--539
+Underfull \hbox (badness 10000) in paragraph at lines 524--532
 
  []
 
 [26]
+File: sens_brd_s5.eps Graphic file (type eps)
+ <sens_brd_s5.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 533--541
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 542--544
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--552
+
+ []
+
+[27]
 File: sens_brd_s7.eps Graphic file (type eps)
  <sens_brd_s7.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 540--548
+Underfull \hbox (badness 10000) in paragraph at lines 553--561
 
  []
 
 File: sens_brd_s8.eps Graphic file (type eps)
 <sens_brd_s8.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 549--557
+Underfull \hbox (badness 10000) in paragraph at lines 562--570
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 549--557
+Underfull \hbox (badness 10000) in paragraph at lines 562--570
 
  []
 
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 558--562
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 571--575
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 558--562
+Underfull \hbox (badness 10000) in paragraph at lines 571--575
 
  []
 
 File: control_brd_s1.eps Graphic file (type eps)
 <control_brd_s1.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 563--570
+Underfull \hbox (badness 10000) in paragraph at lines 576--583
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 563--570
+Underfull \hbox (badness 10000) in paragraph at lines 576--583
 
  []
 
-[28]
+[29]
 File: control_brd_s2.eps Graphic file (type eps)
  <control_brd_s2.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 571--577
+Underfull \hbox (badness 10000) in paragraph at lines 584--590
 
  []
 
 File: control_brd_s3.eps Graphic file (type eps)
 <control_brd_s3.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 578--584
+Underfull \hbox (badness 10000) in paragraph at lines 591--597
 
  []
 
-[29]
+[30]
 File: control_brd_s4.eps Graphic file (type eps)
  <control_brd_s4.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 585--591
+Underfull \hbox (badness 10000) in paragraph at lines 598--604
 
  []
 
 File: arduino_header.eps Graphic file (type eps)
 <arduino_header.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 592--600
+Underfull \hbox (badness 10000) in paragraph at lines 605--613
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 592--600
+Underfull \hbox (badness 10000) in paragraph at lines 605--613
 
  []
 
-[30]
+[31]
 File: action_brd_s1.eps Graphic file (type eps)
  <action_brd_s1.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 603--610
+Underfull \hbox (badness 10000) in paragraph at lines 616--623
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 603--610
+Underfull \hbox (badness 10000) in paragraph at lines 616--623
 
  []
 
 File: action_brd_s2.eps Graphic file (type eps)
 <action_brd_s2.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 611--617
-
- []
-
-[31]
-File: action_brd_s3.eps Graphic file (type eps)
- <action_brd_s3.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 618--624
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 625--635
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 639--645
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 639--645
+Underfull \hbox (badness 10000) in paragraph at lines 624--630
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 646--650
+File: action_brd_s3.eps Graphic file (type eps)
+ <action_brd_s3.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 631--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 651--668
+Underfull \hbox (badness 10000) in paragraph at lines 638--648
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 651--668
+Underfull \hbox (badness 10000) in paragraph at lines 652--658
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 651--668
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 651--668
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 651--668
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 651--668
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 651--668
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 651--668
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 651--668
+Underfull \hbox (badness 10000) in paragraph at lines 652--658
 
  []
 
 [33]
+Underfull \hbox (badness 10000) in paragraph at lines 659--663
 
-LaTeX Warning: Citation `website:hibernate' on page 34 undefined on input line 
-670.
+ []
 
 
-LaTeX Warning: Citation `website:hibernate-wiki' on page 34 undefined on input 
-line 670.
+Underfull \hbox (badness 10000) in paragraph at lines 664--681
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 664--681
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 664--681
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 664--681
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 664--681
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 664--681
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 664--681
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 664--681
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 664--681
+
+ []
+
+[34]
+
+LaTeX Warning: Citation `website:hibernate' on page 35 undefined on input line 
+683.
+
+
+LaTeX Warning: Citation `website:hibernate-wiki' on page 35 undefined on input 
+line 683.
 
 File: wisedb2.eps Graphic file (type eps)
 <wisedb2.eps>
-Overfull \hbox (251.06915pt too wide) in paragraph at lines 674--675
+Overfull \hbox (251.06915pt too wide) in paragraph at lines 687--688
  [][] 
  []
 
-[34] [35]
+[35] [36]
 Chapter 6.
 File: sens_brd_complete.eps Graphic file (type eps)
 <sens_brd_complete.eps>
 File: control_brd_complete.eps Graphic file (type eps)
  <control_brd_complete.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 692--698
+Underfull \hbox (badness 10000) in paragraph at lines 705--711
 
  []
 
-[36
+[37
 
 ]
 File: action_brd_complete.eps Graphic file (type eps)
  <action_brd_complete.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 699--705
-
- []
-
-[37]
-File: apollo_complete.eps Graphic file (type eps)
- <apollo_complete.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 706--715
+Underfull \hbox (badness 10000) in paragraph at lines 712--718
 
  []
 
 [38]
-Underfull \hbox (badness 10000) in paragraph at lines 716--723
+File: apollo_complete.eps Graphic file (type eps)
+ <apollo_complete.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 719--728
+
+ []
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 729--736
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 716--723
+Underfull \hbox (badness 10000) in paragraph at lines 729--736
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 716--723
+Underfull \hbox (badness 10000) in paragraph at lines 729--736
 
  []
 
 File: pir_1.eps Graphic file (type eps)
 <pir_1.eps>
-Overfull \hbox (157.41832pt too wide) in paragraph at lines 730--731
+Overfull \hbox (157.41832pt too wide) in paragraph at lines 743--744
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 725--733
+Underfull \hbox (badness 10000) in paragraph at lines 738--746
 
  []
 
-[39]
+[40]
 File: pir_3.eps Graphic file (type eps)
  <pir_3.eps>
-Overfull \hbox (160.73073pt too wide) in paragraph at lines 740--741
+Overfull \hbox (160.73073pt too wide) in paragraph at lines 753--754
  [][] 
  []
 
 File: pir_9.eps Graphic file (type eps)
 <pir_9.eps>
-Overfull \hbox (160.73073pt too wide) in paragraph at lines 750--751
+Overfull \hbox (160.73073pt too wide) in paragraph at lines 763--764
  [][] 
- []
-
-File: light_1.eps Graphic file (type eps)
-<light_1.eps>
-Overfull \hbox (160.42961pt too wide) in paragraph at lines 760--761
- [][] 
- []
-
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 764--766
-
  []
 
 File: light_1.eps Graphic file (type eps)
@@ -1054,132 +1055,143 @@ Overfull \hbox (160.42961pt too wide) in paragraph at lines 773--774
  [][] 
  []
 
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 777--779
+
+ []
+
+File: light_1.eps Graphic file (type eps)
+<light_1.eps>
+Overfull \hbox (160.42961pt too wide) in paragraph at lines 786--787
+ [][] 
+ []
+
 File: light_3.eps Graphic file (type eps)
 <light_3.eps>
-Overfull \hbox (159.82735pt too wide) in paragraph at lines 784--785
+Overfull \hbox (159.82735pt too wide) in paragraph at lines 797--798
  [][] 
  []
 
 File: pir_9.eps Graphic file (type eps)
 <pir_9.eps>
-Overfull \hbox (160.73073pt too wide) in paragraph at lines 795--796
+Overfull \hbox (160.73073pt too wide) in paragraph at lines 808--809
  [][] 
  []
 
-[41]
+[42]
 File: light_11.eps Graphic file (type eps)
  <light_11.eps>
-Overfull \hbox (161.63411pt too wide) in paragraph at lines 806--807
+Overfull \hbox (161.63411pt too wide) in paragraph at lines 819--820
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 810--812
+Underfull \hbox (badness 10000) in paragraph at lines 823--825
 
  []
 
 File: temp_1.eps Graphic file (type eps)
 <temp_1.eps>
-Overfull \hbox (159.82735pt too wide) in paragraph at lines 819--820
+Overfull \hbox (159.82735pt too wide) in paragraph at lines 832--833
  [][] 
  []
 
-[42]
+[43]
 File: temp_3.eps Graphic file (type eps)
  <temp_3.eps>
-Overfull \hbox (160.42961pt too wide) in paragraph at lines 830--831
+Overfull \hbox (160.42961pt too wide) in paragraph at lines 843--844
  [][] 
  []
 
 File: temp_9.eps Graphic file (type eps)
 <temp_9.eps>
-Overfull \hbox (160.73073pt too wide) in paragraph at lines 841--842
+Overfull \hbox (160.73073pt too wide) in paragraph at lines 854--855
  [][] 
  []
 
 File: temp_11.eps Graphic file (type eps)
 <temp_11.eps>
-Overfull \hbox (160.12848pt too wide) in paragraph at lines 852--853
+Overfull \hbox (160.12848pt too wide) in paragraph at lines 865--866
  [][] 
  []
 
-[43]
-Underfull \hbox (badness 10000) in paragraph at lines 856--858
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 869--871
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 858.
+(hyperref)                removing `math shift' on input line 871.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 858.
+(hyperref)                removing `subscript' on input line 871.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 858.
+(hyperref)                removing `math shift' on input line 871.
 
 File: ch4_1.eps Graphic file (type eps)
 <ch4_1.eps>
-Overfull \hbox (159.2251pt too wide) in paragraph at lines 865--866
+Overfull \hbox (159.2251pt too wide) in paragraph at lines 878--879
  [][] 
  []
 
 File: ch4_3.eps Graphic file (type eps)
 <ch4_3.eps>
-Overfull \hbox (161.03186pt too wide) in paragraph at lines 875--876
+Overfull \hbox (161.03186pt too wide) in paragraph at lines 888--889
  [][] 
  []
 
 File: ch4_9.eps Graphic file (type eps)
 <ch4_9.eps>
-Overfull \hbox (160.73073pt too wide) in paragraph at lines 885--886
+Overfull \hbox (160.73073pt too wide) in paragraph at lines 898--899
  [][] 
- []
-
-[44]
-File: ch4_11.eps Graphic file (type eps)
- <ch4_11.eps>
-Overfull \hbox (160.42961pt too wide) in paragraph at lines 895--896
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 899--901
-
  []
 
 [45]
+File: ch4_11.eps Graphic file (type eps)
+ <ch4_11.eps>
+Overfull \hbox (160.42961pt too wide) in paragraph at lines 908--909
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 912--914
+
+ []
+
+[46]
 Chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 908--920
+Underfull \hbox (badness 10000) in paragraph at lines 921--933
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 908--920
+Underfull \hbox (badness 10000) in paragraph at lines 921--933
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 908--920
+Underfull \hbox (badness 10000) in paragraph at lines 921--933
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 908--920
+Underfull \hbox (badness 10000) in paragraph at lines 921--933
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 908--920
+Underfull \hbox (badness 10000) in paragraph at lines 921--933
 
  []
 
-[46
+[47
 
-] [47] (./final_year_report_draft.bbl
+] [48] (./final_year_report_draft.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 9--12
 []\OT1/cmr/m/sc/12 Arduino\OT1/cmr/m/n/12 .  Ar-duino de-vel-op-ment en-vi-ron-
 ment.
@@ -1223,9 +1235,9 @@ Overfull \hbox (60.71739pt too wide) in paragraph at lines 84--87
  
  []
 
-[48
+[49
 
-]) [49] [50
+]) [50] [51
 
 ] (./final_year_report_draft.aux)
 
@@ -1236,12 +1248,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7608 strings out of 495062
- 111339 string characters out of 1182644
+ 7617 strings out of 495062
+ 111450 string characters out of 1182644
  195978 words of memory out of 3000000
- 10618 multiletter control sequences out of 15000+50000
+ 10624 multiletter control sequences out of 15000+50000
  15781 words of font info for 60 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 38i,11n,43p,891b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,11n,43p,1179b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on final_year_report_draft.dvi (53 pages, 167792 bytes).
+Output written on final_year_report_draft.dvi (54 pages, 170288 bytes).
