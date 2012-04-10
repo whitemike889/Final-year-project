@@ -1,0 +1,11 @@
+# Ignore latex build files
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.lof
+*.log
+*.lot
+*.out
+*.ps
+*.toc
