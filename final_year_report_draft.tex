@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{report}
+\documentclass[12pt,a4paper,draft]{report}
 \usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{caption}
@@ -88,30 +88,38 @@ Dr.Maysam. \textsc{Abbot}
 %
 \chapter{Introduction}
 %
-Air is one of life's essentials for all creatures on Earth. Humans live, work and prosper in air. The quality of air affects humans performance. Throughout the years various methods have been devised to assure the good air quality. For example miners were using canary birds as warning systems until 1987. The presence of toxic gases such as carbon monoxide, methane or carbon dioxide could have deadly consequences. Therefore the notice of any distress from the canary birds would act as a warning. Studies have shown that low air quality standards affects the performance of the people in a working environment.\cite{airquality} Therefore it compulsory to keep high air quality standards, which will improve performance and advance the general well-being as well.\\
+Air is one of life's essentials for all creatures on Earth. Humans live, work and prosper in air. The quality of air affects humans performance. Throughout the years various methods have been devised to assure the good air quality. For example miners were using canary birds as warning systems until 1987. The presence of toxic gases such as carbon monoxide, methane or carbon dioxide could have had deadly consequences for them. Therefore the notice of any distress from the canary birds would act as a warning. Studies have shown that low air quality standards affects the performance of the people in a working environment \cite{airquality}. Therefore it necessary to keep high air quality standards, which will improve people's working performance as well as their general well-being.\\
 \ \\
-Nowadays,in the fast growing world, another great issue is power consumption, and how to minimise it. More and more devices are being developed and are becoming available to consumers. Regardless if those devices are mechanical or electrical, they need energy to operate. Meaningless use of energy increase unnecessary costs and affects the global pollution.\\
+Another great issue in today's fast growing world is power consumption and how to minimise it. More and more devices are being developed and are becoming available to consumers. Regardless if these devices are mechanical or electrical, they need energy to operate. Meaningless use of energy increases unnecessary costs and affects the global pollution.\\
 \ \\
-Innovation in technology nowadays has made certain services to be considered as granted. Such services are internet, which can be used as a powerful tool to monitor and act on life quality standards. In addition people are able to operate their home and office appliances with the press of only a few buttons. Wireless Sensor Network is a distributed network of sensors that accommodate sensing features of environmental changes and via internet can report these changes all over the world. Recent years system applied on WSN are being noticed.\\
+Innovation in technology nowadays has made us take certain services for granted. Such services include the Internet, which can be used as a powerful tool to monitor and act on life quality standards. In addition people are able to operate their home and office appliances with the simple pressing of a few buttons. Wireless Sensor Network is a distributed network of sensors that accommodate sensing features of environmental changes which can be reported all over the world via the Internet. The recent years have witnessed an explosion in the number of system applied relying upon WSN.\\
 \ \\
-This project presents a wireless system devised to improve the air quality in office buildings and other closed working environments. The novel approach of this system is use of a low-power wireless standard protocol \textit{IEEE 802.15.4}, which can communicate with heterogeneous systems. \textit{IEEE 802.15.4} is the default standard for low-rate, low-power wireless communication. In addition, it is used by various wireless network embedded platforms such as SunSPOT, iSense, XBee, TelosB, ZigBee and more. This system also introduces the ability of the previous mentioned platforms to communicate between each otherl.\\
-\ \\   
-Additionally it could also control and minimise the energy consumption by using the building's resources only whenever they are needed. This is achieved by constantly monitoring the environmental conditions in a room and operating the lighting and air-conditioning according to the presence and the preferences of the occupants. This means that energy would be reduced by using it only upon demand, and by minimising meaningless use, such as lights forgotten switched on.\\
-\ \\
-A smart system, such as the introduced, can be solution even to complicate building contractions due its wireless connectivity. Moreover the system's network can easily be expanded because of the heterogeneous ability to communicate with various platforms. Furthermore the easy installation and ease of use make it an outstanding solution.
-%
+%%%%%%%%%%%%%%%%%%   FG: I moved the section title here.
 \section{Project Aims and Objectives}
-This project aims on building a low power wireless system that monitors the environmental conditions in a room. Moreover the system is in position to operate the lighting and/or air-conditioning of the room, according to the user(s) preferences. \\
+This project presents a wireless system devised to improve the air quality in office buildings and other closed working environments. The novel approach of this system relies in the use of a low-power wireless standard protocol -- \textit{IEEE 802.15.4} -- capable of communicating with heterogeneous systems. \textit{IEEE 802.15.4} is the default standard for low-rate, low-power wireless communication. In addition, it is used by various wireless network embedded platforms such as SunSPOT, iSense, XBee, TelosB, ZigBee and more. This system also introduces the ability of the afore mentioned platforms to communicate between each otherl.\\
+\ \\   
+Additionally the devised solution can also control and minimise energy consumption by using the building's resources only whenever they are needed.
+This is achieved by constantly monitoring the environmental conditions in a room and operating the lighting and air-conditioning according to the presence and the preferences of the occupants. 
+The energy is therefore used only upon demand and energy wastes are minimised -- lights switched on and forgotten about, constantly running air conditioning, etc.\\
 \ \\
-For the project implementation the following steps have been achieved:
+A smart system, such as the one presented in this report, can prove to be an effective solution even to complicated building constructions as it relies on wireless connectivity for communication. 
+There is no need for structural building modifications in order to install and run the system.
+Moreover the system's network can easily be expanded because of its inherent heterogeneous ability to communicate with various platforms. 
+Finally, its simple installation procedure and ease of use make it an outstanding solution.
+%
+%%%%%%%%%%%%%%%%%%   FG: These are not aims and objectives. They are more "steps". Maybe find a better section title?
+\section{Project Implementation Steps}
+For the project implementation the following steps were completed:
 \begin{itemize}
-\item[$\blacktriangleright$] A detailed project plan was introduced. Amendments were be done when additions are changes had to be done
-\item[$\blacktriangleright$] A thorough research on the components was performed. Additionally an in depth understanding of the software tools, which would be used, was carried out
-\item[$\blacktriangleright$] An algorithm was created on the overall system operation
-\item[$\blacktriangleright$] Design and build the circuit boards 
-\item[$\blacktriangleright$] Create the program code for the Arduino
-\item[$\blacktriangleright$] Test the system and correct the code if necessary
-\item[$\blacktriangleright$] Collect and evaluate measurements
+	\item[$\blacktriangleright$] A detailed project plan was presented. 
+		Amendments were carried out to accomodate for additions and modifications.
+	\item[$\blacktriangleright$] A thorough research on the components was carried out. 
+		Additionally, an in depth understanding of the software tools, which would be used, was acquired.
+	\item[$\blacktriangleright$] An algorithm was devised for the overall system operation
+	\item[$\blacktriangleright$] The circuit boards were designed and built
+	\item[$\blacktriangleright$] The Arduino control board was programmed to achieve the desired functions
+	\item[$\blacktriangleright$] The system was tested to find and detect errors
+	\item[$\blacktriangleright$] Sensors measurements were collected to evaluate the overall system performance
 \end{itemize}
 %
 \newpage
@@ -121,46 +129,68 @@ For the project implementation the following steps have been achieved:
 A lot of attention has been focused on the energy use of new buildings through regulations and various standards. These just address only part of the problem as almost 70\% of the buildings which will be needed by 2050 have already been built. This becomes even more dramatic as such buildings have been constructed before 1985, the year during which the energy efficiency requirements in the Building Regulations were first introduced ~\cite{website:building_reg,website:carbon_trust}.
 \ \\
 \ \\
-Modifyin an existing building can be very expensive and extremely inconvenient, in particular if it is currently being used. Therefore it seems only reasonable to invest into new technologies that could reduce the energy consumption without altering the construction. \emph{Apollo} is a plug and play 3 piece system which can control the energy use of the room it is installed in.\\
+Modifying an existing building can be very expensive and extremely inconvenient, in particular if it is currently being used. Therefore it seems only reasonable to invest in new technologies that could reduce the energy consumption without altering existing constructions. \emph{Apollo} is a plug and play 3 piece system which can control the energy use of the room it is installed in.\\
 \ \\
 %
 \section {Ventilation and air quality standards}
-Clean air is very important for a working environment. Productivity may be reduced by up to 20\%, as studies has shown. The pollution, which human and machines produces can make the air feel heavy and humid. This is due to the fact that both continuously produce vapours and heat. The result of operating in this environment could be tiredness and discomfort from the increased $CO2$ and temperature levels. Studies has shown that in order to maintain a good indoor climate in an office, the air should be replaced at least three times per hour. In many rooms, such as laboratories, cooling is also essential if just the ventilation is not enough \cite{website:ventilation}.
+Clean air is very important for a working environment. Productivity may be reduced by up to 20\%, as studies has shown. The pollution, which both humans and machines produce can make the air feel heavy and humid. This is due to the fact that both continuously produce vapours and heat. The result of operating in this environment could be tiredness and discomfort from the increased $CO2$ and temperature levels. Studies has shown that in order to maintain a good indoor climate in an office, the air should be replaced at least three times per hour. In many rooms, such as laboratories, cooling is also essential if just the ventilation is not enough \cite{website:ventilation}.
 %
 \section{Building management system}
-Building Management System (\textit{BMS}) is a computer base control system for monitoring and operating mechanical and electrical equipment. BMS made its appearance in the early 1970's with the introduction of complex electronic devices that could collect and store data for managing services such as lighting and heating. BMS systems have seen great development since their appearance. They used to be big electromechanical systems controlling the buildings. Nowadays BMS is a software application that collects data from all over the building and these data presented in a computer screen. BMS systems functionality varies, depending on the demands and the building owner's investment. For example, a BMS system may control the lighting, heating, ventilation and air conditioning for the whole building or for each floor separately, or can even split the floor into sections and so on. The downside of BMS is the high cost and the prerequisite of including the installation at the construction of the building. The cost is also increasing with the depth of systems specialisation on the level of section control.\cite{website:bms}
+Building Management System (\textit{BMS}) is a computer base control system for monitoring and operating mechanical and electrical equipment.
+BMS made its appearance in the early 1970's with the introduction of complex electronic devices that could collect and store data for managing services such as lighting and heating. BMS systems have seen great development since their appearance.
+They used to involve big electromechanical systems controlling the buildings.
+Nowadays BMS is a software application that collects data from all over the building and such data is then presented on a computer screen.
+BMS systems functionality varies, depending on the demands and the building owner's investment.
+For example, a BMS system may control the lighting, heating, ventilation and air conditioning for the whole building or for each floor separately, or even by splitting the floor into sections and so on.
+The downside of BMS is the high cost and the mandatory prerequisite of having to include its installation at the time the building is constructed.
+The cost also increases with the depth of systems specialisation regarding the level of section control \cite{website:bms}.
 %
 \section{Internet of Things}
-The \textit{Internet of Things} (IoT) is the concept of globally interconnected devices -- \textit{things} with RFID \textit{(Radio-Frequency IDentification)} technology with virtual representation in an Internet-like structure. 
-With the rapid technology developments today, the interconnection of the \textit{things} is feasible between heterogeneous devices. Once connected to the Internet these devices can report in real time from anywhere on the globe. Moreover due to their uniqueness, it is easy to map where the data are coming from and most importantly what they are reporting\cite{website:iot}.\\
+The \textit{Internet of Things} (IoT) is the concept of globally interconnected devices -- \textit{things} using RFID \textit{(Radio-Frequency IDentification)} technology with virtual representation in an Internet-like structure.
+Today's rapid technology developments have rendered possible the interconnection of heterogeneous devices as \textit{things}.
+Once connected to the Internet these devices can report in real time from anywhere on the globe.
+Moreover due to their uniqueness, it is easy to map where the data are coming from and most importantly what they are reporting \cite{website:iot}.\\
 \ \\
-IoT vision is not limited to just reporting. As they would be part of global infrastructure, more and more smart processes and services could be available. Those processes and services could have environmental and, ultimately, an economic impact. \emph{Apollo} could clearly be included into IoT, as it monitors environmental changes and by acting accordingly energy is saved effectively contributing to cost reduction in terms of annual consumption \cite{iotconference}.\\
+IoT vision is not limited to just reporting.
+More and more processes and services are slowly making use of the global infrastructure provided by IoT.
+Such processes and services could have environmental and, ultimately, an economic impact. 
+In particular, \emph{Apollo} could clearly be included into IoT, as it monitors environmental changes and by acting accordingly energy is saved, effectively contributing to cost reduction in terms of annual consumption \cite{iotconference}.\\
 \ \\
-An example of such IoT project is Pachube.
+An example of such IoT project is Pachube:
 \begin{quote} 
-    Pachube ("patch-bay") connects people to devices, applications, and the Internet of Things. As a web-based service built to manage the world's real-time data, Pachube gives people the power to share, collaborate, and make use of information generated from the world around them \cite{website:pachube}.
+    Pachube ("patch-bay") connects people to devices, applications, and the Internet of Things. As a web-based service built to manage the world's real-time data, Pachube gives people the power to share, collaborate, and make use of information generated from the world around them. \cite{website:pachube}
 \end{quote}
 \ \\
-Moreover \textit{Pachube} is a platform where sensors report in real time and their data are accessible anywhere on the world. This is due to the fact that \textit{Pachube} traffics its data over the Internet.
+Moreover \textit{Pachube} is a platform where sensors report in real time and their data are accessible anywhere on the world. 
+This is again due to the fact that \textit{Pachube} traffics its data over the Internet.
 %
 \section{Wireless Sensor Network}
 %
-Wireless sensor network (\textit{WSN}) is a concept that makes IoT vision be more and more real. The first appearance of the term dates back to the 1990s.
+Wireless sensor network (\textit{WSN}) is a concept that makes IoT vision more and more real.
+The first appearance of the term dates back to the 1990s.
 \begin{quote}
     Researcher named Kris Pister dreamed up a wild future in which people would sprinkle the Earth with countless tiny sensors, no larger than grains of rice.
-\end{quote} 
-These particles were called \textit{"smart-dust"} \cite{website:smartdust}. WSN is a network consisting of distributed devices that provide sensing features. Lately systems applied on WSN are becoming more and more noticeable. Arduino, which is one of the most common hardware platforms, would make the perfect wireless sensor network node, due to its small size (Arduino Pro Mini), low cost and modularity.\\
+\end{quote} %%%%%%%%%%%%%%%%%%   FG: Citation needed here if this is a quote!
+These particles were called \textit{"smart-dust"} \cite{website:smartdust}.
+WSN is a network consisting of distributed devices that provide sensing features.
+Lately, an increasing number of systems relying on WSN are being developed.
+Arduino, which is one of the most common hardware platforms, would make the perfect wireless sensor network node, due to its small size (Arduino Pro Mini), low cost and modularity.\\
 \ \\
 %\textit{Uberdust} holds a somewhat executive role to IoT as well as to WSN. Uberdust is one of the promising outcomes of the research program \textbf{SPITFIRE} (\textit{Semantic Service Provisioning for the Internet of Things using Future Internet Research by Experimentation}). SPITFIRE's main aim is to investigate unified concepts methods and software infrastructures that facilitate the efficient development of applications that span and intergrate the Internet and the embedded world. Uberdust is a data storage and brokerage web service for connecting IoT data providers and actuators with data consumers and application developers providing real time as well as historical data.It's main focus is to provide storage, sharing and discovery of real-time data from objects, devices and building installations around the world via the Web.\\
 %\ \\
-A unique experiment research facility is currently being proposed by \textit{Smart Santander}. A city-scale experiment for applications and services of a smart city. \emph{Apollo} could easily be adapted into this experiment, providing information on the energy consumption of the office buildings and not only. This way, the city's resources use would be optimised, achieving an greater energy efficiency.\\
+A unique experiment is currently being proposed by \textit{Smart Santander}.
+A city-scale experiment for applications and services of a smart city.
+\emph{Apollo} could easily be adapted into this experiment, providing information on the energy consumption of the office buildings and not only.
+This way, the city's resources use would be optimised, achieving greater energy efficiency.\\
 \ \\
 %
-For this project the Computer Technology Institute and Press "Diophantus" was chosen to collaborate with the author.
+This project was suggested by the Computer Technology Institute and Press "Diophantus".  %%%%%%%%%%%%%%%%%%   FG: Where is the institute from? EXPLAIN.
 %
-\begin{quote}The Computer Technology Institute and Press "Diophantus" is a research and technology organization focusing on research and development in Information and Communication Technologies (ICT)\cite{website:cti}. \end{quote}
+\begin{quote}
+	The Computer Technology Institute and Press "Diophantus" is a research and technology organization focusing on research and development in Information and Communication Technologies (ICT)\cite{website:cti}.
+\end{quote} %%%%%%%%%%%%%%%%%%   FG: Citation needed here if this is a quote!
 %
-The main reason for this collaboration is the interest and technical knowledge of the Institution on WSN as well as to the wireless communication protocol that is been used on the project.
+The main reason for this collaboration is the common interest on the subject as well as the technical expertise provided by the Institution regarding WSN and the wireless communication protocol used.
 %
 \newpage
 %
