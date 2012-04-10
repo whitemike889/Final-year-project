@@ -40,7 +40,7 @@
 % Title
 \hrule
 \hfill\\[0.5cm]
-{ \huge \bfseries Smart system for control and customisation of office building's energy consumption}\\[0.5cm]
+{ \huge \bfseries Smart system for control and customisation of office buildings energy consumption}\\[0.5cm]
 \hrule
 \hfill\\[0.5cm]
 \ \\
@@ -115,7 +115,6 @@ Another great issue in today's fast growing world is power consumption and how t
 \ \\
 Innovation in technology nowadays has made us take certain services for granted. Such services include the Internet, which can be used as a powerful tool to monitor and act on life quality standards. In addition people are able to operate their home and office appliances with the simple pressing of a few buttons. Wireless Sensor Network is a distributed network of sensors that accommodate sensing features of environmental changes which can be reported all over the world via the Internet. The recent years have witnessed an explosion in the number of system applied relying upon WSN.\\
 \ \\
-%%%%%%%%%%%%%%%%%%   FG: I moved the section title here.
 \section{Project Aims and Objectives}
 This project presents a wireless system devised to improve the air quality in office buildings and other closed working environments. The novel approach of this system relies in the use of a low-power wireless standard protocol -- \textit{IEEE 802.15.4} -- capable of communicating with heterogeneous systems. \textit{IEEE 802.15.4} is the default standard for low-rate, low-power wireless communication. In addition, it is used by various wireless network embedded platforms such as SunSPOT, iSense, XBee, TelosB, ZigBee and more. This system also introduces the ability of the afore mentioned platforms to communicate between each otherl.\\
 \ \\   
@@ -774,7 +773,8 @@ Therefore it is necessary to specify the communication serial port between them 
 \subsection{loop()}
 \textit{Loop()} is the final and longest part of the code.
 Firstly Arduino checks if the other two boards (\textit{sensor, action}) are connected to it.
-This way it does not have to be removed in case any of the boards has a defect and is down.\\ %%%%%%%%%%%%%%%%%%   FG: What does this mean? Removed? %%% DK: if one of the boards has a defect it does not have to take down the whole system to repair.
+The program can continue its execution if and only if this is the case.
+If on the other hand the two boards are not connected the program will be halted.
 \ \\
 If the \textit{action} board (relays) are connected, the number of relays are checked.
 As the specifications of the room in which the system is installed may vary, the \textit{action} board may not have all four relays installed.
@@ -784,8 +784,7 @@ The \textit{relayCheckPin} is a dedicated analogue pin (A4) on the Arduino Mini 
 These values are mapped in the code and the system reports back how many relays are installed.\\
 \ \\
 The next function controls the output of the relays.
-The received data from the Controller is checked to see if it contains any measured value from the relay(s) and in what state does it set it. %%%%%%%%%%%%%%%%%%   FG: "what state does is set it" is chinese? What is this about? 
-The next step is to check which of the lamps are on and which are off and report this information.
+Before responding to the relays, the Controller needs to check which of the lamps are on and which are off and act accordingly.
 The system also reports any change on the status of the lamps to the Controller. \\
 \ \\
 The following group of statements checks the status of the motion sensor (\textit{PIR - Passive InfaRed}).
@@ -793,8 +792,7 @@ Every half of a second the status of the PIR sensor is checked and its status is
 \ \\
 Following, the light sensor is called every three seconds and its value is being reported at the time of measurement.\\
 \ \\
-The value of temperature is measured and reported at the same rate.
-Explain the temp function. \\ %%%%%%%%%%%%%%%%%%   FG: What is this??
+The value of temperature is measured and reported, via a dedicated analog pin, at the same rate.
 \ \\
 The value of methane ($CH_4$) is also measured every three seconds.
 This is simply done by reading the analogue value of the sensor's (\textit{MQ-4}) output pin.\\
@@ -814,9 +812,8 @@ $\ddot{U}berdust$ is a database based on the Hibernate \cite{website:hibernate}.
 \label{uberdust-uml}
 \end{figure}
 \ \\
-Furthermore the entities (Setup, Node,Link, NodeCapability, etc) are MySQL tables of Java classes.
+Furthermore the entities (Setup, Node,Link, NodeCapability, etc) are MySQL tables of Java classes used to represent sensor data objects.
 For each of these Java classes there is an XML file which describes the MySQL table.
-With the use of Java a database is created by pointing the existence of a database in a computer-server as well as a WiseDB database. %%%%%%%%%%%%%%%%%%   FG: This is chinese. Explain it to me.
 Once the database is created by using \textit{controllers\footnote{controllers in this case are functions of Java and irrelevant of the Controllers mentioned in \ref{Controller}}}, which manage the MySQL tables, some specific functions are called. These functions are used to add values into the database as well to add nodes etc. 
 %
 \newpage
@@ -868,7 +865,7 @@ The data collected into the database for each room separately, categorised by th
 %
 \section{PIR}
 %
-{Room 0.I.1}
+\subsection{Room 0.I.1}
 %
 \ \\
 \begin{figure}[H]
@@ -879,7 +876,7 @@ The data collected into the database for each room separately, categorised by th
 \end{figure}
 \ \\
 %
-{Room 0.I.3}
+\subsection{Room 0.I.3}
 %
 \begin{figure}[H]
 \centering
@@ -889,7 +886,7 @@ The data collected into the database for each room separately, categorised by th
 \end{figure}
 \ \\
 %
-{Room 0.I.9}
+\subsection{Room 0.I.9}
 %
 \begin{figure}[H]
 \centering
@@ -899,7 +896,7 @@ The data collected into the database for each room separately, categorised by th
 \end{figure}
 \ \\
 %
-{Room 0.I.11}
+\subsection{Room 0.I.11}
 %
 \begin{figure}[H]
 \centering
@@ -911,7 +908,7 @@ The data collected into the database for each room separately, categorised by th
 %
 \section{Light}
 %
-{Room 0.I.1}
+\subsection{Room 0.I.1}
 %
 The following Figure \ref{chart_light_1} displays the pattern of the light emittance that is followed each day.
 \begin{figure}[H]
@@ -922,7 +919,7 @@ The following Figure \ref{chart_light_1} displays the pattern of the light emitt
 \end{figure}
 \ \\
 %
-{Room 0.I.3}
+\subsection{Room 0.I.3}
 %
 The light's strength during a day is visualised in the expanded chart in Figure \ref{chart_light_3}.
 \begin{figure}[H]
@@ -933,7 +930,7 @@ The light's strength during a day is visualised in the expanded chart in Figure 
 \end{figure}
 \ \\
 %
-{Room 0.I.9}
+\subsection{Room 0.I.9}
 %
 In this case the illuminance of different room is shown.
 \begin{figure}[H]
@@ -944,7 +941,7 @@ In this case the illuminance of different room is shown.
 \end{figure}
 \ \\
 %
-{Room 0.I.11}
+\subsection{Room 0.I.11}
 %
 The occupants of this room have a preference of low light emittance.
 This can be seen from the low values reported from the light sensor.
@@ -958,10 +955,12 @@ This can be seen from the low values reported from the light sensor.
 %
 \section{Temperature}
 %
-{Room 0.I.1}
+The temperature plots show a general trend of high temperatures during times in which rooms are unoccupied -- i.e. after working hours.
+During working hours -- circa 08:00h to 18:00h -- the temperature oscillates between 20$^\circ$C and 30$^\circ$C.
+The air conditioning systems seems to start once the temperature reaches the "critical" value at 26$^\circ$C.
+\subsection{Room 0.I.1}
 %
-The temperature shows a steady value around 24$^\circ C$ during the whole day.
-This is due to the fact of electronics dissipating heat. %%%%%%%%%%%%%%%%%%   FG: What does this mean? Are people burning alive?
+The temperature shows a steady value around 24$^\circ$C during the whole day.
 \begin{figure}[H]
 \centering
 	\includegraphics*[scale=0.3]{temp_1}
@@ -970,7 +969,7 @@ This is due to the fact of electronics dissipating heat. %%%%%%%%%%%%%%%%%%   FG
 \end{figure}
 \ \\
 %
-{Room 0.I.3}
+\subsection{Room 0.I.3}
 %
 As all rooms contain several machines with high computing power the levels of dissipated heat are quit high.
 \begin{figure}[H]
@@ -981,7 +980,7 @@ As all rooms contain several machines with high computing power the levels of di
 \end{figure}
 \ \\
 %
-{Room 0.I.9}
+\subsection{Room 0.I.9}
 %
 The same situation occurs in this room.
 \begin{figure}[H]
@@ -992,10 +991,9 @@ The same situation occurs in this room.
 \end{figure}
 \ \\
 %
-{Room 0.I.11}
+\subsection{Room 0.I.11}
 %
-In Figure \ref{chart_temp_11} indicates that at around 14:00h the ventilation was turned on.
-This is due to just a small drop of temperature. %%%%%%%%%%%%%%%%%%   FG: Ventilation for drop of temperature? They wanted to freeze?
+The temperature drop at around 14:00h in Figure \ref{chart_temp_11} indicates that the ventilation was suddenly turned on.
 \begin{figure}[H]
 \centering
 	\includegraphics*[scale=0.3]{temp_11}
@@ -1008,7 +1006,7 @@ This is due to just a small drop of temperature. %%%%%%%%%%%%%%%%%%   FG: Ventil
 %
 The \textit{Methane} $CH_4$ levels are constant and at a low value.
 The \textit{glitch} noticed between 08:00h and 12:00h is due to a sensor's fault in the return value.
-{Room 0.I.1}
+\subsection{Room 0.I.1}
 %
 \begin{figure}[H]
 \centering
@@ -1018,7 +1016,7 @@ The \textit{glitch} noticed between 08:00h and 12:00h is due to a sensor's fault
 \end{figure}
 \ \\
 %
-{Room 0.I.3}
+\subsection{Room 0.I.3}
 %
 \begin{figure}[H]
 \centering
@@ -1028,7 +1026,7 @@ The \textit{glitch} noticed between 08:00h and 12:00h is due to a sensor's fault
 \end{figure}
 \ \\
 %
-{Room 0.I.9}
+\subsection{Room 0.I.9}
 %
 \begin{figure}[H]
 \centering
@@ -1038,7 +1036,7 @@ The \textit{glitch} noticed between 08:00h and 12:00h is due to a sensor's fault
 \end{figure}
 \ \\
 %
-{Room 0.I.11}
+\subsection{Room 0.I.11}
 %
 \begin{figure}[H]
 \centering
@@ -1065,27 +1063,21 @@ This is a novel approach for such a system, as with the use of the IEEE 802.15.4
 On that point the system can work along with other systems such as TelosB, SunSpot, iSense and any other system that uses the same communication protocol. \\
 \ \\
 \emph{Apollo} has a great potential of expansion.
-A first step could involve the development of a pressure sensor system.
-This addition would of course include the option of personalising the system according to the each user.
-On that note the pressure sensor could wirelessly send information of the presence of a specific user.
-Moreover the system could respond to the user's preferences for lighting and temperature.
-With this technique if more than one user occupied the room, each could have a separated preferences for his working space.\\
-%%%%%%%%%%%%%%%%%%   FG: Can't find the link between pressure sensor and separate user preferences.
+A first step could involve the development of a pressure sensor system to detect which chairs, and consequently which desks, are occupied.
+This addition would then lead to the possibility of personalising the working enviromnent according to the each user separately.
+On possible scenario could be the controlling the intensity of desk lights, the computer screen brightness and all those work environmnent settings which are very personal.
 \ \\
-In addition, the presence of a blue-tooth module connected to the \textit{action} board could expand system's personalisation.
-Nowadays every mobile device incorporates a blue-tooth connectivity option.
-The system could recognise the presence of a specific user and would set the working environment accordingly.
-This would mean handling the lighting conditions along with the temperature level to be set upon user's entry in the room. \\
+In addition, the integration of a blue-tooth module connected to the \textit{action} board could further expand the system's personalisation options.
+Nowadays every mobile device incorporates a blue-tooth connectivity option which could be used to detect the presence of a specific user in the room to set the working environment accordingly.
+This would mean handling the lighting conditions along with the temperature level to be set upon user's entry in the room, for example. \\
 \ \\
 Introduction of security alerts via e-mail could be considered a further evolution.
 The system could recognise abnormal activities -- for example fire hazards, thiefs, etc.
 The owner of the office could then be notified for this activity via e-mail.\\
 \ \\
-%%%%%%%%%%%%%%%%%%   FG: I don't get this.
-Most office buildings are equipped with a Building Management System (\textit{BMS}).
-BMS is a computer based control system, which  operates the electrical and mechanical equipment, such as ventilation, lighting, power systems, fire systems and security systems of a building.
-Priceless energy could be saved on the overall building.
-This could easily achieved if the electrical and mechanical systems of each floor or section (depending on the BMS abilities) would operate only when necessary.
+Finally, the devised system could be further developed to fully integrate itself with existing Building Management Systems.
+These tend to be highly energy consuming mechanisms which control the building in a global not-so-smart manner -- turning the central heating on in the entire building even though certain rooms are empty is definitely not a smart behaviour, for example.
+Integrating \emph{Apollo} to provide a smarter point of view could lead to remarkable energy savings.
 %
 \newpage
 %
