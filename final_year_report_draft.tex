@@ -20,6 +20,8 @@
 \newenvironment{elements}
     {\begin{quote}\itshape}
     {\end{quote}}
+% FG: Rename bibliography to References
+\renewcommand\bibname{References}
 
 \author{Student: Dionisios Kalantzis (SID:0733139) \\ Supervisor: Dr. Maysam Abbod}
 %\title{Smart system for control and customisation of office building for energy consumption}
@@ -69,13 +71,14 @@ Dr. Maysam \textsc{Abbot}
 \emph{"Apollo the god who sees and foresees everything."}
 \end{center}
 %
-This project describes, \emph{Apollo}, a smart system that provides sensing features such as temperature, light, gases detection.
+This project describes \emph{Apollo}: a smart system that provides sensing features such as temperature, light, gases detection.
 \emph{Apollo}'s novel approach is based on the use heterogeneous wireless communication (802.15.4) technology, which allows to communicate with various hardware platforms. 
-Furthermore, it operates the lighting and/or air-conditioning according to the room occupant's preferences to achieve the optimum working conditions.
-By using building's energy resources on demand energy consumption is minimised. 
-Additionally to these features the computation for all the above has moved from a dedicated gateway to central wireless controller, reducing the cost and the installation complexity. 
-The built of the system is being discussed in the follow
-In conclusion, possible improvements of the system are presented.
+Furthermore, it can operate the lighting and/or air-conditioning settings according to the room occupant's preferences to achieve optimum working environment conditions.
+By using the building's energy resources on demand, \emph{Apollo} reduces wastes ultimately minimising energy consumption. 
+Additionally, the computation for all the above was moved from a dedicated gateway to a central wireless controller, reducing the cost and the installation complexity. 
+This report describes the design choices and the implementation steps of the system.
+Actual sensor recordings and measurements are presented to evaluate the overall performance of \emph{Apollo}.
+In conclusion, possible improvements of the system are suggested.
 
 \end{abstract}
 %
@@ -125,7 +128,7 @@ There is no need for structural building modifications in order to install and r
 Moreover the system's network can easily be expanded because of its inherent heterogeneous ability to communicate with various platforms. 
 Finally, its simple installation procedure and ease of use make it an outstanding solution.
 %
-\section{Project Implementation Steps}
+\section{Implementation Steps}
 For the project implementation the following steps were completed:
 \begin{itemize}
 	\item[$\blacktriangleright$] A detailed project plan was presented. 
@@ -152,7 +155,7 @@ Modifying an existing building can be very expensive and extremely inconvenient,
 \section {Ventilation and air quality standards}
 Clean air is very important for a working environment. Productivity may be reduced by up to 20\%, as studies has shown. The pollution, which both humans and machines produce can make the air feel heavy and humid. This is due to the fact that both continuously produce vapours and heat. The result of operating in this environment could be tiredness and discomfort from the increased $CO2$ and temperature levels. Studies has shown that in order to maintain a good indoor climate in an office, the air should be replaced at least three times per hour. In many rooms, such as laboratories, cooling is also essential if just the ventilation is not enough \cite{website:ventilation}.
 %
-\section{Building management system}
+\section{Building Management System}
 Building Management System (\textit{BMS}) is a computer base control system for monitoring and operating mechanical and electrical equipment.
 BMS made its appearance in the early 1970's with the introduction of complex electronic devices that could collect and store data for managing services such as lighting and heating. BMS systems have seen great development since their appearance.
 They used to involve big electromechanical systems controlling the buildings.
