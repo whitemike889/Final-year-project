@@ -87,7 +87,7 @@ Many thanks to Dr. Ioannis Chatzigiannakis, Orestis Akribopoulos, Vasileios Geor
 \ \\
 Special thanks go to Miss Maria Kanellopoulou and Mr Francesco Giovannini for their encouragement and moral support. Additionally I would like to acknowledge all my friends for their support.\\
 \ \\
-Finally I would like to extend my heartfelt gratitude to Konstantina Karapapa and Andreas Kalantzis, to whom I dedicate this work.\\
+Finally I would like to extend my heartfelt gratitude to my family and especially Konstantina Karapapa and Andreas Kalantzis, to whom I dedicate this work.\\
 \ \\
 \end{abstract}
 %
@@ -106,11 +106,11 @@ Finally I would like to extend my heartfelt gratitude to Konstantina Karapapa an
 %
 \chapter{Introduction}
 %
-Air is one of life's essential elements for all creatures on Earth. Humans live, work and prosper in air. The quality of air affects our performance. Throughout the years various methods have been devised to assure good air quality. For example miners were using canary birds as warning systems until 1987. The presence of toxic gases such as carbon monoxide, methane or carbon dioxide could have had deadly consequences. Therefore the notice of any distress from the canary birds would act as a warning. Studies have shown that low air quality standards affects the performance of the people in a working environment \cite{airquality}. Therefore it necessary to keep high air quality standards, which will improve people's working performance as well as their general well-being.\\
+Air is one of life's essential elements for all creatures on Earth. Humans live, work and prosper in air. The quality of air affects our performance. Throughout the years various methods have been devised to assure good air quality. For example miners were using canary birds as warning systems until 1987. The presence of toxic gases such as carbon monoxide, methane or carbon dioxide could have had deadly consequences. Therefore the notice of any distress from the canary birds would act as a warning. Studies have shown that low air quality standards affects the performance of the people in a working environment \cite{airquality}. Therefore it is necessary to keep high air quality standards, which will improve people's working performance as well as their general well-being.\\
 \ \\
 Another great issue in today's fast growing world is power consumption and how to minimise it. More and more devices are being developed and are becoming available to consumers. Regardless if these devices are mechanical or electrical, they need energy to operate. Meaningless use of energy increases unnecessary costs and affects global pollution.\\
 \ \\
-Innovation in technology nowadays has made us take certain services for granted. Such services include the Internet, which can be used as a powerful tool to monitor and act on life quality standards. In addition people are able to operate their home and office appliances with the simple pressing of a few buttons. Wireless Sensor Network is a distributed network of sensors that accommodate sensing features of environmental changes which can be reported all over the world via the Internet. The recent years have witnessed an explosion in the number of system applied relying upon WSN.\\
+Innovation in technology nowadays has made us take certain services for granted. Such services include the Internet, which can be used as a powerful tool to monitor and act on life quality standards. In addition people are able to operate their home and office appliances by simply pressing of a few buttons. Wireless Sensor Network is a distributed network of sensors that accommodate sensing features of environmental changes which can be reported all over the world via the Internet. The recent years have witnessed an explosion in the number of system applied relying upon WSN.\\
 \ \\
 \section{Project Aims and Objectives}
 This project presents a wireless system devised to improve the air quality in office buildings and other indoor working environments. The novel approach of this system relies in the use of a low-power wireless standard protocol -- \textit{IEEE 802.15.4} -- capable of communicating with heterogeneous systems. \textit{IEEE 802.15.4} is the default standard for low-rate, low-power wireless communication. In addition, it is used by various wireless network embedded platforms such as SunSPOT, iSense, XBee, TelosB, ZigBee and more. This system also introduces the ability of the afore mentioned platforms to communicate between each other.\\
@@ -162,7 +162,7 @@ The downside of BMS is the high cost and the mandatory prerequisite of having to
 The cost also increases with the depth of systems specialisation regarding the level of section control \cite{website:bms}.
 %
 \section{Internet of Things}
-The \textit{Internet of Things} (IoT) is the concept of globally interconnected devices -- \textit{things} using RFID \textit{(Radio-Frequency IDentification)} technology with virtual representation in an Internet-like structure.
+The Internet of Things (\textit{IoT}) is the concept of globally interconnected devices -- \textit{things} using Radio-Frequency IDentification (\textit{RFID}) technology with virtual representation in an Internet-like structure.
 Today's rapid technology developments have rendered possible the interconnection of heterogeneous devices as \textit{things}.
 Once connected to the Internet these devices can report in real time from anywhere on the globe.
 Moreover due to their uniqueness, it is easy to map where the data are coming from and most importantly what they are reporting \cite{website:iot}.\\
@@ -377,7 +377,6 @@ The sensor can operate continuously from −40$^\circ C$ to 100$^\circ C$.
 \includegraphics*[scale=0.7]{lm335}
 \caption{LM335 - Precision Temperature Sensor}
 \end{figure}
-\ \\
 %
 \section{The control board}
 The control board is the core of the \emph{Apollo}. It is a PCB board which is equipped with:
@@ -807,14 +806,15 @@ $\ddot{U}berdust$ is a database based on the Hibernate \cite{website:hibernate}.
 %
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.4]{wisedb2}
-\caption{$\ddot{U}berdust$ - UML description diagram}
+\includegraphics*[width=\textwidth]{wisedb2}
+\caption{$\ddot{U}berdust$ - Entity Relationship diagram}
 \label{uberdust-uml}
 \end{figure}
 \ \\
 Furthermore the entities (Setup, Node,Link, NodeCapability, etc) are MySQL tables of Java classes used to represent sensor data objects.
 For each of these Java classes there is an XML file which describes the MySQL table.
-Once the database is created by using \textit{controllers\footnote{controllers in this case are functions of Java and irrelevant of the Controllers mentioned in \ref{Controller}}}, which manage the MySQL tables, some specific functions are called. These functions are used to add values into the database as well to add nodes etc. 
+Once the database is created, using Hibernate controllers \footnote{controllers in this case are functions of Java and irrelevant of the Controllers mentioned in Chapter \ref{Controller}} we can communicate with each database table and execute all possible queries like \textit{insert, delete, update}.
+Additionally more complex queries can be made, which are implemented in a more human friendly environment of Java.
 %
 \newpage
 %
@@ -900,9 +900,9 @@ The data collected into the database for each room separately, categorised by th
 %
 \begin{figure}[H]
 \centering
-	\includegraphics*[width=\textwidth]{light_1}
-	\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.11}
-	\label{chart_light_1}
+	\includegraphics*[width=\textwidth]{pir_11}
+	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
+	\label{chart_pir_11}
 \end{figure}
 \ \\
 %
@@ -1011,7 +1011,7 @@ The \textit{glitch} noticed between 08:00h and 12:00h is due to a sensor's fault
 \begin{figure}[H]
 \centering
 	\includegraphics*[width=\textwidth]{ch4_1}
-	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.1}
+	\caption{$\ddot{U}berdust$ chart for MQ - 4 sensor in room 0.I.1}
 	\label{chart_ch4_1}
 \end{figure}
 \ \\
@@ -1021,7 +1021,7 @@ The \textit{glitch} noticed between 08:00h and 12:00h is due to a sensor's fault
 \begin{figure}[H]
 \centering
 	\includegraphics*[width=\textwidth]{ch4_3}
-	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.3}
+	\caption{$\ddot{U}berdust$ chart for MQ - 4 sensor in room 0.I.3}
 	\label{chart_ch4_3}
 \end{figure}
 \ \\
@@ -1031,7 +1031,7 @@ The \textit{glitch} noticed between 08:00h and 12:00h is due to a sensor's fault
 \begin{figure}[H]
 \centering
 	\includegraphics*[width=\textwidth]{ch4_9}
-	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.9}
+	\caption{$\ddot{U}berdust$ chart for MQ - 4 sensor in room 0.I.9}
 	\label{chart_ch4_9}
 \end{figure}
 \ \\
@@ -1041,7 +1041,7 @@ The \textit{glitch} noticed between 08:00h and 12:00h is due to a sensor's fault
 \begin{figure}[H]
 \centering
 	\includegraphics*[width=\textwidth]{ch4_11}
-	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
+	\caption{$\ddot{U}berdust$ chart for MQ - 4 sensor in room 0.I.11}
 	\label{chart_ch4_11}
 \end{figure}
 \ \\
@@ -1054,11 +1054,11 @@ Unfortunately, as explained in section \textit{\textbf{5.4.3 loop ()}}, the $CO$
 \chapter{Conclusions \& Future Improvements}
 %
 To the author's opinion the project can be characterized as successful due to the fact that all the set aims have been achieved.
-The system is installed and working in the Computer Technology Institute and Press "Diophantus" building, lower ground floor.
+The system is installed and working in the Computer Technology Institute and Press "Diophantus" building in Patra,  on lower ground floor.
 Evidence provided by the database feed and everyday working status clearly supports the success of the system.\\
 \ \\
-Moreover \emph{Apollo} is able to collect the environmental values from the room it is installed in and report them back to the \textit{Controller} and, in extension, to the database.
-It is also capable of operating the lighting as well as the air-conditioning of the room.
+Moreover \emph{Apollo} is able to collect the environmental values from the rooms it is installed in and report them back to the \textit{Controller} and, in extension, to the database.
+It is also capable of operating the lighting as well as the air-conditioning of the rooms.
 This is a novel approach for such a system, as with the use of the IEEE 802.15.4 protocol, the communication with other systems can easily be achieved.
 On that point the system can work along with other systems such as TelosB, SunSpot, iSense and any other system that uses the same communication protocol. \\
 \ \\
