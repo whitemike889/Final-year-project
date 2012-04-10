@@ -540,21 +540,31 @@ The database is called $\ddot{U}berdust$. It stores data using the WiseDB compon
 \newpage
 %
 \chapter{System Design}
-This section presents the overall design of the system as well as of the individual components implementation of \emph{Apollo}. In addition, the design choices are explained and justified in detail and their advantages are analysed in depth.\\
+This section presents the overall design of the system as well as of the individual \emph{Apollo} components.
+In addition, the design choices are explained and justified in detail and their advantages are analysed in depth.\\
 \ \\
 The main guides for designing \emph{Apollo} were the air quality standards for office and laboratory buildings. In addition the installation of the system should have the minimum impact on the building's structure. The maintenance time and cost of all three boards was another major factor for their design. Moreover the system's capacity for heterogeneous connection and interaction with other systems was one of the crucial characteristics for its design. \\
 \ \\
-\emph{Apollo} has passed various stages before taking the shape and form that has on the date of this report. The original approach included two boards; \textbf{\textit{control}} and the \textbf{\textit{sensor}} board. After a series of prototype testing seemed cogent to break the \textit{control} board in two discrete ones. The outcome of this was the three boards; \textbf{\textit{sensor, control, action}}.\\
+\emph{Apollo} passed various stages before taking the shape and form that it has to date.
+The original approach included only two boards: \textbf{\textit{control}} and \textbf{\textit{sensor}} board.
+After a series of prototype testing it seemed cogent to break the \textit{control} board in two discrete ones.
+The outcome of this was the three boards: \textbf{\textit{sensor, control, action}}.\\
 \ \\
-The significant difference of the two is the separation of the Arduino platform from the control board with the relays. The reason for that was the minimisation of the repair (\textit{MTTR}). This increased the cost of the system. The cost increase is of approximately £1, according to the School technician. It is not possible to calculate the exact cost increase, as for the development of the PCBs the facilities of the School were used.\\
+The significant difference between the two approaches is the separation of the Arduino platform from the control board with the relays.
+The reason for this design choice was the minimisation of the repair (\textit{MTTR}).
+This on the other hand increased the overall cost of the system.
+The cost increase is of approximately £1, according to the School technician.
+It is not possible to calculate the exact cost increase, as for the development of the PCBs the facilities of the School were used.\\
 \ \\
-For the design of the boards, CadSoft Eagle CAD software was used. Eagle is equipped with an Electrical Rule Check \textit{ERC} as well as with a Design Rule Check \textit{DRC} . This is integrated functions that check the schematics for electrical and design errors respectively. If any error(s) are detected, an error dialogue window pops with details on the errors.
+For the design of the boards, CadSoft Eagle CAD software was used. Eagle is equipped with an Electrical Rule Check \textit{ERC} as well as with a Design Rule Check \textit{DRC} mechanism.
+These are integrated functions that check the schematics for electrical and design errors respectively.
+If any error(s) are detected, a dialogue window pops up with details on the errors.
 %
 \section{Sensor board}
 \subsection{Schematic implementation}
-Below, it will be presented the process of designing the sensor board with the use of Eagle CAD software.
+The design process of the sensor board (using Eagle CAD software) is presented below.
 \ \\
-To begin with, the development starts with the creation of the schematic. In the schematic all the necessary parts are being placed. \ref{Sensor-brd-s1}
+The development begins with the creation of the schematic in order to place all the necessary components as shown in Figure \ref{Sensor-brd-s1}.
 \ \\
 \begin{figure}[H]
 \centering
@@ -563,7 +573,8 @@ To begin with, the development starts with the creation of the schematic. In the
 \label{Sensor-brd-s1}
 \end{figure}
 \ \\
-For the schematic, and the board later, to be easier and clear what is what, the parts are named accordingly. \ref{Sensor-brd-s2}
+Each part is sensibly named to allow easy identification of the separate components.
+This is shown in Figure \ref{Sensor-brd-s2}.
 \begin{figure}[H]
 \centering
 \includegraphics*[scale=0.25]{sens_brd_s2}
@@ -571,7 +582,8 @@ For the schematic, and the board later, to be easier and clear what is what, the
 \label{Sensor-brd-s2}
 \end{figure}
 \ \\
-At this stage the parts are being spread. The reason for this is for the following step to be easier and more efficient.
+At this stage the parts are being spread out on the board.
+The reason for this is for the following step to be easier and more efficient.
 \ \\
 \begin{figure}[H]
 \centering
@@ -580,7 +592,7 @@ At this stage the parts are being spread. The reason for this is for the followi
 \label{Sensor-brd-s3}
 \end{figure}
 \ \\
-In the following Figure \ref{Sensor-brd-s4} the wiring of the parts of the sensor board is being made.
+In the following Figure \ref{Sensor-brd-s4} the wiring of the parts of the sensor board is being traced.
 \ \\
 \begin{figure}[H]
 \centering
@@ -589,7 +601,11 @@ In the following Figure \ref{Sensor-brd-s4} the wiring of the parts of the senso
 \label{Sensor-brd-s4} 
 \end{figure}
 \ \\
-To check if the wiring is properly done, and there is neither short-circuit nor unconnected parts and \textbf{ERC} was performed. The result is shown in Figure \ref{Sensor-brd-s5}. There were no errors reported back. The warnings are of somewhat minimum importance as the parts used are universal. On the other hand it is of importance, all pins to be connected either to other parts and/or to the power supply and/or to the ground.
+To check if the wiring is properly done, and there are neither short-circuits nor unconnected parts an \textbf{ERC} was performed.
+The result is shown in Figure \ref{Sensor-brd-s5}.
+No errors were reported back.
+The warnings are of somewhat minimum importance as the parts used are universal.
+On the other hand it is crucial for all pins to be connected either to other parts and/or to the power supply and/or to the ground.
 \ \\
 \begin{figure}[H]
 \centering
@@ -600,7 +616,10 @@ To check if the wiring is properly done, and there is neither short-circuit nor 
 \ \\
 %
 \subsection{Board implementation}
-This is the stage where the parts implemented on the previous part will be take shape on the board. As the board will be installed in a visible part in a room, it is important to be as discreet as possible. In the Figure \ref{Sensor-brd-s6}, below, the components are ready to be spread in the available space. The size of the board will be 5cm wide and 5cm high.
+This is the stage in which the parts implemented on the previous step will be placed on the board.
+As the board will be installed in a visible part of a room, it is important for it to be as discrete as possible.
+In Figure \ref{Sensor-brd-s6}, below, the components are ready to be spreaded in the available space.
+The final size of the board will be 5cm wide and 5cm high.
 \ \\
 \begin{figure}[H]
 \centering
@@ -609,7 +628,8 @@ This is the stage where the parts implemented on the previous part will be take 
 \label{Sensor-brd-s6}
 \end{figure}
 \ \\
-Once all components were spread with sufficient space between them the \textit{Ratsnest} tool was used to minimise the path of the of the wiring. This time the wiring is the conductive medium,of electric current between the parts of the board, the copper.
+Once all components were spread with sufficient space between them, the \textit{Ratsnest} tool was used to minimise the path of the of the wiring.
+This time the wiring is the conductive medium of electric current between the parts of the board -- the copper.
 \ \\
 \begin{figure}[H]
 \centering
@@ -618,7 +638,9 @@ Once all components were spread with sufficient space between them the \textit{R
 \label{Sensor-brd-s7}
 \end{figure}
 \ \\
-The wiring route were finally generated with the use of the \textit{Autoroute} tool. To achieve the optimal result, in this case the minimum copper paths \textit{Autoroute} has an \textit{Optimiser} option which was used. Moreover the settings of the \textit{Optimiser} were set accordingly to achieve the least possible layers and bias.\\
+The wiring routes were finally generated with the use of the \textit{Autoroute} tool.
+To achieve an optimal result -- shortest copper paths -- \textit{Autoroute} has an \textit{Optimiser} option which was used.
+Moreover the settings of the \textit{Optimiser} were set accordingly to achieve the least possible layers and bias.\\
 \ \\
 \begin{figure}[H]
 \centering
@@ -627,7 +649,10 @@ The wiring route were finally generated with the use of the \textit{Autoroute} t
 \label{Sensor-brd-s8}
 \end{figure}
 \ \\
-Layers are the sides of the board used for the creating the copper paths. In Figure \ref{Sensor-brd-s8} the top layer wire paths are marked with maroon color, where the bottom layer paths are on blue. Bias are called the points where the wire path changes layer. Bias add extra difficulty on soldering the board and therefore are being avoided when possible.\\
+Layers are the sides of the board used for the creating the copper paths.
+In Figure \ref{Sensor-brd-s8} the top layer wire paths are marked with maroon color and the bottom layer paths are blue.
+Biases are the points where the wire path changes layer.
+Biases add extra difficulty when soldering the board and therefore should being avoided when possible.\\
 \ \\
 %
 \section{Control board}
