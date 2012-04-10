@@ -302,7 +302,6 @@ From the following diagram it is easy to see the simplicity of sensor's drive ci
 \caption{MQ - 4 sensor's drive circuit}
 \end{figure}
 \ \\
-%%%%%%%%%%%%%%%%%%   FG: CORRECTED 
 The sensor requires an input of 5 Volt and its output is an analogue resistance. The output is inversely proportional to the gas concentration. This means the greater the gas concentration is the lower the output value will be.
 \ \\
 %
@@ -317,8 +316,8 @@ The \emph{Carbon Monoxide} sensor is as well an easy to use sensor.  The detecti
 \caption{MQ - 7 Dimensions}
 \end{figure}
 \ \\
-%%%%%%%%%%%%%%%%%%   FG: done
-The MQ - 7 has a slightly more complicated operation technique comparing to the MQ - 4.It detects the concentration of carbon monoxide by cycles of 5 Volts and 1.5 Volts. Specifically when at sensor is applied 5 Volts, the internal resistance heats up and cleans any other gases absorbed under the cycle of 1.5 Volts, when the internal resistance is at low temperature. The conductivity of the sensor is higher along the gas concentration rising \cite{website:mq7_datasheet}.
+The MQ - 7 has a slightly more complicated operation technique comparing to the MQ - 4.It detects the concentration of carbon monoxide by cycles of 5 Volts and 1.5 Volts. Specifically when at sensor is applied 5 Volts, the internal resistance heats up and cleans any other gases absorbed under the cycle of 1.5 Volts, when the internal resistance is at low temperature. 
+The conductivity of the sensor increases as along with the gas concentration \cite{website:mq7_datasheet}. %%%%%%%%%%%%%%%%%%   FG: I modified this sentence. Is it correct?
 \ \\
 %
 \subsection{LDR - Light Dependent Resistor}
@@ -350,7 +349,11 @@ The sensor has a 3-pin connection interface. The red wire is the power (5 Volts)
 %
 \subsection{LM335 - Precision Temperature Sensor}
 %
-The LM335A is a analog temperature sensor. The LM335A works like a Zener diode with a breakdown voltage proportional to absolute temperature at 10mV/$^\circ K$. When a resistor is connected between the 5V and the GND, and the LM335A will output an analog voltage of 2.98V (298 Kelvin is 25$^\circ C$).  The output of the sensor is linear, and when calibrated at 25$^\circ C$ the LM335A has typically less than 1$^\circ C$ error over a 100°C temperature range. The sensor can operate continuously from −40$^\circ C$ to 100$^\circ C$. 
+The LM335A is an analog temperature sensor.
+The LM335A works like a Zener diode with a breakdown voltage proportional to absolute temperature at 10mV/$^\circ$K.
+When a resistor is connected between the 5V and the GND the LM335A will output an analog voltage of 2.98V (298 Kelvin is 25$^\circ C$).
+The output of the sensor is linear and when calibrated at 25$^\circ C$ the LM335A has typically less than 1$^\circ C$ error over a 100°C temperature range.
+The sensor can operate continuously from −40$^\circ C$ to 100$^\circ C$. 
 \ \\
 \begin{figure}[H]
 \centering
@@ -373,7 +376,9 @@ The control board is the core of the \emph{Apollo}. It is a PCB board which is e
 %\end{figure}
 \ \\
 %%%%%%%%%%%%%%%%%%   FG: done
-The board is connected through pin cable with the sensor board. The collected are then prepared and sent. This is done with the use of the XBee RF Module.\\
+The board is connected with the sensor board via a pin cable. 
+The sensor collects the data which are then prepared for transmission and sent.
+This is done with the use of the XBee RF Module.\\
 %
 \subsection{Arduino Pro Mini}
 Arduino is an open-source platform based on a micro-controller and a simple software development environment. It can be used to build interactive applications, receiving inputs from several types of sensors and interacting with the environment controlling various actuators.\\
@@ -390,8 +395,8 @@ There are two versions of the Arduino Pro Mini. One, which runs at 3.3 Volts and
 It can be powered up by either USB connection or a external power supply. The recommended input voltage is between 5 to 12 V.
 \ \\
 %
-Specifications:
-\begin{table}
+Below are the Arduino Pro Mini specifications:
+\begin{table}[h]
 \centering
     \begin{tabular}{|l|l|}
         \hline Micro-controller & ATmega168 \\
@@ -411,9 +416,9 @@ Specifications:
 \ \\
 
 \subsection{XBee RF Module}
-Arduino does not provide built-in wireless connectivity. Therefore the wireless communication is achieved by connecting an IEEE 802.15.4 module, the XBee RF.
+Arduino does not provide built-in wireless connectivity. Therefore the wireless communication is achieved by connecting an IEEE 802.15.4 module, the XBee RF. \\
 \ \\
-XBee RF is an embedded module providing wireless connectivity to devices. The module uses the IEEE 802.15.4 standards for a low-rate wireless PAN (\textit{Personal Area Network}) \cite{website:xbee}. This makes it ideal for a low-cost, low-power wireless sensor network, such as \emph{Apollo}.
+XBee RF is an embedded module providing wireless connectivity to other devices. The module uses the IEEE 802.15.4 standards for a low-rate wireless PAN (\textit{Personal Area Network}) \cite{website:xbee}. This makes it ideal for a low-cost, low-power wireless sensor network, such as \emph{Apollo}.
 \begin{figure}[H]
     \centering
     \includegraphics*[scale=0.4]{xbee}
@@ -436,8 +441,8 @@ This is a high quality SPDT sealed relay. Suitable for high voltage and high cur
     \caption{Relay SPDT Sealed}
 \end{figure}
 \ \\
-Specifications:
-\begin{table}[H]
+Below are the SPDT specifications:
+\begin{table}[h]
 \centering
     \begin{tabular}{|l|l|}
     \hline Max. Operating Current & 5 A \\
@@ -452,6 +457,7 @@ Specifications:
     \caption{SPDT Specifications}
 \end{table}
 \ \\
+\subsection{LEDs}
 The action board is also equipped with \textbf{LEDs} (\textit{light emitting diodes}) which are connected to the relays. This provides a visual and fast inspection for defect(s) on the board.
 \begin{figure}[H]
 \centering
@@ -462,31 +468,40 @@ The action board is also equipped with \textbf{LEDs} (\textit{light emitting dio
 %
 \section{Software}
 \subsection{Arduino IDE}
-\textbf{Arduino IDE} is a software development environment for program applications for the Arduino platform. It is comprises a toolbar, which includes the most common functions, a text editor for writing the code and a message area. Arduino IDE is also used to upload programs and communicate with the Arduino boards \cite{website:arduinosoftware}.
+\textbf{Arduino IDE} is a software development environment for Arduino platform program applications.
+It comprises a toolbar, which includes the most common functions, a text editor for writing the code and a message area.
+Arduino IDE is also used to upload programs and communicate with the Arduino boards \cite{website:arduinosoftware}.
+Figure \ref{fig:ArduinoIDE} below shows a screenshot of the IDE:
 \begin{figure}[H]
     \centering
     \includegraphics*[width=300px]{arduinomain}
     \caption{Arduino IDE software development environment}
+    \label{fig:ArduinoIDE}
 \end{figure}
 \ \\
 The toolbar buttons allow the user to verify programs, create new, open existing, save, upload to the Arduino board and the serial monitor. The programs written using Arduino Software are called \textbf{Sketches}. The serial monitor displays serial data being sent from the Arduino board it also can send data to the board. The message area is used to display errors and to provide feedback at the process of saving and uploading the programs on the board. The console displays text output by the Arduino environment including full error messages \cite{website:arduinosoftware}.\\
 \ \\
-Sketches are written in C/C++ but developers need to define two methods:
+Sketches are written in C/C++ and require two methods to be defined:
 \begin{itemize}
-    \item[$\triangleright$] \textbf{setup():} runs only once in the beginning of the program and initialises the variables.
-    \item[$\triangleright$] \textbf{loop$()$:} runs repeatedly inside the program until the power of the board be cut.   
+    \item[$\triangleright$] \textbf{setup():} runs only once at the beginning of the program and initialises the variables
+    \item[$\triangleright$] \textbf{loop$()$:} runs repeatedly inside the program until the power of the board is cut
 \end{itemize}
 \ \\
-Beside these two basic methods Arduino IDE includes others which can be split in \textbf{structure}, \textbf{values}, \textbf{functions} \cite{website:arduinosoftware}. These are defined below: 
+Beside these two basic methods Arduino IDE includes others which can be split in \textbf{structure}, \textbf{values} and \textbf{functions} \cite{website:arduinosoftware}. These are defined below: 
 \begin{itemize}
-    \item[$\triangleright$] \textbf{Structure:} include all the control flow structures of numerical and logical operations, such as: \textbf{if, if...else, and more}, 
+    \item[$\triangleright$] \textbf{Structure:} includes all the control flow structures of numerical and logical operations, such as: \textbf{if, if...else, and more}, 
     \item[$\triangleright$] \textbf{Values:} include all the data structure, such as: \textbf{boolean, char, int, byte, long, and more},
     \item[$\triangleright$] \textbf{Functions:} include all the management methods for the pins and the general internal function of the micro-controller, such as: \textbf{pinMode(), digitalWrite(), digitalRead(), analogRead(), tone(), interrupts(), and more}.
 \end{itemize}
 \ \\
 %
 \subsection{CoolTerm}
-\textbf{CoolTerm} is a software for communication with hardware connected to serial ports. It is a serial port terminal application for the exchange of data with hardware connected to serial ports  such as micro-controllers. It has the same concept as the serial monitor of the Arduino IDE. The main differences that made it more suitable are the capability of multiple concurrent connections if multiple serial port connections are presented. It can also display the received data in plain text as well as hexadecimal format. In addition, it can capture the received data to a text file \cite{website:coolterm}.
+\textbf{CoolTerm} is a software for communication with hardware connected to serial ports.
+It is a serial port terminal application for the exchange of data with hardware such as micro-controllers.
+It relies the same concept as the serial monitor of the Arduino IDE.
+The main differences that made it more suitable for this project are the capability of multiple concurrent connections if multiple serial port connections are presented.
+It can also display the received data in plain text as well as hexadecimal format thus rendering it more human-readable.
+In addition, it can capture the received data into an output text file \cite{website:coolterm}.
 \begin{figure}[H]
 \centering
     \includegraphics*[scale=0.3]{cooltermtinux}
