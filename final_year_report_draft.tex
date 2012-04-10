@@ -800,7 +800,7 @@ The issue was determined to be related to the heating time and the working cycle
 %
 \section{Database}
 %
-$\ddot{U}berdust$ is database that is based on the Hibernate \cite{website:hibernate}. Hibernate is a Java framework based on an object relational mapping library \cite{website:hibernate-wiki}. The following (Figure \ref{uberdust-uml}) UML diagram is used to visualise the structure of $\ddot{U}berdust$.
+$\ddot{U}berdust$ is a database based on the Hibernate \cite{website:hibernate}. Hibernate is a Java framework based on an object relational mapping library \cite{website:hibernate-wiki}. The following (Figure \ref{uberdust-uml}) UML diagram is used to visualise the structure of $\ddot{U}berdust$.
 %
 \begin{figure}[H]
 \centering
@@ -809,48 +809,56 @@ $\ddot{U}berdust$ is database that is based on the Hibernate \cite{website:hiber
 \label{uberdust-uml}
 \end{figure}
 \ \\
-Furthermore the entities (Setup, Node,Link, NodeCapability, etc) are mysql tables of Java classes. For a each of these Java classes there is an xml file which describes the mysql table. With the use of Java a database created by pointing the existence of a database in a computer-server as well as a wisedb  database. Once the database is created by using \textit{controllers\footnote{controllers in this case are functions of Java and irrelevant of the Controllers mentioned in \ref{Controller}}}, which they manage the mysql tables, functions are called. These functions are used to add values into the database as well to add nodes and more. 
+Furthermore the entities (Setup, Node,Link, NodeCapability, etc) are MySQL tables of Java classes.
+For each of these Java classes there is an XML file which describes the MySQL table.
+With the use of Java a database is created by pointing the existence of a database in a computer-server as well as a WiseDB database. %%%%%%%%%%%%%%%%%%   FG: This is chinese. Explain it to me.
+Once the database is created by using \textit{controllers\footnote{controllers in this case are functions of Java and irrelevant of the Controllers mentioned in \ref{Controller}}}, which manage the MySQL tables, some specific functions are called. These functions are used to add values into the database as well to add nodes etc. 
 %
 \newpage
 %
 \chapter{Results}
 %
-\emph{Apollo} was built completely as it can be seen in the following Figures \ref{Sensor_brd_complete} \ref{Control_brd_complete}  \ref{Action_brd_complete}.
+\emph{Apollo} was fully built as shown in the following Figures \ref{Sensor_brd_complete} \ref{Control_brd_complete} \ref{Action_brd_complete}.
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{sens_brd_complete}
-\caption{Sensor board - Completed with all parts soldered}
-\label{Sensor_brd_complete}
+	\includegraphics*[scale=0.3]{sens_brd_complete}
+	\caption{Sensor board - Completed with all parts soldered}
+	\label{Sensor_brd_complete}
 \end{figure}
 \ \\
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{control_brd_complete}
-\caption{Control board - Completed with all parts soldered}
-\label{Control_brd_complete}
+	\includegraphics*[scale=0.3]{control_brd_complete}
+	\caption{Control board - Completed with all parts soldered}
+	\label{Control_brd_complete}
 \end{figure}
 \ \\
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{action_brd_complete}
-\caption{Action board - Completed with all parts soldered}
-\label{Action_brd_complete}
-\end{figure}
-\ \\
-%
-In the next figure is shown the connections between the three boards.
-\ \\
-\begin{figure}[H]
-\centering
-\includegraphics*[scale=0.3]{apollo_complete}
-\caption{\emph{Apollo} - All boards are connected}
-\label{all_brd_connected}
+	\includegraphics*[scale=0.3]{action_brd_complete}
+	\caption{Action board - Completed with all parts soldered}
+	\label{Action_brd_complete}
 \end{figure}
 \ \\
 %
-The system was installed into the rooms 0.I.1, 0.I.3, 0.I.9 and 0.I.11 of the lower ground floor of the Computer Technology Institute and Press "Diophantus" building in Greece. The selection of the rooms was made on the fact that they are occupied by different number of people. This was an extra test of the reliability of the system. Thus the size of the rooms defers as well as the number of lamps and air-conditioning units.\\
+The following figure shows the connections between the three boards:
 \ \\
-The moment each system went live it started reporting the environmental values and feed the \textit{Uberdust} database. Below are shown the data collected into the database for each room separately, categorised by the type of sensor.\\
+\begin{figure}[H]
+\centering
+	\includegraphics*[scale=0.3]{apollo_complete}
+	\caption{\emph{Apollo} - All boards are connected}
+	\label{all_brd_connected}
+\end{figure}
+\ \\
+%
+The system was installed into the rooms 0.I.1, 0.I.3, 0.I.9 and 0.I.11 of the lower ground floor of the Computer Technology Institute and Press "Diophantus" building in Patra, Greece.
+The rooms were chosen based on their size and number of occupants.
+This was an extra test for the reliability of the system.
+For example, the number of lighting systems and air-conditioning units varies depending on the room size.
+This means that no room should have the same size-occupants-units configuration. \\
+\ \\
+The moment each system went live it started reporting the environmental values and storing the recording into the \textit{Uberdust} database.
+The data collected into the database for each room separately, categorised by the type of sensor, is shown below.\\
 \ \\
 %
 \section{PIR}
@@ -860,9 +868,9 @@ The moment each system went live it started reporting the environmental values a
 \ \\
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{pir_1}
-\caption{$\ddot{U}berdust$ chart for for PIR sensor in room 0.I.1}
-\label{chart_pir_1}
+	\includegraphics*[scale=0.3]{pir_1}
+	\caption{$\ddot{U}berdust$ chart for for PIR sensor in room 0.I.1}
+	\label{chart_pir_1}
 \end{figure}
 \ \\
 %
@@ -870,9 +878,9 @@ The moment each system went live it started reporting the environmental values a
 %
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{pir_3}
-\caption{$\ddot{U}berdust$ chart for for PIR sensor in room 0.I.3}
-\label{chart_pir_3}
+	\includegraphics*[scale=0.3]{pir_3}
+	\caption{$\ddot{U}berdust$ chart for for PIR sensor in room 0.I.3}
+	\label{chart_pir_3}
 \end{figure}
 \ \\
 %
@@ -880,9 +888,9 @@ The moment each system went live it started reporting the environmental values a
 %
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{pir_9}
-\caption{$\ddot{U}berdust$ chart for for PIR sensor in room 0.I.9}
-\label{chart_pir_9}
+	\includegraphics*[scale=0.3]{pir_9}
+	\caption{$\ddot{U}berdust$ chart for for PIR sensor in room 0.I.9}
+	\label{chart_pir_9}
 \end{figure}
 \ \\
 %
@@ -890,9 +898,9 @@ The moment each system went live it started reporting the environmental values a
 %
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{light_1}
-\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.11}
-\label{chart_light_1}
+	\includegraphics*[scale=0.3]{light_1}
+	\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.11}
+	\label{chart_light_1}
 \end{figure}
 \ \\
 %
@@ -900,45 +908,46 @@ The moment each system went live it started reporting the environmental values a
 %
 {Room 0.I.1}
 %
-From the following Figure \ref{chart_light_1} is clear the pattern of the light emittance that is followed each day.
+The following Figure \ref{chart_light_1} displays the pattern of the light emittance that is followed each day.
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{light_1}
-\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.1}
-\label{chart_light_1}
+	\includegraphics*[scale=0.3]{light_1}
+	\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.1}
+	\label{chart_light_1}
 \end{figure}
 \ \\
 %
 {Room 0.I.3}
 %
-In the expanded chart in Figure \ref{chart_light_3}, is visible the light's strength during a day.
+The light's strength during a day is visualised in the expanded chart in Figure \ref{chart_light_3}.
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{light_3}
-\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.3}
-\label{chart_light_3}
+	\includegraphics*[scale=0.3]{light_3}
+	\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.3}
+	\label{chart_light_3}
 \end{figure}
 \ \\
 %
 {Room 0.I.9}
 %
-In this case the illuminance of different room is being presented.
+In this case the illuminance of different room is shown.
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{pir_9}
-\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.9}
-\label{chart_light_9}
+	\includegraphics*[scale=0.3]{pir_9}
+	\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.9}
+	\label{chart_light_9}
 \end{figure}
 \ \\
 %
 {Room 0.I.11}
 %
-The occupants of this room have a preference of low light emittance. This can be seen from the low values from the light sensor.
+The occupants of this room have a preference of low light emittance.
+This can be seen from the low values reported from the light sensor.
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{light_11}
-\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.11}
-\label{chart_light_11}
+	\includegraphics*[scale=0.3]{light_11}
+	\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.11}
+	\label{chart_light_11}
 \end{figure}
 \ \\
 %
@@ -946,58 +955,61 @@ The occupants of this room have a preference of low light emittance. This can be
 %
 {Room 0.I.1}
 %
-The temperature show a steady value around 24$^\circ C$ during the whole day. This is due to the fact of electronics dissipating heat.
+The temperature shows a steady value around 24$^\circ C$ during the whole day.
+This is due to the fact of electronics dissipating heat. %%%%%%%%%%%%%%%%%%   FG: What does this mean? Are people burning alive?
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{temp_1}
-\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
-\label{chart_temp_1}
+	\includegraphics*[scale=0.3]{temp_1}
+	\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
+	\label{chart_temp_1}
 \end{figure}
 \ \\
 %
 {Room 0.I.3}
 %
-As all rooms are installed with computers with high computing power the levels of dissipating heat are quit high.
+As all rooms contain several machines with high computing power the levels of dissipated heat are quit high.
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{temp_3}
-\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
-\label{chart_temp_3}
+	\includegraphics*[scale=0.3]{temp_3}
+	\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
+	\label{chart_temp_3}
 \end{figure}
 \ \\
 %
 {Room 0.I.9}
 %
-The same situation is seen in this room as well.
+The same situation occurs in this room.
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{temp_9}
-\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
-\label{chart_temp_9}
+	\includegraphics*[scale=0.3]{temp_9}
+	\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
+	\label{chart_temp_9}
 \end{figure}
 \ \\
 %
 {Room 0.I.11}
 %
-In Figure \ref{chart_temp_11} it is indicated that around 14:00 the ventilation was turned on. This is due to just a small drop of temperature.
+In Figure \ref{chart_temp_11} indicates that at around 14:00h the ventilation was turned on.
+This is due to just a small drop of temperature. %%%%%%%%%%%%%%%%%%   FG: Ventilation for drop of temperature? They wanted to freeze?
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{temp_11}
-\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
-\label{chart_temp_11}
+	\includegraphics*[scale=0.3]{temp_11}
+	\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
+	\label{chart_temp_11}
 \end{figure}
 \ \\
 %
 \section{$CH_4$}
 %
-The \textit{Methane} $CH_4$ levels are constant and at a low value. The \textit{glitch} noticed between 08:00 and 12:00 is due to sensor's fault return value.
+The \textit{Methane} $CH_4$ levels are constant and at a low value.
+The \textit{glitch} noticed between 08:00h and 12:00h is due to a sensor's fault in the return value.
 {Room 0.I.1}
 %
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{ch4_1}
-\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
-\label{chart_ch4_1}
+	\includegraphics*[scale=0.3]{ch4_1}
+	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
+	\label{chart_ch4_1}
 \end{figure}
 \ \\
 %
@@ -1005,9 +1017,9 @@ The \textit{Methane} $CH_4$ levels are constant and at a low value. The \textit{
 %
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{ch4_3}
-\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
-\label{chart_ch4_3}
+	\includegraphics*[scale=0.3]{ch4_3}
+	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
+	\label{chart_ch4_3}
 \end{figure}
 \ \\
 %
@@ -1015,9 +1027,9 @@ The \textit{Methane} $CH_4$ levels are constant and at a low value. The \textit{
 %
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{ch4_9}
-\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
-\label{chart_ch4_9}
+	\includegraphics*[scale=0.3]{ch4_9}
+	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
+	\label{chart_ch4_9}
 \end{figure}
 \ \\
 %
@@ -1025,15 +1037,15 @@ The \textit{Methane} $CH_4$ levels are constant and at a low value. The \textit{
 %
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{ch4_11}
-\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
-\label{chart_ch4_11}
+	\includegraphics*[scale=0.3]{ch4_11}
+	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
+	\label{chart_ch4_11}
 \end{figure}
 \ \\
 %
 \section{CO}
 %
-Unfortunately as it has been explained in section \textit{\textbf{5.4.3 loop ()}} the $CO$ sensor is not yet funtioning properly.
+Unfortunately, as explained in section \textit{\textbf{5.4.3 loop ()}}, the $CO$ sensor is not yet functioning properly.
 \newpage
 %
 \chapter{Conclusions \& Future improvements}
