@@ -189,8 +189,9 @@ This is again due to the fact that \textit{Pachube} traffics its data over the I
 Wireless sensor network (\textit{WSN}) is a concept that makes IoT vision more and more real.
 The first appearance of the term dates back to the 1990s.
 \begin{quote}
-    Researcher named Kris Pister dreamed up a wild future in which people would sprinkle the Earth with countless tiny sensors, no larger than grains of rice.
-\end{quote} %%%%%%%%%%%%%%%%%%   FG: Citation needed here if this is a quote!
+    Researcher named Kris Pister dreamed up a wild future in which people would sprinkle the Earth with countless tiny sensors, no larger than grains of rice. \cite{website:smartdust} 
+\end{quote}
+%
 These particles were called \textit{"smart-dust"} \cite{website:smartdust}.
 WSN is a network consisting of distributed devices that provide sensing features.
 Lately, an increasing number of systems relying on WSN are being developed.
@@ -204,7 +205,7 @@ A city-scale experiment for applications and services of a smart city.
 This way, the city's resources use would be optimised, achieving greater energy efficiency.\\
 \ \\
 %
-This project was conducted in collaboration with the Computer Technology Institute and Press "Diophantus".  %%%%%%%%%%%%%%%%%%   FG: Where is the institute from? EXPLAIN.
+This project was conducted in collaboration with the Computer Technology Institute and Press "Diophantus". The Institution is based in Patra, Greece.
 %
 \begin{quote}
 	The Computer Technology Institute and Press "Diophantus" is a research and technology organization focusing on research and development in Information and Communication Technologies (ICT) \cite{website:cti}.
@@ -337,7 +338,7 @@ The \emph{Carbon Monoxide} sensor is as well an easy to use sensor.  The detecti
 \end{figure}
 \ \\
 The MQ - 7 has a slightly more complicated operation technique comparing to the MQ - 4.It detects the concentration of carbon monoxide by cycles of 5 Volts and 1.5 Volts. Specifically when at sensor is applied 5 Volts, the internal resistance heats up and cleans any other gases absorbed under the cycle of 1.5 Volts, when the internal resistance is at low temperature. 
-The conductivity of the sensor increases as along with the gas concentration \cite{website:mq7_datasheet}. %%%%%%%%%%%%%%%%%%   FG: I modified this sentence. Is it correct?
+The conductivity of the sensor increases as along with the gas concentration \cite{website:mq7_datasheet}.
 \ \\
 %
 \subsection{LDR - Light Dependent Resistor}
@@ -716,8 +717,8 @@ With this method the shield's pins will not be bended, therefore any damage will
 The same method as for the \textit{Control} board was used in the development of the \textit{Action} board.
 At this point, it is important to explain the existence of the four \textit{LEDs} on the board.
 Their purpose is to have a quick visual check of the signal going into the relay.
-In this way, it is possible to detect if any or more of the relays have failed.
-With this technique, precious time is saved from removing the \textit{action} board. \\ %%%%%%%%%%%%%%%%%%   FG: What does this mean? Removing the board?
+In this way, it is possible to detect if one or more of the relays have failed.
+With this technique, precious time is saved as the\textit{action} board does not have to be removed. \\ %%% DK
 \ \\
 \begin{figure}[H]
 \centering
@@ -773,12 +774,13 @@ Therefore it is necessary to specify the communication serial port between them 
 \subsection{loop()}
 \textit{Loop()} is the final and longest part of the code.
 Firstly Arduino checks if the other two boards (\textit{sensor, action}) are connected to it.
-This way the system does not have to be removed in case any of the boards has a defect and is down.\\ %%%%%%%%%%%%%%%%%%   FG: What does this mean? Removed?
+This way it does not have to be removed in case any of the boards has a defect and is down.\\ %%%%%%%%%%%%%%%%%%   FG: What does this mean? Removed? %%% DK: if one of the boards has a defect it does not have to take down the whole system to repair.
 \ \\
 If the \textit{action} board (relays) are connected, the number of relays are checked.
 As the specifications of the room in which the system is installed may vary, the \textit{action} board may not have all four relays installed.
 To check how many relays are on the \textit{action} board different resistances are used for each case.
-Therefore different current values will be measured in the \textit{relayCheckPin}. %%%%%%%%%%%%%%%%%%   FG: What is relayChickenPin? SPECIFY.
+Therefore different current values will be measured in the \textit{relayCheckPin}. 
+The \textit{relayCheckPin} is a dedicated analogue pin (A4) on the Arduino Mini Pro board. %%% DK: relayCheckPin
 These values are mapped in the code and the system reports back how many relays are installed.\\
 \ \\
 The next function controls the output of the relays.
