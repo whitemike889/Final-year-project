@@ -627,7 +627,7 @@ On the other hand it is crucial for all pins to be connected either to other par
 \ \\
 %
 \subsection{Board implementation}
-This is the stage in which the parts implemented on the previous step will be placed on the board.
+This is the stage in which the parts implemented in the previous step will be placed on the board.
 As the board will be installed in a visible part of a room, it is important for it to be as discrete as possible.
 In Figure \ref{Sensor-brd-s6}, below, the components are ready to be spreaded in the available space.
 The final size of the board will be 5cm wide and 5cm high.
@@ -697,7 +697,10 @@ The same method as with \textit{Sensor} was used for designing and developing th
 \label{Control-brd-s4}
 \end{figure}
 \ \\
-At this stage is essential to clarify the existence of the six pin holes (\textit{JP8}) in the above Figure \ref{Control-brd-s4}. Those six pin holes will host a six pin header (Figure \ref{Arduino_header}). This is one of many practical ways to hold the \textit{XBee} shield straight. With this method the shield's pins will not be bended, therefore any damage will be avoided.\\
+At this stage is essential to clarify the existence of the six pin holes (\textit{JP8}) in the above Figure \ref{Control-brd-s4}.
+These will host a six pin header (Figure \ref{Arduino_header}).
+This is one of many practical ways to hold the \textit{XBee} shield straight.
+With this method the shield's pins will not be bended, therefore any damage will be avoided.\\
 \ \\
 \begin{figure}[H]
 \centering
@@ -707,7 +710,11 @@ At this stage is essential to clarify the existence of the six pin holes (\texti
 \end{figure}
 %
 \section{Action board}
-For the development of the \textit{Action} board was used the same method as of the \textit{Control}. At this point, it is important to explain the existence of the four \textit{LEDs} on the board. Their purpose is to have a quick visual check of the signal going into the relay. In this way, it is possible to detect if any or more of the relays has/have fail. With this technique, precious time is saved from removing the \textit{action} board. \\
+The same method as for the \textit{Control} board was used in the development of the \textit{Action} board.
+At this point, it is important to explain the existence of the four \textit{LEDs} on the board.
+Their purpose is to have a quick visual check of the signal going into the relay.
+In this way, it is possible to detect if any or more of the relays have failed.
+With this technique, precious time is saved from removing the \textit{action} board. \\ %%%%%%%%%%%%%%%%%%   FG: What does this mean? Removing the board?
 \ \\
 \begin{figure}[H]
 \centering
@@ -740,36 +747,55 @@ For the development of the \textit{Action} board was used the same method as of 
 %\ \\
 %
 \section{Arduino code}
-In this section an extensive description of the code that was created for \emph{Apollo} will be carried out. The code is divided in three parts; \textit{\textbf{initialisation, setup(), loop()}}
+In this section an extensive description of the code that was created for \emph{Apollo} will be presented.
+The code is divided in three parts; \textit{\textbf{initialisation, setup(), loop()}}
 %
 \subsection{Initialisation}
-The very first part of the code consist the \textit{initialisation}. This includes the libraries as well as the global variables, which will be used across all the program.\\
+The very first part of the code consist in the \textit{initialisation} procedures.
+These usually comprise the inclusion of the libraries as well as the declaration of the global variables which will be used across all the program.\\
 \ \\
 The heterogeneous communication protocol which allows the Arduino to communicate with different devices is included as a header in this part. This is the \textit{XbeeDario.h} and was provided by the Computer Technology Institute and Press "Diophantus".\\
 \ \\
-Furthermore the global variables were declared at this stage as well. Global variables include the Arduino's pins and to what they are connected to. 
+Furthermore the global variables were declared at this stage as well.
+These include the Arduino's pins and to what they are connected to. 
 %
 \subsection{setup()}
-The connected pins can be set as input or output depending of their purpose. This is done in the \textit{setup()} part of the code.\\
+The connected pins can be set as input or output depending on their purpose.
+This is done in the \textit{setup()} part of the code.\\
 \ \\
-In addition the communication between the Arduino and the XBee is set up. Moreover the XBee is connected to the pins of the Arduino. Therefore it is compulsory to specify the communication serial port between them two.
+In addition the communication between the Arduino and the XBee is to be initialised.
+Moreover the XBee is connected to the pins of the Arduino.
+Therefore it is necessary to specify the communication serial port between them two.
 %
 \subsection{loop()}
-\textit{Loop()} is the final and longest part of the code. To start with Arduino checks if the other two boards (\textit{sensor, action}) are connected to it. This way the system do not have to be removed in case any of the boards has a defect and is down.\\
+\textit{Loop()} is the final and longest part of the code.
+Firstly Arduino checks if the other two boards (\textit{sensor, action}) are connected to it.
+This way the system does not have to be removed in case any of the boards has a defect and is down.\\ %%%%%%%%%%%%%%%%%%   FG: What does this mean? Removed?
 \ \\
-If the \textit{action} board (relays) are connected, the number of relays are being checked. As the specifications of the room that the system is installed may vary therefore the \textit{action} board my not have all four relays installed. To check how many relays are on the \textit{action} board different resistance is used for each case. Therefore different current values are being measured in the \textit{relayCheckPin}. This values are mapped in the code and the system reports back how many relays are installed.\\
+If the \textit{action} board (relays) are connected, the number of relays are checked.
+As the specifications of the room in which the system is installed may vary, the \textit{action} board may not have all four relays installed.
+To check how many relays are on the \textit{action} board different resistances are used for each case.
+Therefore different current values will be measured in the \textit{relayCheckPin}. %%%%%%%%%%%%%%%%%%   FG: What is relayChickenPin? SPECIFY.
+These values are mapped in the code and the system reports back how many relays are installed.\\
 \ \\
-The next function controls the output of the relays. The received data from the Controller is checked if it contains any value for the relay(s) and in what state does it set it. The next step is to check which of the lamps are on and which are off and report this information. Also reports any change on the status of the lamps to the Controller. \\
+The next function controls the output of the relays.
+The received data from the Controller is checked to see if it contains any measured value from the relay(s) and in what state does it set it. %%%%%%%%%%%%%%%%%%   FG: "what state does is set it" is chinese? What is this about? 
+The next step is to check which of the lamps are on and which are off and report this information.
+The system also reports any change on the status of the lamps to the Controller. \\
 \ \\
-The following group of statements check the status of the motion sensor (\textit{PIR - Passive InfaRed}). Every half of a second the status of the PIR sensor is being checked and his status is being reported as well.\\
+The following group of statements checks the status of the motion sensor (\textit{PIR - Passive InfaRed}).
+Every half of a second the status of the PIR sensor is checked and its status is reported as well.\\
 \ \\
 Following, the light sensor is called every three seconds and its value is being reported at the time of measurement.\\
 \ \\
-On the same rate of every three seconds, the value of temperature is being measured. Explain the temp function. \\
+The value of temperature is measured and reported at the same rate.
+Explain the temp function. \\ %%%%%%%%%%%%%%%%%%   FG: What is this??
 \ \\
-The value of methane ($CH_4$) is also measured every three seconds. This is simply being done by reading the analogue value of sensor's (\textit{MQ-4}) output pin.\\
+The value of methane ($CH_4$) is also measured every three seconds.
+This is simply done by reading the analogue value of the sensor's (\textit{MQ-4}) output pin.\\
 \ \\
-It was not possible to measure the $CO$ levels as there was an ambiguity on the return values of the \textit{MQ-7} sensor. The issue was determined around the heating time and the working cycles before sensor's values were evaluated.\\
+It was not possible to measure the $CO$ levels as there was an ambiguity on the values returned from the \textit{MQ-7} sensor.
+The issue was determined to be related to the heating time and the working cycles before sensor's values were evaluated.\\
 \ \\
 %
 \section{Database}
