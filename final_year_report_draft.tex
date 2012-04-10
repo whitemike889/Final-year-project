@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,draft]{report}
+\documentclass[12pt,a4paper]{report}
 \usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{caption}
@@ -16,7 +16,6 @@
 \usepackage{fancyhdr}
 \usepackage[left=1.25in,right=1.25in,top=1in, bottom=1in]{geometry}
 
-% FG: Make quote environments italic
 \newenvironment{elements}
     {\begin{quote}\itshape}
     {\end{quote}}
@@ -24,14 +23,12 @@
 \renewcommand\bibname{References}
 
 \author{Student: Dionisios Kalantzis (SID:0733139) \\ Supervisor: Dr. Maysam Abbod}
-%\title{Smart system for control and customisation of office building for energy consumption}
-%\maketitle
+%
 \begin{document}
 \onehalfspacing
 \begin{titlepage}
 \begin{center}
 % Upper part of the page
-%\includegraphics[width=0.15\textwidth]{./logo}\\[1cm]    
 %
 \textsc{\LARGE Brunel University}\\[1.5cm]
 \textsc{\LARGE School of Engineering and Design}\\[1cm]
@@ -68,7 +65,7 @@ Dr. Maysam \textsc{Abbot}
 \newpage
 \begin{abstract}
 \begin{center}
-\emph{"Apollo the god who sees and foresees everything."}
+\emph{"Apollo, the god who sees and foresees everything."}
 \end{center}
 %
 This project describes \emph{Apollo}: a smart system that provides sensing features such as temperature, light, gas detection.
@@ -109,16 +106,16 @@ Finally I would like to extend my heartfelt gratitude to Konstantina Karapapa an
 %
 \chapter{Introduction}
 %
-Air is one of life's essentials for all creatures on Earth. Humans live, work and prosper in air. The quality of air affects humans performance. Throughout the years various methods have been devised to assure the good air quality. For example miners were using canary birds as warning systems until 1987. The presence of toxic gases such as carbon monoxide, methane or carbon dioxide could have had deadly consequences for them. Therefore the notice of any distress from the canary birds would act as a warning. Studies have shown that low air quality standards affects the performance of the people in a working environment \cite{airquality}. Therefore it necessary to keep high air quality standards, which will improve people's working performance as well as their general well-being.\\
+Air is one of life's essential elements for all creatures on Earth. Humans live, work and prosper in air. The quality of air affects our performance. Throughout the years various methods have been devised to assure good air quality. For example miners were using canary birds as warning systems until 1987. The presence of toxic gases such as carbon monoxide, methane or carbon dioxide could have had deadly consequences. Therefore the notice of any distress from the canary birds would act as a warning. Studies have shown that low air quality standards affects the performance of the people in a working environment \cite{airquality}. Therefore it necessary to keep high air quality standards, which will improve people's working performance as well as their general well-being.\\
 \ \\
-Another great issue in today's fast growing world is power consumption and how to minimise it. More and more devices are being developed and are becoming available to consumers. Regardless if these devices are mechanical or electrical, they need energy to operate. Meaningless use of energy increases unnecessary costs and affects the global pollution.\\
+Another great issue in today's fast growing world is power consumption and how to minimise it. More and more devices are being developed and are becoming available to consumers. Regardless if these devices are mechanical or electrical, they need energy to operate. Meaningless use of energy increases unnecessary costs and affects global pollution.\\
 \ \\
 Innovation in technology nowadays has made us take certain services for granted. Such services include the Internet, which can be used as a powerful tool to monitor and act on life quality standards. In addition people are able to operate their home and office appliances with the simple pressing of a few buttons. Wireless Sensor Network is a distributed network of sensors that accommodate sensing features of environmental changes which can be reported all over the world via the Internet. The recent years have witnessed an explosion in the number of system applied relying upon WSN.\\
 \ \\
 \section{Project Aims and Objectives}
-This project presents a wireless system devised to improve the air quality in office buildings and other closed working environments. The novel approach of this system relies in the use of a low-power wireless standard protocol -- \textit{IEEE 802.15.4} -- capable of communicating with heterogeneous systems. \textit{IEEE 802.15.4} is the default standard for low-rate, low-power wireless communication. In addition, it is used by various wireless network embedded platforms such as SunSPOT, iSense, XBee, TelosB, ZigBee and more. This system also introduces the ability of the afore mentioned platforms to communicate between each otherl.\\
+This project presents a wireless system devised to improve the air quality in office buildings and other indoor working environments. The novel approach of this system relies in the use of a low-power wireless standard protocol -- \textit{IEEE 802.15.4} -- capable of communicating with heterogeneous systems. \textit{IEEE 802.15.4} is the default standard for low-rate, low-power wireless communication. In addition, it is used by various wireless network embedded platforms such as SunSPOT, iSense, XBee, TelosB, ZigBee and more. This system also introduces the ability of the afore mentioned platforms to communicate between each other.\\
 \ \\   
-Additionally the devised solution can also control and minimise energy consumption by using the building's resources only whenever they are needed.
+Additionally the devised solution can also control and minimise energy consumption by using the building's resources only when needed.
 This is achieved by constantly monitoring the environmental conditions in a room and operating the lighting and air-conditioning according to the presence and the preferences of the occupants. 
 The energy is therefore used only upon demand and energy wastes are minimised -- lights switched on and forgotten about, constantly running air conditioning, etc.\\
 \ \\
@@ -131,7 +128,7 @@ Finally, its simple installation procedure and ease of use make it an outstandin
 For the project implementation the following steps were completed:
 \begin{itemize}
 	\item[$\blacktriangleright$] A detailed project plan was presented. 
-		Amendments were carried out to accommodate for additions and modifications.
+		Amendments were carried out to accommodate additions and modifications.
 	\item[$\blacktriangleright$] A thorough research on the components was carried out. 
 		Additionally, an in depth understanding of the software tools, which would be used, was acquired.
 	\item[$\blacktriangleright$] An algorithm was devised for the overall system operation
@@ -152,11 +149,11 @@ Modifying an existing building can be very expensive and extremely inconvenient,
 \ \\
 %
 \section {Ventilation and air quality standards}
-Clean air is very important for a working environment. Productivity may be reduced by up to 20\%, as studies has shown. The pollution, which both humans and machines produce can make the air feel heavy and humid. This is due to the fact that both continuously produce vapours and heat. The result of operating in this environment could be tiredness and discomfort from the increased $CO2$ and temperature levels. Studies has shown that in order to maintain a good indoor climate in an office, the air should be replaced at least three times per hour. In many rooms, such as laboratories, cooling is also essential if just the ventilation is not enough \cite{website:ventilation}.
+Clean air is very important for a working environment. Productivity may be reduced by up to 20\%, as studies have shown. Pollution, produced by both human and machine, can make the air feel heavy and humid. This is due to the fact that both continuously produce vapours and heat. The result of operating in this environment could be fatigue and discomfort from the increased $CO2$ and temperature levels. Studies has shown that in order to maintain a good indoor climate in an office, the air should be replaced at least three times per hour. In many rooms, such as laboratories, cooling is also essential if the ventilation on its own is not enough \cite{website:ventilation}.
 %
 \section{Building Management System}
 Building Management System (\textit{BMS}) is a computer base control system for monitoring and operating mechanical and electrical equipment.
-BMS made its appearance in the early 1970's with the introduction of complex electronic devices that could collect and store data for managing services such as lighting and heating. BMS systems have seen great development since their appearance.
+BMS made its appearance in the early 1970's with the introduction of complex electronic devices that could collect and store data for managing services such as lighting and heating. BMS have seen great development since their appearance.
 They used to involve big electromechanical systems controlling the buildings.
 Nowadays BMS is a software application that collects data from all over the building and such data is then presented on a computer screen.
 BMS systems functionality varies, depending on the demands and the building owner's investment.
@@ -216,8 +213,8 @@ The main reason for this collaboration is the common interest on the subject as 
 %
 \chapter{System Architecture}
 %
-\emph{Apollo} is an automatic system which detects the environmental conditions in a room or office.
-As a smart system it reacts, according to the preferences of the users in the office, to achieve the optimum environment to maximise the work performance.\\
+\emph{Apollo} is an automatic system which detects the environmental conditions in a room or an office.
+As a smart system it reacts, according to the preferences of the users in the office, to achieve the optimum environment in order to maximise the work performance.\\
 \ \\
 In Figure \ref{arch_design} below there is a visual representation of \emph{Apollo}. The communication between the board is shown with the use of the arrows.\\
 %
@@ -229,11 +226,11 @@ In Figure \ref{arch_design} below there is a visual representation of \emph{Apol
 \end{figure}
 \ \\
 The \textit{Controller} is a SunSPOT (Sun Small Programmable Object Technology) -- a wireless sensor network mote developed by Sun Microsystems \cite{website:sunspot}. 
-Due to is computational power it is preferred over the Arduino to make the decisions regarding the operation of the lights and/or the air-conditioning.\label{Controller} \\ 
+Due to its computational power it is preferred over the Arduino to make the decisions regarding the operation of the lights and/or the air-conditioning.\label{Controller} \\ 
 \ \\
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.35]{sunspot1}
+\includegraphics*[scale=0.4]{sunspot1}
 \includegraphics*[scale=0.35]{sunspot2}
 \caption{Sun SPOT}
 \label{sunspot}
@@ -248,7 +245,7 @@ During this stage (\textit{active}) the system operates the lights and the air c
 \ \\
 As the weather conditions change over the year it is advised to use the system on the \emph{passive} stage approximately for one to two weeks every four months. This is to calibrate the system with reference to the four different seasons (\textit{spring, summer, autumn, winter}) over the year. In general this is needed to be done only once after the installation of the system. From then onwards the \emph{passive} stage is needed to be run only when the users feel the need to make any core modifications of the thresholds.\\
 \ \\
-Regarding the modifications, user(s) are also able to use the web interface of the system to manually control the lighting and/or air conditioning. The web interface is a medium where user(s) can remotely access and interact with the system. This could mean operating manually the lighting and/or air conditioning remotely. The user(s) are also capable to check the status of the system via the web interface.\\
+Regarding the modifications, user(s) are also able to use the web interface of the system to manually control the lighting and/or air conditioning. The web interface is a medium where user(s) can remotely access and interact with the system. This could mean manually (and remotely) operating the lighting and/or air conditioning remotely. The user(s) are also capable to check the status of the system via the web interface.\\
 \ \\
 The status of the system is generally used for security reasons as \emph{Apollo} can inform the owner of the office of any unusual changes in environmental conditions. This is useful for example to detect fires. Moreover every time the system recognises an unauthorised person using the office can remotely inform its owner through the internet with an email.\\
 \ \\
@@ -258,7 +255,7 @@ The nodes feed their data into the database via a Controller (SunSPOT).
 \ \\
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.35]{syst-arch}
+\includegraphics*[scale=0.49]{syst-arch}
 \caption{System Architecture}
 \label{syst-arch}
 \end{figure}
@@ -336,7 +333,7 @@ The \emph{Carbon Monoxide} sensor is as well an easy to use sensor.  The detecti
 \caption{MQ - 7 Dimensions}
 \end{figure}
 \ \\
-The MQ - 7 has a slightly more complicated operation technique comparing to the MQ - 4.It detects the concentration of carbon monoxide by cycles of 5 Volts and 1.5 Volts. Specifically when at sensor is applied 5 Volts, the internal resistance heats up and cleans any other gases absorbed under the cycle of 1.5 Volts, when the internal resistance is at low temperature. 
+The MQ - 7 has a slightly more complicated operation technique comparing to the MQ - 4. It detects the concentration of carbon monoxide by cycles of 5 Volts and 1.5 Volts. Specifically when at sensor is applied 5 Volts, the internal resistance heats up and cleans any other gases absorbed under the cycle of 1.5 Volts, when the internal resistance is at low temperature. 
 The conductivity of the sensor increases as along with the gas concentration \cite{website:mq7_datasheet}.
 \ \\
 %
@@ -350,11 +347,11 @@ This is the simplest light sensor. It is a variable resistance of a range betwee
 \caption{LDR - Light Dependent Resistor}
 \end{figure}
 \ \\
-The LDR, in dark condition, has a very high resistance allowing to a small amount of current to pass. As the light (\textit{lux}) increases, the resistance decreases proportionally.
+The LDR, in dark condition, has a very high resistance allowing a small amount of current to pass. As the light (\textit{lux}) increases, the resistance decreases proportionally.
 \ \\
 %
 \subsection{PIR - Passive InfraRed motion sensor}
-PIR \textit{Passive InfraRed} motion sensor is a ready to use integrated circuit. It can detect movement up to approximately 6 meter.
+PIR \textit{Passive InfraRed} motion sensor is a ready to use integrated circuit. It can detect movement up to approximately 6 meters.
 \ \\
 \begin{figure}[H]
 \centering
@@ -377,7 +374,7 @@ The sensor can operate continuously from −40$^\circ C$ to 100$^\circ C$.
 \ \\
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.3]{lm335}
+\includegraphics*[scale=0.7]{lm335}
 \caption{LM335 - Precision Temperature Sensor}
 \end{figure}
 \ \\
@@ -397,7 +394,7 @@ The control board is the core of the \emph{Apollo}. It is a PCB board which is e
 \ \\
 %
 The board is connected with the sensor board via a pin cable. 
-The sensor collects the data which are then prepared for transmission and sent.
+The sensor collects the data which are prepared for transmission and then sent.
 This is done with the use of the XBee RF Module.\\
 %
 \subsection{Arduino Pro Mini}
@@ -441,7 +438,7 @@ Arduino does not provide built-in wireless connectivity. Therefore the wireless 
 XBee RF is an embedded module providing wireless connectivity to other devices. The module uses the IEEE 802.15.4 standards for a low-rate wireless PAN (\textit{Personal Area Network}) \cite{website:xbee}. This makes it ideal for a low-cost, low-power wireless sensor network, such as \emph{Apollo}.
 \begin{figure}[H]
     \centering
-    \includegraphics*[scale=0.4]{xbee}
+    \includegraphics*[scale=0.25]{xbee}
     \caption{XBee RF module}
 \end{figure}
 \ \\
@@ -481,7 +478,7 @@ Below are the SPDT specifications:
 The action board is also equipped with \textbf{LEDs} (\textit{light emitting diodes}) which are connected to the relays. This provides a visual and fast inspection for defect(s) on the board.
 \begin{figure}[H]
 \centering
-    \includegraphics*[scale=0.2]{led}
+    \includegraphics*[scale=0.3]{led}
     \caption{LEDs}
 \end{figure}
 \ \\
@@ -533,23 +530,26 @@ In addition, it can capture the received data into an output text file \cite{web
 Eagle PCB Software is a powerful and flexible PCB design program. Eagle is an acronym for Easily Applicable Graphical Layout Editor. It was used to design and print the PCB designs for this project (\emph{Apollo}). To do this the schematic design of the three different boards first had to be drawn. The board design was then produced by arranging the components appropriately \cite{website:eagle}.
 \begin{figure}[H]
 \centering
-    %\includegraphics*[scale=0.2]{eagle1}
+    \includegraphics*[scale=0.25]{eagle1}
     \caption{Eagle - Schematic design}
-
+\end{figure}
+\begin{figure}[H]
+\centering
+	\includegraphics*[scale=0.25]{eagle2}
     \caption{Eagle - Board design}
 \end{figure}
 \ \\
 \section{Database}
 The database is called $\ddot{U}berdust$. It stores data using the WiseDB component of the WiseML library based on Hibernate. Hibernate is a well established relational persistence framework for Java. Hibernate facilitates the storage and retrieval of Java domain objects via Object/Relational Mapping (ORM). Although $\ddot{U}berdust$ was originally developed for storing sensor data from wireless sensor networks, any source can provide data as long as it is in a simple timestamp-based format and a small set of metadata is already provided in the persistence store. $\ddot{U}berdust$ was provided by the Computer Technology Institute and Press "Diophantus". \cite{website:database} \\
 %
-\begin{figure}[H]
-\centering
-    \includegraphics*[scale=0.4]{Uberdust}
-    \caption{$\ddot{U}berdust$}
-
-    \caption{Uberdust}
-\end{figure}
-\ \\
+%\begin{figure}[H]
+%\centering
+%    \includegraphics*[scale=0.4]{Uberdust}
+%    \caption{$\ddot{U}berdust$}
+%
+%    \caption{Uberdust}
+%\end{figure}
+%\ \\
 %
 \newpage
 %
@@ -632,15 +632,15 @@ On the other hand it is crucial for all pins to be connected either to other par
 \subsection{Board implementation}
 This is the stage in which the parts implemented in the previous step will be placed on the board.
 As the board will be installed in a visible part of a room, it is important for it to be as discrete as possible.
-In Figure \ref{Sensor-brd-s6}, below, the components are ready to be spreaded in the available space.
+Following the components are spread in the available space.
 The final size of the board will be 5cm wide and 5cm high.
-\ \\
-\begin{figure}[H]
-\centering
-%\includegraphics*[scale=0.25]{sens_brd_s6}
-\caption{Sensor board -  (Stage 6)}
-\label{Sensor-brd-s6}
-\end{figure}
+%\ \\
+%\begin{figure}[H]
+%\centering
+%%\includegraphics*[scale=0.25]{sens_brd_s6}
+%\caption{Sensor board -  (Stage 6)}
+%\label{Sensor-brd-s6}
+%\end{figure}
 \ \\
 Once all components were spread with sufficient space between them, the \textit{Ratsnest} tool was used to minimise the path of the of the wiring.
 This time the wiring is the conductive medium of electric current between the parts of the board -- the copper.
@@ -648,7 +648,7 @@ This time the wiring is the conductive medium of electric current between the pa
 \begin{figure}[H]
 \centering
 \includegraphics*[scale=0.25]{sens_brd_s7}
-\caption{Sensor board -  (Stage 7)}
+\caption{Sensor board -  (Stage 6)}
 \label{Sensor-brd-s7}
 \end{figure}
 \ \\
@@ -659,7 +659,7 @@ Moreover the settings of the \textit{Optimiser} were set accordingly to achieve 
 \begin{figure}[H]
 \centering
 \includegraphics*[scale=0.25]{sens_brd_s8}
-\caption{Sensor board -  (Stage 8)}
+\caption{Sensor board -  (Stage 7)}
 \label{Sensor-brd-s8}
 \end{figure}
 \ \\
@@ -754,7 +754,7 @@ In this section an extensive description of the code that was created for \emph{
 The code is divided in three parts; \textit{\textbf{initialisation, setup(), loop()}}
 %
 \subsection{Initialisation}
-The very first part of the code consist in the \textit{initialisation} procedures.
+The very first part of the code consists in the \textit{initialisation} procedures.
 These usually comprise the inclusion of the libraries as well as the declaration of the global variables which will be used across all the program.\\
 \ \\
 The heterogeneous communication protocol which allows the Arduino to communicate with different devices is included as a header in this part. This is the \textit{XbeeDario.h} and was provided by the Computer Technology Institute and Press "Diophantus".\\
@@ -768,7 +768,7 @@ This is done in the \textit{setup()} part of the code.\\
 \ \\
 In addition the communication between the Arduino and the XBee is to be initialised.
 Moreover the XBee is connected to the pins of the Arduino.
-Therefore it is necessary to specify the communication serial port between them two.
+Therefore it is necessary to specify the communication serial port between these two.
 %
 \subsection{loop()}
 \textit{Loop()} is the final and longest part of the code.
@@ -792,7 +792,7 @@ Every half of a second the status of the PIR sensor is checked and its status is
 \ \\
 Following, the light sensor is called every three seconds and its value is being reported at the time of measurement.\\
 \ \\
-The value of temperature is measured and reported, via a dedicated analog pin, at the same rate.
+The value of temperature is measured and reported, via a dedicated analogue pin, at the same rate.
 \ \\
 The value of methane ($CH_4$) is also measured every three seconds.
 This is simply done by reading the analogue value of the sensor's (\textit{MQ-4}) output pin.\\
@@ -807,7 +807,7 @@ $\ddot{U}berdust$ is a database based on the Hibernate \cite{website:hibernate}.
 %
 \begin{figure}[H]
 \centering
-\includegraphics*[scale=0.6]{wisedb2}
+\includegraphics*[scale=0.4]{wisedb2}
 \caption{$\ddot{U}berdust$ - UML description diagram}
 \label{uberdust-uml}
 \end{figure}
@@ -823,21 +823,21 @@ Once the database is created by using \textit{controllers\footnote{controllers i
 \emph{Apollo} was fully built as shown in the following Figures \ref{Sensor_brd_complete} \ref{Control_brd_complete} \ref{Action_brd_complete}.
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{sens_brd_complete}
+	\includegraphics*[scale=0.25]{sens_brd_complete}
 	\caption{Sensor board - Completed with all parts soldered}
 	\label{Sensor_brd_complete}
 \end{figure}
 \ \\
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{control_brd_complete}
+	\includegraphics*[scale=0.22]{control_brd_complete}
 	\caption{Control board - Completed with all parts soldered}
 	\label{Control_brd_complete}
 \end{figure}
 \ \\
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{action_brd_complete}
+	\includegraphics*[scale=0.2]{action_brd_complete}
 	\caption{Action board - Completed with all parts soldered}
 	\label{Action_brd_complete}
 \end{figure}
@@ -870,7 +870,7 @@ The data collected into the database for each room separately, categorised by th
 \ \\
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{pir_1}
+	\includegraphics*[width=\textwidth]{pir_1}
 	\caption{$\ddot{U}berdust$ chart for for PIR sensor in room 0.I.1}
 	\label{chart_pir_1}
 \end{figure}
@@ -880,7 +880,7 @@ The data collected into the database for each room separately, categorised by th
 %
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{pir_3}
+	\includegraphics*[width=\textwidth]{pir_3}
 	\caption{$\ddot{U}berdust$ chart for for PIR sensor in room 0.I.3}
 	\label{chart_pir_3}
 \end{figure}
@@ -890,7 +890,7 @@ The data collected into the database for each room separately, categorised by th
 %
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{pir_9}
+	\includegraphics*[width=\textwidth]{pir_9}
 	\caption{$\ddot{U}berdust$ chart for for PIR sensor in room 0.I.9}
 	\label{chart_pir_9}
 \end{figure}
@@ -900,7 +900,7 @@ The data collected into the database for each room separately, categorised by th
 %
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{light_1}
+	\includegraphics*[width=\textwidth]{light_1}
 	\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.11}
 	\label{chart_light_1}
 \end{figure}
@@ -913,7 +913,7 @@ The data collected into the database for each room separately, categorised by th
 The following Figure \ref{chart_light_1} displays the pattern of the light emittance that is followed each day.
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{light_1}
+	\includegraphics*[width=\textwidth]{light_1}
 	\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.1}
 	\label{chart_light_1}
 \end{figure}
@@ -924,7 +924,7 @@ The following Figure \ref{chart_light_1} displays the pattern of the light emitt
 The light's strength during a day is visualised in the expanded chart in Figure \ref{chart_light_3}.
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{light_3}
+	\includegraphics*[width=\textwidth]{light_3}
 	\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.3}
 	\label{chart_light_3}
 \end{figure}
@@ -935,7 +935,7 @@ The light's strength during a day is visualised in the expanded chart in Figure 
 In this case the illuminance of different room is shown.
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{pir_9}
+	\includegraphics*[width=\textwidth]{pir_9}
 	\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.9}
 	\label{chart_light_9}
 \end{figure}
@@ -947,7 +947,7 @@ The occupants of this room have a preference of low light emittance.
 This can be seen from the low values reported from the light sensor.
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{light_11}
+	\includegraphics*[width=\textwidth]{light_11}
 	\caption{$\ddot{U}berdust$ chart for LDR sensor in room 0.I.11}
 	\label{chart_light_11}
 \end{figure}
@@ -963,8 +963,8 @@ The air conditioning systems seems to start once the temperature reaches the "cr
 The temperature shows a steady value around 24$^\circ$C during the whole day.
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{temp_1}
-	\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
+	\includegraphics*[width=\textwidth]{temp_1}
+	\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.1}
 	\label{chart_temp_1}
 \end{figure}
 \ \\
@@ -974,8 +974,8 @@ The temperature shows a steady value around 24$^\circ$C during the whole day.
 As all rooms contain several machines with high computing power the levels of dissipated heat are quit high.
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{temp_3}
-	\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
+	\includegraphics*[width=\textwidth]{temp_3}
+	\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.3}
 	\label{chart_temp_3}
 \end{figure}
 \ \\
@@ -985,8 +985,8 @@ As all rooms contain several machines with high computing power the levels of di
 The same situation occurs in this room.
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{temp_9}
-	\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
+	\includegraphics*[width=\textwidth]{temp_9}
+	\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.9}
 	\label{chart_temp_9}
 \end{figure}
 \ \\
@@ -996,7 +996,7 @@ The same situation occurs in this room.
 The temperature drop at around 14:00h in Figure \ref{chart_temp_11} indicates that the ventilation was suddenly turned on.
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{temp_11}
+	\includegraphics*[width=\textwidth]{temp_11}
 	\caption{$\ddot{U}berdust$ chart for Temperature sensor in room 0.I.11}
 	\label{chart_temp_11}
 \end{figure}
@@ -1010,8 +1010,8 @@ The \textit{glitch} noticed between 08:00h and 12:00h is due to a sensor's fault
 %
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{ch4_1}
-	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
+	\includegraphics*[width=\textwidth]{ch4_1}
+	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.1}
 	\label{chart_ch4_1}
 \end{figure}
 \ \\
@@ -1020,8 +1020,8 @@ The \textit{glitch} noticed between 08:00h and 12:00h is due to a sensor's fault
 %
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{ch4_3}
-	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
+	\includegraphics*[width=\textwidth]{ch4_3}
+	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.3}
 	\label{chart_ch4_3}
 \end{figure}
 \ \\
@@ -1030,8 +1030,8 @@ The \textit{glitch} noticed between 08:00h and 12:00h is due to a sensor's fault
 %
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{ch4_9}
-	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
+	\includegraphics*[width=\textwidth]{ch4_9}
+	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.9}
 	\label{chart_ch4_9}
 \end{figure}
 \ \\
@@ -1040,7 +1040,7 @@ The \textit{glitch} noticed between 08:00h and 12:00h is due to a sensor's fault
 %
 \begin{figure}[H]
 \centering
-	\includegraphics*[scale=0.3]{ch4_11}
+	\includegraphics*[width=\textwidth]{ch4_11}
 	\caption{$\ddot{U}berdust$ chart for PIR sensor in room 0.I.11}
 	\label{chart_ch4_11}
 \end{figure}
@@ -1057,7 +1057,7 @@ To the author's opinion the project can be characterized as successful due to th
 The system is installed and working in the Computer Technology Institute and Press "Diophantus" building, lower ground floor.
 Evidence provided by the database feed and everyday working status clearly supports the success of the system.\\
 \ \\
-Moreover \emph{Apollo} is able to collect the environmental values from the room is installed in and report them back to the \textit{Controller} and, in extension, to the database.
+Moreover \emph{Apollo} is able to collect the environmental values from the room it is installed in and report them back to the \textit{Controller} and, in extension, to the database.
 It is also capable of operating the lighting as well as the air-conditioning of the room.
 This is a novel approach for such a system, as with the use of the IEEE 802.15.4 protocol, the communication with other systems can easily be achieved.
 On that point the system can work along with other systems such as TelosB, SunSpot, iSense and any other system that uses the same communication protocol. \\
