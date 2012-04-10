@@ -184,10 +184,10 @@ A city-scale experiment for applications and services of a smart city.
 This way, the city's resources use would be optimised, achieving greater energy efficiency.\\
 \ \\
 %
-This project was suggested by the Computer Technology Institute and Press "Diophantus".  %%%%%%%%%%%%%%%%%%   FG: Where is the institute from? EXPLAIN.
+This project was conducted in collaboration with the Computer Technology Institute and Press "Diophantus".  %%%%%%%%%%%%%%%%%%   FG: Where is the institute from? EXPLAIN.
 %
 \begin{quote}
-	The Computer Technology Institute and Press "Diophantus" is a research and technology organization focusing on research and development in Information and Communication Technologies (ICT)\cite{website:cti}.
+	The Computer Technology Institute and Press "Diophantus" is a research and technology organization focusing on research and development in Information and Communication Technologies (ICT) \cite{website:cti}.
 \end{quote} %%%%%%%%%%%%%%%%%%   FG: Citation needed here if this is a quote!
 %
 The main reason for this collaboration is the common interest on the subject as well as the technical expertise provided by the Institution regarding WSN and the wireless communication protocol used.
@@ -196,7 +196,8 @@ The main reason for this collaboration is the common interest on the subject as 
 %
 \chapter{System Architecture}
 %
-\emph{Apollo} is an automatic system which detects the environmental conditions in the office. As a smart system it reacts, accordingly to the preferences of the users in the office, to achieve the optimum environment to maximise the work performance.\\
+\emph{Apollo} is an automatic system which detects the environmental conditions in a room or office.
+As a smart system it reacts, according to the preferences of the users in the office, to achieve the optimum environment to maximise the work performance.\\
 \ \\
 In Figure \ref{arch_design} below there is a visual representation of \emph{Apollo}. The communication between the board is shown with the use of the arrows.\\
 %
@@ -207,7 +208,8 @@ In Figure \ref{arch_design} below there is a visual representation of \emph{Apol
 \label{arch_design}
 \end{figure}
 \ \\
-The \textit{Controller} is a SunSPOT. SunSPOT (Sun Small Programmable Object Technology) is a wireless sensor network mote developed by Sun Microsystems \cite{website:sunspot}. Due to is computational power it is preferred over the Arduino to make the decisions on the operation of the lights and/or the air-conditioning.\label{Controller} \\ 
+The \textit{Controller} is a SunSPOT (Sun Small Programmable Object Technology) -- a wireless sensor network mote developed by Sun Microsystems \cite{website:sunspot}. 
+Due to is computational power it is preferred over the Arduino to make the decisions regarding the operation of the lights and/or the air-conditioning.\label{Controller} \\ 
 \ \\
 \begin{figure}[H]
 \centering
@@ -217,17 +219,22 @@ The \textit{Controller} is a SunSPOT. SunSPOT (Sun Small Programmable Object Tec
 \label{sunspot}
 \end{figure}
 \ \\
-The system works in two stages -- the \emph{passive} process and the \emph{active} process. In order for the system to work on the later stage it is necessary to go through the \emph{passive}. The difference between these two stages is, during the former (\emph{passive}) stage, the system collects the user(s) preferences on the environmental changes. It also observes the environmental values when the user(s) choose to switch on the lights and/or the air conditioning.\\
+The system works in two stages -- the \emph{passive} process and the \emph{active} process.
+In order for the system to work on the later stage it is necessary to go through the \emph{passive}.
+The difference between these two stages is that during the former (\emph{passive}) stage the system collects the user(s) preferences regarding the environmental changes.
+It also observes the environmental values when the user(s) choose to switch on the lights and/or the air conditioning.
+Those markers will set the threshold of when the system will operate on the \emph{active} stage.
+During this stage (\textit{active}) the system operates the lights and the air conditioning.\\
 \ \\
-Those marks will set the threshold on when the system will operate on the \emph{active} stage. During this stage (\textit{active}) the system operates the lights and the air conditioning. And this is done with the preferences the users set on the \emph{passive} stage.\\
-\ \\
-As the weather conditions change over the year it is advised to use the system on the \emph{passive} stage approximately for one to two weeks every four months. This is to calibrate the system with reference to the four different seasons (\textit{spring, summer, autumn, winter}) over the year. In general this is needed to be done only once after the installation of the system. From then onwards the \emph{passive} stage is needed to be run only when the users feel the need to make any core modifications on the thresholds.\\
+As the weather conditions change over the year it is advised to use the system on the \emph{passive} stage approximately for one to two weeks every four months. This is to calibrate the system with reference to the four different seasons (\textit{spring, summer, autumn, winter}) over the year. In general this is needed to be done only once after the installation of the system. From then onwards the \emph{passive} stage is needed to be run only when the users feel the need to make any core modifications of the thresholds.\\
 \ \\
 Regarding the modifications, user(s) are also able to use the web interface of the system to manually control the lighting and/or air conditioning. The web interface is a medium where user(s) can remotely access and interact with the system. This could mean operating manually the lighting and/or air conditioning remotely. The user(s) are also capable to check the status of the system via the web interface.\\
 \ \\
-The status of the system is generally used for security reasons as \emph{Apollo} can inform the owner of the office of any unusual changes in environmental conditions. This is useful for example to detect fires. Moreover every time the system recognise an unauthorised person using the office can remotely inform its owner through the internet with an email.\\
+The status of the system is generally used for security reasons as \emph{Apollo} can inform the owner of the office of any unusual changes in environmental conditions. This is useful for example to detect fires. Moreover every time the system recognises an unauthorised person using the office can remotely inform its owner through the internet with an email.\\
 \ \\
-The following Figure \ref{syst-arch} gives an overall description of \emph{Apollo}. The different wireless sensor system nodes can communicate between each other in a heterogeneous network. The nodes through a Controller (SunSPOT) feed their data into the database. \emph{Apollo} can also get instructions from the Controller to operate the lighting and/or air conditioning of the room theya are installed in.
+Figure \ref{syst-arch} gives an overall description of \emph{Apollo}. The different wireless sensor system nodes can communicate between each other in a heterogeneous network.
+The nodes feed their data into the database via a Controller (SunSPOT).
+\emph{Apollo} can also receive instructions from the Controller to operate the lighting and/or air conditioning of the room it is installed in.
 \ \\
 \begin{figure}[H]
 \centering
